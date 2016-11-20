@@ -1,0 +1,71 @@
+/*
+* Left-sidebar.css -- The CSS file for the left sidebar layout.
+*/
+/* Sidebars */
+.left-sidebar{
+	display: block;
+	width: 225px;
+	padding-right: 10px;
+	padding-top: 15px;
+	border-right: 1px #000000 solid;
+	float: left;
+	position: relative;
+	min-height: 100%;
+}
+
+.right-sidebar{
+	display: none !important;
+}
+
+/* Home */
+.home-post-area {
+	float: right;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+.column-one {
+	padding-left: 5px;
+}
+
+/* Single Post */
+.post-single {
+	float: right;
+	position: relative;
+}
+
+/* Index */
+.index {
+	float: right;
+	position: relative;
+}
+
+/* Page */
+.page-single {
+	float: right;
+	position: relative;
+}
+
+/* Staff */
+.staff {
+	float: right;
+	position: relative;
+}
+
+/* 404*/
+.404 {
+	float: right;
+	position: relative;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 979px) {
+	.mobile-sidebar .left-sidebar {
+    	display: block !important;
+    	width: 100%;
+	}
+	.mobile-sidebar .right-sidebar {
+		display: none !important;
+	}
+}

@@ -1,0 +1,64 @@
+a,
+#wp-calendar caption,
+hr,
+.footer p {
+    color: #010053;
+}
+.top-menu li:hover > a, .top-menu a:focus,
+.main-menu, .main-menu ul ul a,
+.breadcrumbs li,
+.label-head, .label-head a,
+.read-more, .read-more a,
+#reply-title, .latest-category .title, .related-stories .title,
+.index .title,
+.index .older a, .index .newer a {
+    background-color: #010053 !important;
+    color: #FFFFFF !important;
+}
+.top-menu ul ul a,
+.main-menu li:hover > a, .main-menu a:focus,
+.read-more:hover, .read-more a:hover,
+.index .older a:hover, .index .newer a:hover {
+    background-color: #020082 !important;
+    color: #FFFFFF !important;
+}
+.todays-date,
+.top-story, .top-story-header,
+.column-header {
+    border-bottom: 1px solid #010053;
+}
+.right-sidebar, .column-three {
+    border-left: 1px solid #010053;
+}
+.left-sidebar, .column-one {
+    border-right: 1px solid #010053;
+}
+.widget-title {
+    border-bottom: 1px solid #010053;
+    border-top: 1px solid #010053;
+}
+#wp-calendar th, #wp-calendar tfoot, #wp-calendar #today, #wp-calendar td:hover, #wp-calendar td a:hover {
+    background-color: #010053 !important;
+}
+tbody tr:nth-child(odd) {
+    background-color: #0805D6;
+    color: #FFFFFF !important;
+}
+tbody tr:nth-child(even) {
+    background-color: #040240;
+    color: #FFFFFF !important;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+    background-color: #010053 !important;
+    border: 1px solid #010053;
+}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button {
+    color: #010053;
+    background-color: #FFFFFF !important;
+}
+.reply, .comment-navigation .newer a, .comment-navigation .older a, input#submit {
+    background-color: #020082 !important;
+}
+.reply:hover, .comment-navigation .newer a:hover, .comment-navigation .older a:hover, input#submit:hover {
+    background-color: #010053 !important;
+}

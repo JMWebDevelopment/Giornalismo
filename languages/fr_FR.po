@@ -1,0 +1,691 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Giornalismo\n"
+"POT-Creation-Date: 2015-06-20 15:22-0600\n"
+"PO-Revision-Date: 2015-06-20 15:40-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:16
+msgid "Whoops! That's not here."
+msgstr "Oups ! Ce n’est pas ici."
+
+#: 404.php:17
+msgid "We're sorry but the post or page you were looking for isn't here. "
+msgstr ""
+"Nous sommes désolés, mais le poteau ou la page que vous cherchez n’est pas "
+"ici."
+
+#: 404.php:17
+msgid "Click here"
+msgstr "Cliquer ici"
+
+#: 404.php:17
+msgid ""
+"to return to the homepage or use the search bar below to search for what you "
+"were looking for."
+msgstr ""
+"pour revenir à la page d’accueil ou utilisez la barre de recherche ci-"
+"dessous pour rechercher ce que vous cherchez."
+
+#: admin/class-tgm-plugin-activation.php:161
+msgid "Install Required Plugins"
+msgstr "Installer les extensions requises"
+
+#: admin/class-tgm-plugin-activation.php:162
+msgid "Install Plugins"
+msgstr "Installer les extensions"
+
+#: admin/class-tgm-plugin-activation.php:163
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Installation de l’extension : %s"
+
+#: admin/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr "Un problème est survenu."
+
+#: admin/class-tgm-plugin-activation.php:165
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Ce thème nécessite l’extension suivante : %1$s."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Ce thème recommande l’extension suivante : %1$s."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:167
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+"Désolé, mais vous n’avez pas l’autorisations nécessaires pour installer "
+"l’extension %s. Contactez l’administrateur de ce site pour obtenir de l’aide."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "L’extension requise suivante  est actuellement inactive :%1$s."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "L’extension recommandée suivante est actuellement inactive : %1$s."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+"Désolé, mais vous n’avez pas l’autorisations nécessaires pour activer "
+"l’extension %s . Contactez l’administrateur de ce site pour obtenir de "
+"l’aide."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:171
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"L’extension suivante doit être mis à jour vers sa dernière version afin "
+"d’assurer une compatibilité maximale avec ce thème : %1$s."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:172
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+"Désolé, mais vous n’avez pas les autorisations nécessaires pour mettre à "
+"jour l’extension %s . Contactez l’administrateur de ce site pour obtenir de "
+"l’aide sur l’extension à mettre à jour."
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:173
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Commencez à installer l’extension"
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Activation de l’extension"
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:175
+msgid "Return to Required Plugins Installer"
+msgstr "Retourner à l’installateur de plug-ins requis."
+
+#: admin/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr "Retourner au tableau de bord"
+
+#: admin/class-tgm-plugin-activation.php:177
+#: admin/class-tgm-plugin-activation.php:1952
+msgid "Plugin activated successfully."
+msgstr "Plug-in activé avec succès."
+
+#: admin/class-tgm-plugin-activation.php:178
+#: admin/class-tgm-plugin-activation.php:1643
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Le plugin suivant a bien été activé :"
+msgstr[1] ""
+
+#: admin/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Toutes les extensions ont été installées et activées avec succès. %1$s"
+
+#: admin/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr "Ignorer cet avertissement."
+
+#: admin/class-tgm-plugin-activation.php:536
+#: admin/class-tgm-plugin-activation.php:2169
+msgid "Return to the Dashboard"
+msgstr "Retourner au tableau de bord"
+
+#: admin/class-tgm-plugin-activation.php:1171
+msgid "Private Repository"
+msgstr "Répertoire privé"
+
+#: admin/class-tgm-plugin-activation.php:1174
+msgid "Pre-Packaged"
+msgstr "Prépackagé"
+
+#: admin/class-tgm-plugin-activation.php:1179
+msgid "WordPress Repository"
+msgstr "Répertoire Wordpress"
+
+#: admin/class-tgm-plugin-activation.php:1182
+msgid "Required"
+msgstr "Obligatoire"
+
+#: admin/class-tgm-plugin-activation.php:1182
+msgid "Recommended"
+msgstr "Recommandé"
+
+#: admin/class-tgm-plugin-activation.php:1185
+msgid "Not Installed"
+msgstr "Non installé"
+
+#: admin/class-tgm-plugin-activation.php:1187
+msgid "Installed But Not Activated"
+msgstr "Installé mais pas activé"
+
+#: admin/class-tgm-plugin-activation.php:1292
+#: admin/class-tgm-plugin-activation.php:1405
+msgid "Install"
+msgstr "Installer les plugins"
+
+#: admin/class-tgm-plugin-activation.php:1316
+#: admin/class-tgm-plugin-activation.php:1406
+msgid "Activate"
+msgstr "Activer"
+
+#: admin/class-tgm-plugin-activation.php:1368
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Pas de plug-ins à installer ou activer. <a href=«   %1$s » title=«   Return "
+"to the Dashboard »>Retourner au tableau de bord</a>"
+
+#: admin/class-tgm-plugin-activation.php:1384
+msgid "Plugin"
+msgstr "Extension"
+
+#: admin/class-tgm-plugin-activation.php:1385
+msgid "Source"
+msgstr "Source"
+
+#: admin/class-tgm-plugin-activation.php:1386
+msgid "Type"
+msgstr "Type"
+
+#: admin/class-tgm-plugin-activation.php:1387
+msgid "Status"
+msgstr "Statut"
+
+#: admin/class-tgm-plugin-activation.php:1935
+msgid "Install package not available."
+msgstr "Paquet d’installation non disponible."
+
+#: admin/class-tgm-plugin-activation.php:1936
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+"Téléchargement du paquet d’installation depuis <span class=« code »>%s</"
+"span>&#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1937
+msgid "Unpacking the package&#8230;"
+msgstr "Décompression du package&#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1938
+msgid "Installing the plugin&#8230;"
+msgstr "Installation de l’extension&#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1939
+msgid "Plugin install failed."
+msgstr "L’installation de l’extension a échoué."
+
+#: admin/class-tgm-plugin-activation.php:1940
+msgid "Plugin installed successfully."
+msgstr "L’extension a été installée avec succès."
+
+#: admin/class-tgm-plugin-activation.php:1951
+msgid "Plugin activation failed."
+msgstr "L’activation de l’extension a échoué"
+
+#: admin/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Installation et activation en cours. Cela peut prendre un peu de temps selon "
+"l’hébergeur, merci de patienter."
+
+#: admin/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installé et activé avec succès."
+
+#: admin/class-tgm-plugin-activation.php:2066
+#: admin/class-tgm-plugin-activation.php:2075
+msgid "Show Details"
+msgstr "Voir les détails"
+
+#: admin/class-tgm-plugin-activation.php:2066
+#: admin/class-tgm-plugin-activation.php:2075
+msgid "Hide Details"
+msgstr "Détails de contact"
+
+#: admin/class-tgm-plugin-activation.php:2067
+msgid "All installations and activations have been completed."
+msgstr "Toutes les installations et activations ont été effectuées."
+
+#: admin/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation et activation de l’extension %1$s (%2$d/%3$d)"
+
+#: admin/class-tgm-plugin-activation.php:2072
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Le processus d’installation commence. Cela peut prendre un peu de temps "
+"selon l’hébergeur, merci de patienter."
+
+#: admin/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Une erreur s’est produite lors de l’installation de %1$s: <strong>%2$s</"
+"strong>."
+
+#: admin/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "L’installation de %1$s à échoué."
+
+#: admin/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s à été installé avec succès."
+
+#: admin/class-tgm-plugin-activation.php:2076
+msgid "All installations have been completed."
+msgstr "Tous les installations ont été complétées."
+
+#: admin/class-tgm-plugin-activation.php:2077
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation de l’extension %1$s (%2$d/%3$d)"
+
+#: admin/theme-options.php:17
+msgid "General Settings"
+msgstr "Paramètres Généraux"
+
+#: admin/theme-options.php:18
+msgid "This is the general settings section."
+msgstr "Il s’agit de la section Paramètres généraux."
+
+#: admin/theme-options.php:35
+msgid "Layout"
+msgstr "Mise en page"
+
+#: admin/theme-options.php:39 admin/theme-options.php:454 functions.php:93
+msgid "Right Sidebar"
+msgstr "Barre latérale droite"
+
+#: admin/theme-options.php:40 admin/theme-options.php:455 functions.php:84
+msgid "Left Sidebar"
+msgstr "Sidebar Gauche"
+
+#: admin/theme-options.php:41 admin/theme-options.php:456
+msgid "Two Sidebars"
+msgstr "Deux barres latérales"
+
+#: admin/theme-options.php:58 functions.php:29
+msgid "Top Menu"
+msgstr "Menu supérieur"
+
+#: admin/theme-options.php:76
+msgid "Show Today's Date"
+msgstr "Date d’aujourd’hui"
+
+#: admin/theme-options.php:94
+msgid "Display the Author's Position"
+msgstr "Afficher la Position de l’auteur"
+
+#: admin/theme-options.php:112
+msgid "Display Breadcrumbs"
+msgstr "Afficher Fil d’Ariane"
+
+#: admin/theme-options.php:130
+msgid "Show Related Stories"
+msgstr "Sujets Similaires"
+
+#: admin/theme-options.php:148
+msgid "Show latest posts from a category on the single post template"
+msgstr ""
+"Afficher les derniers messages d’une catégorie sur le modèle de message "
+"unique"
+
+#: admin/theme-options.php:161
+msgid "Social Media Settings"
+msgstr "Paramètres des réseaux sociaux"
+
+#: admin/theme-options.php:162
+msgid "This is the social media settings section."
+msgstr "Il s’agit de la section paramètres de médias sociaux."
+
+#: admin/theme-options.php:179
+msgid "Facebook Link"
+msgstr "Lien Facebook"
+
+#: admin/theme-options.php:197
+msgid "Twitter Link"
+msgstr "Lien Twitter"
+
+#: admin/theme-options.php:215
+msgid "Google+ Link"
+msgstr "Lien Google+"
+
+#: admin/theme-options.php:233
+msgid "RSS Feed Link"
+msgstr "Lien RSS"
+
+#: admin/theme-options.php:251
+msgid "Show Author's Twitter Handle"
+msgstr "Voir l’établissement Twitter poignée de l’auteur"
+
+#: admin/theme-options.php:269
+msgid "Site Twitter Handle"
+msgstr "Pseudonyme Twitter"
+
+#: admin/theme-options.php:287
+msgid "Add Support for Twitter Cards"
+msgstr "Ajouter le Support pour les cartes de Twitter"
+
+#: admin/theme-options.php:300
+msgid "Homepage Settings"
+msgstr "Paramétres page d’accueil"
+
+#: admin/theme-options.php:301
+msgid "This is the homepage settings section."
+msgstr "Il s’agit de la section de paramètres de page d’accueil."
+
+#: admin/theme-options.php:311 admin/theme-options.php:481
+msgid "None"
+msgstr "Aucun"
+
+#: admin/theme-options.php:325
+msgid "Top Story Category"
+msgstr "Catégorie Top Story"
+
+#: admin/theme-options.php:344
+msgid "Column One Category"
+msgstr "Colonne une catégorie"
+
+#: admin/theme-options.php:363
+msgid "Number of Stories in the First Column"
+msgstr "Nombre d’histoires dans la première colonne"
+
+#: admin/theme-options.php:381
+msgid "Column Two Category"
+msgstr "Colonne deux catégorie"
+
+#: admin/theme-options.php:400
+msgid "Number of Stories in the Second Column"
+msgstr "Nombre d’histoires dans la deuxième colonne"
+
+#: admin/theme-options.php:418
+msgid "Column Three Category"
+msgstr "Catégorie de colonne trois"
+
+#: admin/theme-options.php:437
+msgid "Number of Stories in the Third Column"
+msgstr "Nombre d’histoires dans la troisième colonne"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "0 Comments"
+msgstr "0 commentaire"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "1 Comment"
+msgstr "1 commentaire"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "% Comments"
+msgstr "% Commentaires"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "Comments Off"
+msgstr "Commentaires désactivés"
+
+#: archive.php:39 author.php:40
+msgid "Older Posts&rsaquo;&rsaquo;"
+msgstr "Articles plus anciens&rsaquo;&rsaquo;"
+
+#: archive.php:40 author.php:41
+msgid "&lsaquo;&lsaquo;Newer Posts"
+msgstr "&lsaquo;&lsaquo;Articles plus récents"
+
+#: author.php:20
+msgid "Posts by: "
+msgstr "Aticles par: "
+
+#: comments.php:14
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Merci de ne pas charger cette page directement. Merci!"
+
+#: comments.php:17
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Cet article est protégé par mot de passe. Saisissez le pour voir les "
+"commentaires."
+
+#: comments.php:23
+msgid "No Responses"
+msgstr "Pas de réponses"
+
+#: comments.php:23
+msgid "One Response"
+msgstr "Une réponse"
+
+#: comments.php:23
+msgid "% Responses"
+msgstr "% Réponses"
+
+#: comments.php:23
+msgid "to"
+msgstr "à"
+
+#: comments.php:38
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: footer.php:14
+msgid "| Giornalismo | Copyright  &copy;"
+msgstr "| Giornalismo | Droit d'auteur  &copy;"
+
+#: functions.php:30
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: functions.php:75
+msgid "Continue Reading&rsaquo;&rsaquo;"
+msgstr "Lire la suite&rsaquo;&rsaquo;"
+
+#: functions.php:102
+msgid "Header Widget Area"
+msgstr "Widget en-tête"
+
+#: functions.php:104
+msgid "Use this area to display an ad in the header area."
+msgstr "Cette zone permet d’afficher une annonce dans la zone d’en-tête."
+
+#: functions.php:235
+msgid " on Facebook"
+msgstr "sur Facebook"
+
+#: functions.php:238
+msgid " on Twitter"
+msgstr "sur Twitter"
+
+#: functions.php:241
+msgid " on Google+"
+msgstr "sur Google+"
+
+#: functions.php:244 functions.php:246
+msgid "'s RSS Feed"
+msgstr " Flux RSS"
+
+#: functions.php:265
+msgid "Home"
+msgstr "Accueil"
+
+#: functions.php:297
+msgid "Author Archive: "
+msgstr "Archive de l’auteur: "
+
+#: functions.php:298
+msgid "Blog Archives"
+msgstr "Archives du blog"
+
+#: functions.php:299
+msgid "Search Results: "
+msgstr "Résultats :"
+
+#: functions.php:300
+msgid "Staff"
+msgstr "Le personnel"
+
+#: functions.php:412
+msgid "Story Highlights"
+msgstr "Faits Saillants de l'histoire"
+
+#: functions.php:442
+msgid "Related Stories"
+msgstr "Sujets Similaires"
+
+#: functions.php:468
+msgid "More Stories From "
+msgstr "Plus d’histoires de"
+
+#: functions.php:503
+msgid "About"
+msgstr "À propos"
+
+#: functions.php:520 functions.php:523 functions.php:526
+msgid "Archives for "
+msgstr "Archives pour"
+
+#: functions.php:532
+msgid "Search results for "
+msgstr "Résultats de recherche pour"
+
+#: functions.php:539
+msgid "Page "
+msgstr "Page"
+
+#: functions.php:558
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: functions.php:559
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+#: functions.php:559
+msgid "(Edit)"
+msgstr "(voir)"
+
+#: functions.php:564
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en cours de modération."
+
+#: functions.php:580
+msgid "del"
+msgstr "effacer"
+
+#: functions.php:581
+msgid "spam"
+msgstr "spam"
+
+#: functions.php:618 functions.php:620
+msgid "Written by "
+msgstr "Ecrit par"
+
+#: header.php:38
+msgid "Go to ..."
+msgstr "Aller à…"
+
+#: page-staff-page.php:18
+msgid " Staff"
+msgstr "Le personnel"
+
+#: single.php:40
+msgid "Tags: "
+msgstr "Mots clés: "
+
+#. Theme Name of the plugin/theme
+msgid "Giornalismo"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.jacobmartella.com/giornalismo"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A theme to make your blog look similar to that of a newspaper on the "
+"homepage and features spots for ads, linking to social media and other "
+"customizeable features."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jacob Martella"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.jacobmartella.com/"
+msgstr ""

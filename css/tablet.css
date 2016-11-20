@@ -1,0 +1,619 @@
+/* tablet.css
+*
+* Tablet Stylesheet
+*
+* Table of Contents
+* I. Screen Width between 650px and 699px
+* II. Screen Width between 700px and 979px
+*/
+/*
+I. Screen Width between 650px and 699px---------------- */
+@media only screen and (min-width: 650px) and (max-width: 699px) {
+	/* Menus -------------------- */
+    .top-menu, .main-menu {
+        display: none !important;
+    }
+
+    .mobile-nav-area {
+        display: block !important;
+        width: 100%;
+    }
+
+    .mobile-nav-bar {
+        width: 100%;
+        height: 40px;
+        background-color: #252525;
+        text-align: center;
+        padding: 3px 0px;
+    }
+
+    .mobile-nav-icon {
+        text-align: left;
+        width: 30px;
+        float: left;
+        position: relative;
+        margin-top: 3px;
+    }
+
+    .mobile-nav-bar h5 {
+        color: #ffffff;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        padding-bottom: 2px;
+        margin: 0px;
+    }
+
+    .mobile-nav {
+        width: 100%;
+        background-color: #252525;
+        height: auto;
+    }
+
+    .mobile-nav-left {
+        width: 50%;
+        float: left;
+        position: relative;
+        font-family: 'Oswald';
+        font-size: 26px;
+        background-color: #000000;
+    }
+
+    .mobile-nav-left ul {
+        list-style: none;
+        margin: 0 0 0 0px;
+        padding-left: 0;
+    }
+
+    .mobile-nav-left li {
+        display: block;
+        width: 100%;
+        padding: 5px -3px 5px 3px;
+        background-color: #000000;
+        margin-bottom: 4px
+    }
+
+    .mobile-nav-left li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .mobile-nav-left a {
+        color: #ffffff;
+        display: block;
+        line-height: 39px;
+        padding: 3px 12px;
+        text-decoration: none;
+    }
+
+    .mobile-nav-left ul > li {
+        margin-left: 0px;
+    }
+
+    .mobile-nav-left ul ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: #6C6C6C;
+    }
+
+    .mobile-nav-left ul ul li {
+        background: #6C6C6C;
+    }
+
+    .mobile-nav-left ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .mobile-nav-left ul ul a {
+        background: #6C6C6C;
+        color: #ffffff;
+        height: auto;
+        line-height: 39px;
+        padding: 10px 10px;
+        width: 100%;
+        box-shadow: ;
+    }
+
+    .mobile-nav-left li:hover > a,
+    .mobile-nav-left li:hover,
+    .mobile-nav-left ul ul :hover > a,
+    .mobile-nav-left a:focus {
+        background: #252525;
+        color: #ffffff;
+    }
+
+    .mobile-nav-left li:hover > a,
+    .mobile-nav-left li:hover,
+    .mobile-nav-left a:focus {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .mobile-nav-left ul li:hover > ul {
+        display: block;
+        position: static;
+    }
+
+    .mobile-nav-left .current-menu-item > a,
+    .mobile-nav-left .current-menu-ancestor > a,
+    .mobile-nav-left .current_page_item > a,
+    .mobile-nav-left .current_page_ancestor > a {
+    }
+
+    .mobile-nav-right {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+
+    .mobile-nav-right ul {
+        list-style: none;
+        margin: 0 0 0 0px;
+        padding-left: 0;
+    }
+
+    .mobile-nav-right li {
+        display: block;
+        width: 100%;
+        padding: 5px -3px 5px 3px;
+        margin-bottom: 4px;
+    }
+
+    .mobile-nav-right li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .mobile-nav-right a {
+        color: #ffffff;
+        display: block;
+        line-height: 41px;
+        padding: 0 12px;
+        padding-right: 0px;
+        text-decoration: none;  
+        font-family: 'Lato';
+        font-size: 16px;
+        font-weight: 300; 
+    }
+
+    .mobile-nav-right ul > li {
+        margin-left: 0px;
+    }
+
+    .mobile-nav-right ul ul {
+        display: none;
+        float: left;
+        position: absolute;
+        background: #000000;
+        width: 100%;
+    }
+
+    .mobile-nav-right ul ul li {
+        background: #000000;
+    }
+
+    .mobile-nav-right ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    .mobile-nav-right ul ul a {
+        background: #000000;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 300;
+        height: auto;
+        padding: 10px 10px;
+        width: 100%;
+    }
+
+    .mobile-nav-right li:hover > a,
+    .mobile-nav-right li:hover,
+    .mobile-nav-right ul ul :hover > a,
+    .mobile-nav-right a:focus {
+        background: #B3B3B3;
+        color: #000000;
+    }
+
+    .mobile-nav-right li:hover > a,
+    .mobile-nav-right li:hover,
+    .mobile-nav-right a:focus {
+        background: #B3B3B3;
+        color: #000000;
+    }
+
+    .mobile-nav-right ul li:hover > ul {
+        display: block;
+        position: static;
+    }
+
+    .main-menu .current-menu-item > a,
+    .main-menu .current-menu-ancestor > a,
+    .main-menu .current_page_item > a,
+    .main-menu .current_page_ancestor > a {
+    }
+
+	/* Header -------------------- */
+	.header-area {
+		width: 650px;
+		margin: auto;
+	}
+
+	.masthead {
+		width: 640px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.header-right {
+		margin: auto;
+		margin-left: 155px;
+		text-align: center;
+	}
+
+	.social-area {
+        margin-left: 15px;
+    }
+
+    .giornalismo-social-link {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .giornalismo-social-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .giornalismo-social-link p {
+        display: none !important;
+    }
+
+    .todays-date {
+        border-top: 1px solid #000000;
+    }
+
+    /* Wrap -------------------- */
+    .wrap {
+    	width: 650px;
+    }
+
+    /* Sidebars -------------------- */
+	.mobile-sidebar{
+        display: block !important;
+        float: left;
+        position: relative;
+        margin: auto;
+        width: 640px;
+    }
+
+    .mobile-sidebar .right-sidebar {
+        display: block;
+        width: 100%;
+        border-left: 0px;
+    }
+
+    .mobile-sidebar .left-sidebar {
+        display: none;
+        border-right: 0px;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    /* Home -------------------- */
+    .home-posts-area {
+        width: 640px !important;
+        margin: auto !important;
+        padding-right: 0px !important;
+    }
+
+    .home-center {
+        width: 640px !important;
+        margin: auto;
+        border-bottom: 1px solid #000000;
+        margin-bottom: 10px;
+    }
+
+    /* Top Story -------------------- */
+    .top-story {
+        width: 640px !important;
+        padding: 0px !important;
+    }
+
+    .top-story .featured-photo {
+        width: 640px !important;
+        height: 384px !important;
+    }
+
+    /* Column One -------------------- */
+    .column-one {
+        width: 320px !important;
+        padding-right: 5px !important;
+    }
+
+    .column-one .featured-photo {
+        width: 310px !important;
+        height: 186px !important;
+    }
+
+    /* Column Two -------------------- */
+    .column-two {
+        width: 320px !important;
+    }
+
+    .column-two .featured-photo {
+        width: 310px !important;
+        height: 186px !important;
+    }
+
+    /* Column Three -------------------- */
+    .column-three {
+        width: 640px !important;
+        padding: 0px !important;
+        border: none !important;
+        float: left !important;
+        position: relative !important;
+        border-top: 1px solid #000000;
+    }
+
+    .column-three .featured-photo {
+        width: 640px !important;
+        height: 384px !important;
+    }
+
+    /* Single Post -------------------- */
+    .post-single {
+        width: 640px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none;
+    }
+
+    .post-single .featured-photo {
+        width: 640px !important;
+        height: 384px !important;
+    }
+
+    .post-single .related-stories .story, .post-single .latest-category .story {
+        margin-right: 47px;
+        margin-left: 47px;
+    }
+
+    .post-single .related-stories article.story:last-child, .post-single .latest-category article.story:last-child {
+    	display: none !important;
+    }
+
+    /* Archive -------------------- */
+    .index {
+        width: 640px;
+        padding: 0px !important;
+        float: none;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Page ---------------------- */
+    .page-single {
+        width: 640px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+
+    /* Staff Page ---------------------- */
+    .staff {
+        width: 640px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+
+    /* 404 Page ---------------------- */
+    .post-404 {
+        width: 640px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+}
+
+/*
+II. Screen Width between 700px and 979px---------------- */
+@media only screen and (min-width: 700px) and (max-width: 979px) {
+	/* Header -------------------- */
+	.header-area {
+		width: 700px;
+		margin: auto;
+	}
+
+	.masthead {
+		width: 690px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.header-right {
+		margin: auto;
+		margin-left: 178px;
+		text-align: center;
+	}
+
+	.social-area {
+        margin-left: 15px;
+    }
+
+    .giornalismo-social-link {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .giornalismo-social-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .giornalismo-social-link p {
+        display: none !important;
+    }
+    .top-menu div, .main-menu div {
+        width: 700px;
+        margin: auto;
+    }
+
+    /* Wrap -------------------- */
+    .wrap {
+    	width: 690px;
+    }
+
+    /* Sidebars -------------------- */
+	.mobile-sidebar{
+        display: block !important;
+        float: left;
+        position: relative;
+        margin: auto;
+        width: 690px;
+    }
+
+    .mobile-sidebar .right-sidebar {
+        display: block;
+        width: 100%;
+        border-left: 0px;
+    }
+
+    .mobile-sidebar .left-sidebar {
+        display: none;
+        border-right: 0px;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    /* Home -------------------- */
+    .home-posts-area {
+        width: 690px !important;
+        margin: auto !important;
+        padding-right: 0px !important;
+    }
+
+    .home-center {
+        width: 690px !important;
+        margin: auto;
+        border-bottom: 1px solid #000000;
+        margin-bottom: 10px;
+    }
+
+    /* Top Story -------------------- */
+    .top-story {
+        width: 690px !important;
+        padding: 0px !important;
+    }
+
+    .top-story .featured-photo {
+        width: 690px !important;
+        height: 414px !important;
+    }
+
+    /* Column One -------------------- */
+    .column-one {
+        width: 345px !important;
+        padding-right: 5px !important;
+    }
+
+    .column-one .featured-photo {
+        width: 335px !important;
+        height: 201px !important;
+        padding-right: 0px;
+    }
+
+    /* Column Two -------------------- */
+    .column-two {
+        width: 345px !important;
+    }
+
+    .column-two .featured-photo {
+        width: 335px !important;
+        height: 201px !important;
+    }
+
+    /* Column Three -------------------- */
+    .column-three {
+        width: 690px !important;
+        padding: 0px !important;
+        border: none !important;
+        float: left !important;
+        position: relative !important;
+    }
+
+    .column-three .featured-photo {
+        width: 690px !important;
+        height: 414px !important;
+    }
+
+    /* Single Post -------------------- */
+    .post-single {
+        width: 690px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none;
+    }
+
+    .post-single .featured-photo {
+        width: 690px !important;
+        height: 414px !important;
+    }
+
+    .post-single .related-stories .story, .post-single .latest-category .story {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .post-single .related-stories article.story:last-child, .post-single .latest-category article.story:last-child {
+    	display: none !important;
+    }
+
+    /* Archive -------------------- */
+    .index {
+        width: 690px;
+        padding: 0px !important;
+        float: none;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Page ---------------------- */
+    .page-single {
+        width: 690px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+
+    /* Staff Page ---------------------- */
+    .staff {
+        width: 690px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+
+    /* 404 Page ---------------------- */
+    .post-404 {
+        width: 690px !important;
+        padding: 0px !important;
+        margin: auto;
+        float: none !important;
+    }
+}

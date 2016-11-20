@@ -1,0 +1,61 @@
+a,
+#wp-calendar caption,
+hr,
+.footer p {
+    color: #8D0000;
+}
+.top-menu li:hover > a, .top-menu a:focus,
+.main-menu, .main-menu ul ul a,
+.breadcrumbs li,
+.label-head, .label-head a,
+.read-more, .read-more a,
+#reply-title, .latest-category .title, .related-stories .title,
+.index .title,
+.index .older a, .index .newer a {
+    background-color: #8D0000 !important;
+    color: #FFFFFF !important;
+}
+.top-menu ul ul a,
+.main-menu li:hover > a, .main-menu a:focus,
+.read-more:hover, .read-more a:hover,
+.index .older a:hover, .index .newer a:hover {
+    background-color: #C80000 !important;
+}
+.todays-date,
+.top-story, .top-story-header,
+.column-header {
+    border-bottom: 1px solid #8D0000;
+}
+.right-sidebar, .column-three {
+    border-left: 1px solid #8D0000;
+}
+.left-sidebar, .column-one {
+    border-right: 1px solid #8D0000;
+}
+.widget-title {
+    border-bottom: 1px solid #8D0000;
+    border-top: 1px solid #8D0000;
+}
+#wp-calendar th, #wp-calendar tfoot, #wp-calendar #today, #wp-calendar td:hover, #wp-calendar td a:hover {
+    background-color: #8D0000 !important;
+}
+tbody tr:nth-child(odd) {
+    background-color: #C81719;
+}
+tbody tr:nth-child(even) {
+    background-color: #901112;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+    background-color: #8D0000 !important;
+    border: 1px solid #8D0000;
+}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button {
+    color: #8D0000;
+    background-color: #FFFFFF !important;
+}
+.reply, .comment-navigation .newer a, .comment-navigation .older a, input#submit {
+    background-color: #C80000 !important;
+}
+.reply:hover, .comment-navigation .newer a:hover, .comment-navigation .older a:hover, input#submit:hover {
+    background-color: #8D0000 !important;
+}

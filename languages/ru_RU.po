@@ -1,0 +1,696 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Giornalismo\n"
+"POT-Creation-Date: 2015-06-20 15:56-0600\n"
+"PO-Revision-Date: 2015-06-20 16:05-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:16
+msgid "Whoops! That's not here."
+msgstr "К сожалению! Это не здесь."
+
+#: 404.php:17
+msgid "We're sorry but the post or page you were looking for isn't here. "
+msgstr "Мы огорченны но пост или страницу, которую вы ищете, не здесь."
+
+#: 404.php:17
+msgid "Click here"
+msgstr "Нажмите здесь"
+
+#: 404.php:17
+msgid ""
+"to return to the homepage or use the search bar below to search for what you "
+"were looking for."
+msgstr ""
+"чтобы вернуться на домашнюю страницу или использовать адвокатское сословие "
+"поиска для поиска что вы искали."
+
+#: admin/class-tgm-plugin-activation.php:161
+msgid "Install Required Plugins"
+msgstr "Установите Плагины"
+
+#: admin/class-tgm-plugin-activation.php:162
+msgid "Install Plugins"
+msgstr "Установить"
+
+#: admin/class-tgm-plugin-activation.php:163
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Установка Плагина: %s"
+
+#: admin/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr "Что-то пошло не так :-("
+
+#: admin/class-tgm-plugin-activation.php:165
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Для этой темы требуется следующий плагин: %1$s."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Для этой темы рекомендуется следующий плагин: %1$s."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:167
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+"Извините, не достаточно прав для установки %s плагина. Свяжитесь с "
+"администратором этого сайта для получения помощи по вопросу обновления "
+"плагина."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "В данный момент не активен необходимый плагин: %1$s."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "В данный момент не активен рекомендуемый плагин: %1$s."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+"Извините, но вы не имеете достаточно прав для активации %s плагина. "
+"Свяжитесь с администратором этого сайта для получения помощи по вопросу "
+"обновления плагина."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:171
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"Следующий плагин необходимо обновить до последней версии для максимальной "
+"совместимости с темой: %1$s."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:172
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+"Извините, не достаточно прав для обновления %s плагина. Свяжитесь с "
+"администратором этого сайта для получения помощи по вопросу обновления "
+"плагина."
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:173
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Установка плагина"
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Активировать плагин"
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:175
+msgid "Return to Required Plugins Installer"
+msgstr "Вернутся к установке необходимых плагинов"
+
+#: admin/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr "Вернуться Консоли"
+
+#: admin/class-tgm-plugin-activation.php:177
+#: admin/class-tgm-plugin-activation.php:1952
+msgid "Plugin activated successfully."
+msgstr "Плагин успешно активирован."
+
+#: admin/class-tgm-plugin-activation.php:178
+#: admin/class-tgm-plugin-activation.php:1643
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Этот плагин успешно активирован:"
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Все плагины установлены и успешно активированы. %1$s"
+
+#: admin/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr "Отклонить уведомление"
+
+#: admin/class-tgm-plugin-activation.php:536
+#: admin/class-tgm-plugin-activation.php:2169
+msgid "Return to the Dashboard"
+msgstr "Вернуться в Консоль"
+
+#: admin/class-tgm-plugin-activation.php:1171
+msgid "Private Repository"
+msgstr "Частный Репозиторий"
+
+#: admin/class-tgm-plugin-activation.php:1174
+msgid "Pre-Packaged"
+msgstr "В пакете"
+
+#: admin/class-tgm-plugin-activation.php:1179
+msgid "WordPress Repository"
+msgstr "WordPress хранилище (Репозиторий)"
+
+#: admin/class-tgm-plugin-activation.php:1182
+msgid "Required"
+msgstr "Обязательно"
+
+#: admin/class-tgm-plugin-activation.php:1182
+msgid "Recommended"
+msgstr "Рекомендуется"
+
+#: admin/class-tgm-plugin-activation.php:1185
+msgid "Not Installed"
+msgstr "Не установлено"
+
+#: admin/class-tgm-plugin-activation.php:1187
+msgid "Installed But Not Activated"
+msgstr "Установлено, но не активировано"
+
+#: admin/class-tgm-plugin-activation.php:1292
+#: admin/class-tgm-plugin-activation.php:1405
+msgid "Install"
+msgstr "Установить"
+
+#: admin/class-tgm-plugin-activation.php:1316
+#: admin/class-tgm-plugin-activation.php:1406
+msgid "Activate"
+msgstr "Активировать"
+
+#: admin/class-tgm-plugin-activation.php:1368
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Не найдено плагинов для установки, обновления или активации. <a href=“%1$s” "
+"title=“Вернуться в панель управления”>Вернуться в панель управления</a>"
+
+#: admin/class-tgm-plugin-activation.php:1384
+msgid "Plugin"
+msgstr "Плагин"
+
+#: admin/class-tgm-plugin-activation.php:1385
+msgid "Source"
+msgstr "Источник"
+
+#: admin/class-tgm-plugin-activation.php:1386
+msgid "Type"
+msgstr "Тип"
+
+#: admin/class-tgm-plugin-activation.php:1387
+msgid "Status"
+msgstr "Статус"
+
+#: admin/class-tgm-plugin-activation.php:1935
+msgid "Install package not available."
+msgstr "Пакет установки недоступен."
+
+#: admin/class-tgm-plugin-activation.php:1936
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "Загрузка пакета установки из <span class=“code”>%s</span>&#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1937
+msgid "Unpacking the package&#8230;"
+msgstr "Распаковка пакета &#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1938
+msgid "Installing the plugin&#8230;"
+msgstr "Установка плагина &#8230;"
+
+#: admin/class-tgm-plugin-activation.php:1939
+msgid "Plugin install failed."
+msgstr "Установка плагина не удалась."
+
+#: admin/class-tgm-plugin-activation.php:1940
+msgid "Plugin installed successfully."
+msgstr "Установка плагина выполнена успешно."
+
+#: admin/class-tgm-plugin-activation.php:1951
+msgid "Plugin activation failed."
+msgstr "Активация плагина не удалась."
+
+#: admin/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Запущен процесс активации. Этот процесс может занимать некоторое время на "
+"разных хостинга, пожалуйста, будьте терпеливы."
+
+#: admin/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s успешно установлен и активирован."
+
+#: admin/class-tgm-plugin-activation.php:2066
+#: admin/class-tgm-plugin-activation.php:2075
+msgid "Show Details"
+msgstr "Показать детали"
+
+#: admin/class-tgm-plugin-activation.php:2066
+#: admin/class-tgm-plugin-activation.php:2075
+msgid "Hide Details"
+msgstr "Скрыть детали"
+
+#: admin/class-tgm-plugin-activation.php:2067
+msgid "All installations and activations have been completed."
+msgstr "Все установки были успешно установлены и активированы."
+
+#: admin/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Установка и активация плагина %1$s (%2$d/%3$d)"
+
+#: admin/class-tgm-plugin-activation.php:2072
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Запущен процесс установки. Этот процесс может занимать некоторое время на "
+"разных хостинга, пожалуйста, будьте терпеливы."
+
+#: admin/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Произошла ошибка при установке %1$s: <strong>S:%2$s.</strong>"
+
+#: admin/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Установка %1$s не удалась."
+
+#: admin/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s успешно установлен."
+
+#: admin/class-tgm-plugin-activation.php:2076
+msgid "All installations have been completed."
+msgstr "Все установки были завершены."
+
+#: admin/class-tgm-plugin-activation.php:2077
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Установка плагина %1$s (%2$d/%3$d)"
+
+#: admin/theme-options.php:17
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: admin/theme-options.php:18
+msgid "This is the general settings section."
+msgstr "Это раздел Общие параметры."
+
+#: admin/theme-options.php:35
+msgid "Layout"
+msgstr "Макет"
+
+#: admin/theme-options.php:39 admin/theme-options.php:454 functions.php:93
+msgid "Right Sidebar"
+msgstr "Правая боковая панель"
+
+#: admin/theme-options.php:40 admin/theme-options.php:455 functions.php:84
+msgid "Left Sidebar"
+msgstr "Левая боковая панель"
+
+#: admin/theme-options.php:41 admin/theme-options.php:456
+msgid "Two Sidebars"
+msgstr "Две боковые"
+
+#: admin/theme-options.php:58 functions.php:29
+msgid "Top Menu"
+msgstr "Верхнее меню"
+
+#: admin/theme-options.php:76
+msgid "Show Today's Date"
+msgstr "Показать текущую дату"
+
+#: admin/theme-options.php:94
+msgid "Display the Author's Position"
+msgstr "Отображает позицию автора"
+
+#: admin/theme-options.php:112
+msgid "Display Breadcrumbs"
+msgstr "Отображать динамическую навигацию"
+
+#: admin/theme-options.php:130
+msgid "Show Related Stories"
+msgstr "Похожие истории"
+
+#: admin/theme-options.php:148
+msgid "Show latest posts from a category on the single post template"
+msgstr "Показать последние сообщения из категории на единый шаблон"
+
+#: admin/theme-options.php:161
+msgid "Social Media Settings"
+msgstr "Страница настроек социальных сред"
+
+#: admin/theme-options.php:162
+msgid "This is the social media settings section."
+msgstr "Это раздел параметров социальных средств массовой информации."
+
+#: admin/theme-options.php:179
+msgid "Facebook Link"
+msgstr "Ссылка Facebook"
+
+#: admin/theme-options.php:197
+msgid "Twitter Link"
+msgstr "Ссылка Twitter"
+
+#: admin/theme-options.php:215
+msgid "Google+ Link"
+msgstr "Google+ ссылка"
+
+#: admin/theme-options.php:233
+msgid "RSS Feed Link"
+msgstr "Ссылку на ленту RSS"
+
+#: admin/theme-options.php:251
+msgid "Show Author's Twitter Handle"
+msgstr "Показать автора щебетать ручкой"
+
+#: admin/theme-options.php:269
+msgid "Site Twitter Handle"
+msgstr "Сайта щебетать ручкой"
+
+#: admin/theme-options.php:287
+msgid "Add Support for Twitter Cards"
+msgstr "Добавить поддержку для Twitter карт"
+
+#: admin/theme-options.php:300
+msgid "Homepage Settings"
+msgstr "Настройки Главной страницы"
+
+#: admin/theme-options.php:301
+msgid "This is the homepage settings section."
+msgstr "домашняя страница"
+
+#: admin/theme-options.php:311 admin/theme-options.php:481
+msgid "None"
+msgstr "Нет"
+
+#: admin/theme-options.php:325
+msgid "Top Story Category"
+msgstr "Категория историй"
+
+#: admin/theme-options.php:344
+msgid "Column One Category"
+msgstr "Колонка 1 Категория"
+
+#: admin/theme-options.php:363
+msgid "Number of Stories in the First Column"
+msgstr "Количество этажей в первом столбце"
+
+#: admin/theme-options.php:381
+msgid "Column Two Category"
+msgstr "Колонка 2 Категория"
+
+#: admin/theme-options.php:400
+msgid "Number of Stories in the Second Column"
+msgstr "Количество этажей во второй колонке"
+
+#: admin/theme-options.php:418
+msgid "Column Three Category"
+msgstr "Колонка 3 Категория"
+
+#: admin/theme-options.php:437
+msgid "Number of Stories in the Third Column"
+msgstr "Количество этажей в третьей колонке"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "0 Comments"
+msgstr "0 Комментариев"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "% Comments"
+msgstr "% Коментариев"
+
+#: archive.php:28 author.php:31 home.php:43 home.php:79 home.php:115
+#: home.php:152 single.php:34
+msgid "Comments Off"
+msgstr "Комментарии отключены"
+
+#: archive.php:39 author.php:40
+msgid "Older Posts&rsaquo;&rsaquo;"
+msgstr "Предыдущие сообщения&rsaquo;&rsaquo;"
+
+#: archive.php:40 author.php:41
+msgid "&lsaquo;&lsaquo;Newer Posts"
+msgstr "&lsaquo;&lsaquo;Новые сообщения"
+
+#: author.php:20
+msgid "Posts by: "
+msgstr "Автор: "
+
+#: comments.php:14
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Пожалуйста, не загружайте эту страницу напрямую. Спасибо!"
+
+#: comments.php:17
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Эта публикация защищена паролем. Введите пароль для просмотра."
+
+#: comments.php:23
+msgid "No Responses"
+msgstr "Нет Комментариев"
+
+#: comments.php:23
+msgid "One Response"
+msgstr "Один Комментарий"
+
+#: comments.php:23
+msgid "% Responses"
+msgstr "% ответов"
+
+#: comments.php:23
+msgid "to"
+msgstr "до"
+
+#: comments.php:38
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: footer.php:14
+msgid "| Giornalismo | Copyright  &copy;"
+msgstr "| Giornalismo | авторское право  &copy;"
+
+#: functions.php:30
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: functions.php:75
+msgid "Continue Reading&rsaquo;&rsaquo;"
+msgstr "Продолжить чтение &rsaquo; &rsaquo;"
+
+#: functions.php:102
+msgid "Header Widget Area"
+msgstr "Виджет в области заголовка"
+
+#: functions.php:104
+msgid "Use this area to display an ad in the header area."
+msgstr ""
+"Эта область используется для отображения объявлений в области верхнего "
+"колонтитула."
+
+#: functions.php:235
+msgid " on Facebook"
+msgstr "в Facebook"
+
+#: functions.php:238
+msgid " on Twitter"
+msgstr "в Twitter"
+
+#: functions.php:241
+msgid " on Google+"
+msgstr "в Google +"
+
+#: functions.php:244 functions.php:246
+msgid "'s RSS Feed"
+msgstr " RSS канал"
+
+#: functions.php:265
+msgid "Home"
+msgstr "Главная"
+
+#: functions.php:297
+msgid "Author Archive: "
+msgstr "Архив Автора: "
+
+#: functions.php:298
+msgid "Blog Archives"
+msgstr "Архив Блога"
+
+#: functions.php:299
+msgid "Search Results: "
+msgstr "Wyniki wyszukiwania:"
+
+#: functions.php:300
+msgid "Staff"
+msgstr "Персонал"
+
+#: functions.php:412
+msgid "Story Highlights"
+msgstr "Основные моменты истории"
+
+#: functions.php:442
+msgid "Related Stories"
+msgstr "Похожие истории"
+
+#: functions.php:468
+msgid "More Stories From "
+msgstr "Больше историй из "
+
+#: functions.php:503
+msgid "About"
+msgstr "Об авторе:"
+
+#: functions.php:520 functions.php:523 functions.php:526
+msgid "Archives for "
+msgstr "Архивы"
+
+#: functions.php:532
+msgid "Search results for "
+msgstr "Результаты поиска для"
+
+#: functions.php:539
+msgid "Page "
+msgstr "Страница"
+
+#: functions.php:558
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: functions.php:559
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s дата %2$s"
+
+#: functions.php:559
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: functions.php:564
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий на проверке модератора."
+
+#: functions.php:580
+msgid "del"
+msgstr "удалять"
+
+#: functions.php:581
+msgid "spam"
+msgstr "спам"
+
+#: functions.php:618 functions.php:620
+msgid "Written by "
+msgstr "Автор "
+
+#: header.php:38
+msgid "Go to ..."
+msgstr "Перейти…"
+
+#: page-staff-page.php:18
+msgid " Staff"
+msgstr " Персонал"
+
+#: single.php:40
+msgid "Tags: "
+msgstr "Метки: "
+
+#. Theme Name of the plugin/theme
+msgid "Giornalismo"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.jacobmartella.com/giornalismo"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A theme to make your blog look similar to that of a newspaper on the "
+"homepage and features spots for ads, linking to social media and other "
+"customizeable features."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jacob Martella"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.jacobmartella.com/"
+msgstr ""
