@@ -49,7 +49,7 @@ get_header(); ?>
 		<!--End Top Story Section-->
 		<!--Begin Column One-->
 		<section class="column-one home-column">
-			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ) ) { $column_one_cat = esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ); } else { $column_one_cat = ''; } ?>
+			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ) != 'none' ) { $column_one_cat = esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ); } else { $column_one_cat = ''; } ?>
 			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-one-count' ) ) ) { $column_one_count = esc_attr( get_theme_mod( 'giornalismo-column-one-count' ) ); } else { $column_one_count = 5; } ?>
 			<?php if ( ( $column_one_cat != '' ) and ( $column_one_cat != 'none' ) ) {
 				$column_one_slug = get_category( $column_one_cat );
@@ -84,17 +84,17 @@ get_header(); ?>
 			</article>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
             <?php
-            if ( esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ) ) { ?>
+            if ( esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ) != 'none' ) { ?>
                 <a class="read-more-posts-link" <?php echo $category_one_color; ?> href="<?php echo esc_url( get_category_link( $column_one_cat, 'category' ) ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
             <?php } else { ?>
-                <a class="read-more-posts-link" href="<?php echo esc_url( get_home_url() . '/?paged=2' ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
+                <?php next_posts_link( '<span class="read-more-posts-link">' . __( 'Next Posts&rsaquo;&rsaquo;', 'nuovo' ) . '</span>' ); ?>
             <?php }
             ?>
 		</section>
 		<!--End Column One-->
 		<!--Begin Column Two-->
 		<section class="column-two home-column">
-			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-two-category' ) ) ) { $column_two_cat = esc_attr( get_theme_mod( 'giornalismo-column-two-category' ) ); } else { $column_two_cat = ''; } ?>
+			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-two-category' ) != 'none' ) ) { $column_two_cat = esc_attr( get_theme_mod( 'giornalismo-column-two-category' ) ); } else { $column_two_cat = ''; } ?>
 			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-two-count' ) ) ) { $column_two_count = esc_attr( get_theme_mod( 'giornalismo-column-two-count' ) ); } else { $column_two_count = 5; } ?>
 			<?php if ( ( $column_two_cat != '' ) and ( $column_two_cat != 'none' ) ) {
 				$column_two_slug = get_category( $column_two_cat );
@@ -134,7 +134,7 @@ get_header(); ?>
 	<!--End Column Two-->
 	<!--Begin Column Three-->
 	<section class="column-three home-column">
-		<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-three-category' ) ) ) { $column_three_cat = esc_attr( get_theme_mod( 'giornalismo-column-three-category' ) ); } else { $column_three_cat = ''; } ?>
+		<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-three-category' ) ) != 'none' ) { $column_three_cat = esc_attr( get_theme_mod( 'giornalismo-column-three-category' ) ); } else { $column_three_cat = ''; } ?>
 			<?php if ( esc_attr( get_theme_mod( 'giornalismo-column-three-count' ) ) ) { $column_three_count = esc_attr( get_theme_mod( 'giornalismo-column-three-count' ) ); } else { $column_three_count = 5; } ?>
 			<?php if ( ( $column_three_cat != '' ) and ( $column_three_cat != 'none' ) ) {
 				$column_three_slug = get_category( $column_three_cat );
