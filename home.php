@@ -83,6 +83,13 @@ get_header(); ?>
 				<?php the_excerpt(); ?>
 			</article>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php
+            if ( esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ) ) { ?>
+                <a class="read-more-posts-link" <?php echo $category_one_color; ?> href="<?php echo esc_url( get_category_link( $column_one_cat, 'category' ) ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
+            <?php } else { ?>
+                <a class="read-more-posts-link" href="<?php echo esc_url( get_home_url() . '/?paged=2' ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
+            <?php }
+            ?>
 		</section>
 		<!--End Column One-->
 		<!--Begin Column Two-->

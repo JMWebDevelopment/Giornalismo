@@ -196,12 +196,7 @@ function giornalismo_register_required_plugins() {
             'name'      => 'Story Lines',
             'slug'      => 'story-lines',
             'required'  => false,
-        ),
-		array(
-			'name'      => 'Category Color',
-			'slug'      => 'category-color',
-			'required'  => false,
-		)
+        )
     );
 
     /**
@@ -225,6 +220,19 @@ function giornalismo_register_required_plugins() {
 
 }
 add_action( 'tgmpa_register', 'giornalismo_register_required_plugins' );
+
+/**
+ * Returns the location of the custom index template
+ *
+ * @return string, path to custom index template
+ */
+function giornalismo_change_page_two( $template ){
+    if( is_front_page() && is_paged() ){
+        $template = locate_template( array( 'index.php' ) );
+    }
+    return $template;
+}
+add_action( 'template_include','giornalismo_change_page_two' );
 
 /**
 * II. Header Functions
