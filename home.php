@@ -129,6 +129,13 @@ get_header(); ?>
 				<?php the_excerpt(); ?>
 			</article>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php
+            if ( esc_attr( get_theme_mod( 'giornalismo-column-two-category' ) ) != 'none' ) { ?>
+                <a class="read-more-posts-link" <?php echo $category_two_color; ?> href="<?php echo esc_url( get_category_link( $column_two_cat, 'category' ) ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
+            <?php } else { ?>
+                <?php next_posts_link( '<span class="read-more-posts-link">' . __( 'View More &rsaquo;&rsaquo;', 'nuovo' ) . '</span>' ); ?>
+            <?php }
+            ?>
 		</section> 
 	</section>
 	<!--End Column Two-->
@@ -139,7 +146,7 @@ get_header(); ?>
 			<?php if ( ( $column_three_cat != '' ) and ( $column_three_cat != 'none' ) ) {
 				$column_three_slug = get_category( $column_three_cat );
 				if( function_exists( 'rl_color' ) ) { $category_three_color = 'style="background-color: ' . rl_color( $column_three_cat ) . ';"'; } else { $category_three_color = ''; }?>
-				<h5 class="label-head category-<?php echo $column_three_cat->slug; ?>" <?php echo $category_three_color; ?>><a href="<?php echo esc_url( get_category_link( $column_three_cat ) ); ?>" <?php echo $category_three_color; ?>><?php echo get_cat_name( $column_three_cat ); ?></a></h5>
+				<h5 class="label-head category-<?php echo $column_three_slug->slug; ?>" <?php echo $category_three_color; ?>><a href="<?php echo esc_url( get_category_link( $column_three_cat ) ); ?>" <?php echo $category_three_color; ?>><?php echo get_cat_name( $column_three_cat ); ?></a></h5>
 			<?php } ?>
 			<?php
 				$column_three_args = array(
@@ -168,6 +175,13 @@ get_header(); ?>
 				<?php the_excerpt(); ?>
 			</article>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
+        <?php
+        if ( esc_attr( get_theme_mod( 'giornalismo-column-three-category' ) ) != 'none' ) { ?>
+            <a class="read-more-posts-link" <?php echo $category_three_color; ?> href="<?php echo esc_url( get_category_link( $column_three_cat, 'category' ) ); ?>"><?php _e( 'View More &rsaquo;&rsaquo;', 'giornalismo' ); ?></a>
+        <?php } else { ?>
+            <?php next_posts_link( '<span class="read-more-posts-link">' . __( 'View More &rsaquo;&rsaquo;', 'nuovo' ) . '</span>' ); ?>
+        <?php }
+        ?>
 	</section>
 	<!--End Column Three-->
 </main>

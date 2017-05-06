@@ -1364,6 +1364,18 @@ B. Column One
 .column-one .read-more:hover a {
      color: #252525;
 }
+.column-one .read-more-posts-link {
+     display: block;
+     width: 100%;
+     color: #ffffff;
+     background-color: #252525;
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     font-size: 18px;
+     margin-top: 4px;
+     margin-bottom: 4px;
+     padding: 5px 0 5px 3px;
+}
 /*
 C. Column Two
 ------------------------------------------- */
@@ -1463,6 +1475,18 @@ C. Column Two
 
 .column-two .read-more:hover a {
      color: #252525;
+}
+.column-two .read-more-posts-link {
+     display: block;
+     width: 100%;
+     color: #ffffff;
+     background-color: #252525;
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     font-size: 18px;
+     margin-top: 4px;
+     margin-bottom: 4px;
+     padding: 5px 0 5px 3px;
 }
 /*
 D. Column Three
@@ -1564,6 +1588,18 @@ D. Column Three
 
 .column-three .read-more:hover a {
      color: #252525;
+}
+.column-three .read-more-posts-link {
+     display: block;
+     width: 100%;
+     color: #ffffff;
+     background-color: #252525;
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     font-size: 18px;
+     margin-top: 4px;
+     margin-bottom: 4px;
+     padding: 5px 0 5px 3px;
 }
 /*
 VII. Single Post
