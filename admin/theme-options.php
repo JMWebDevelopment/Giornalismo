@@ -43,6 +43,31 @@ function giornalismo_general_customizer( $wp_customize ) {
     	)
 	);
 
+    //* Layout option
+    $wp_customize->add_setting(
+        'giornalismo-color-theme',
+        array(
+            'default'           => 'right-sidebar',
+            'sanitize_callback' => 'giornalismo_sanitize_select',
+        )
+    );
+
+    $wp_customize->add_control(
+        'giornalismo-color-theme',
+        array(
+            'label'     => __ ( 'Color Theme', 'giornalismo' ),
+            'section'   => 'general',
+            'type'      => 'select',
+            'choices'   => array(
+                'default'   => __( 'Default', 'giornalismo' ),
+                'blue'      => __( 'Blue', 'giornalismo' ),
+                'green'     => __( 'Green', 'giornalismo' ),
+                'purple'    => __( 'Purple', 'giornalismo' ),
+                'red'       => __( 'Red', 'giornalismo' )
+            )
+        )
+    );
+
 	//* Top Menu
 	$wp_customize->add_setting(
    		'giornalismo-top-menu',
@@ -78,6 +103,24 @@ function giornalismo_general_customizer( $wp_customize ) {
         	'type'      => 'checkbox',
     	)
 	);
+
+    //* Author Bio
+    $wp_customize->add_setting(
+        'giornalismo-author-bio',
+        array(
+            'default'           => '1',
+            'sanitize_callback' => 'giornalismo_sanitize_checkbox',
+        )
+    );
+
+    $wp_customize->add_control(
+        'giornalismo-author-bio',
+        array(
+            'label'     => __('Display the Author\'s Bio After Posts', 'giornalismo'),
+            'section'   => 'general',
+            'type'      => 'checkbox',
+        )
+    );
 
     //* Author Position
     $wp_customize->add_setting(
