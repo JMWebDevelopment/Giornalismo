@@ -129,9 +129,6 @@ function giornalismo_enqueue_scripts() {
 	if ( esc_attr( get_theme_mod( 'giornalismo-layout' ) ) == 'left-sidebar' ) {
 		wp_enqueue_style( 'giornalismo-left-sidebar', get_template_directory_uri() . '/css/left-sidebar.css' );
 	}
-	if ( esc_attr( get_theme_mod( 'giornalismo-layout' ) ) == 'two-sidebars' ) {
-		wp_enqueue_style( 'giornalismo-two-sidebars', get_template_directory_uri() . '/css/two-sidebars.css' );
-	}
 	wp_register_style( 'giornalismo-lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 	wp_enqueue_style( 'giornalismo-lato'  );
 	wp_register_style( 'giornalismo-oswald', '//fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext' );
@@ -142,22 +139,25 @@ function giornalismo_enqueue_scripts() {
 	wp_enqueue_style( 'giornalismo-source-sans-sans' );
 	wp_register_style( 'giornalismo-quattrocento', '//fonts.googleapis.com/css?family=Quattrocento:700' );
 	wp_enqueue_style( 'giornalismo-quattrocento' );
-	wp_register_script( 'giornalismo-mobile-nav', get_template_directory_uri() . '/js/mobile-nav.js' );
-	wp_enqueue_script( 'giornalismo-mobile-nav' );
-	wp_register_script( 'giornalismo-mobile-sidebar', get_template_directory_uri() . '/js/mobile-sidebar.js' );
-	wp_enqueue_script( 'giornalismo-mobile-sidebar' );
 	wp_enqueue_script( 'giornalismo-jquery' );
 	wp_enqueue_script( 'giornalismo-jquery-ui-core' );
+    wp_register_script( 'giornalismo-mobile-nav', get_template_directory_uri() . '/js/mobile-nav.js', array('jquery') );
+    wp_enqueue_script( 'giornalismo-mobile-nav' );
+    wp_register_script( 'giornalismo-mobile-sidebar', get_template_directory_uri() . '/js/mobile-sidebar.js', array('jquery') );
+    wp_enqueue_script( 'giornalismo-mobile-sidebar' );
 	wp_register_style( 'giornalismo-mobile-css', get_template_directory_uri() . '/css/mobile.css' );
 	wp_enqueue_style( 'giornalismo-mobile-css' );
 	wp_register_style( 'giornalismo-tablet-css', get_template_directory_uri() . '/css/tablet.css' );
 	wp_enqueue_style( 'giornalismo-tablet-css' );
+    if ( esc_attr( get_theme_mod( 'giornalismo-layout' ) ) == 'two-sidebars' ) {
+        wp_enqueue_style( 'giornalismo-two-sidebars', get_template_directory_uri() . '/css/two-sidebars.css' );
+    }
 	if ( esc_attr( get_theme_mod( 'giornalismo-color-theme' ) == 'red' ) ) {
 		wp_enqueue_style( 'giornalismo-red-theme', get_template_directory_uri() . '/css/red.css' );
 	} elseif ( esc_attr( get_theme_mod( 'giornalismo-color-theme' ) == 'green' ) ) {
 		wp_enqueue_style( 'giornalismo-green-theme', get_template_directory_uri() . '/css/green.css' );
 	} elseif ( esc_attr( get_theme_mod( 'giornalismo-color-theme' ) == 'blue' ) ) {
-		wp_enqueue_style( 'giornalismo-blur-theme', get_template_directory_uri() . '/css/blue.css' );
+		wp_enqueue_style( 'giornalismo-blue-theme', get_template_directory_uri() . '/css/blue.css' );
 	} elseif ( esc_attr( get_theme_mod( 'giornalismo-color-theme' ) == 'purple' ) ) {
 		wp_enqueue_style( 'giornalismo-purple-theme', get_template_directory_uri() . '/css/purple.css' );
 	}
@@ -514,19 +514,21 @@ if ( ! function_exists( 'giornalismo_latest_stories' ) ) {
 if ( ! function_exists( 'giornalismo_author_bio' ) ) {
 	function giornalismo_author_bio() {
 		$html = '';
-		$html = '<section class="author-bio clearfix">';
-		if ( get_avatar( get_the_author_meta( 'email' ) ) ) {
-			$html .= '<div class="mug-shot">' . get_avatar( get_the_author_meta( 'email' ), $size = 96 ) . '</div>';
+		if ( get_theme_mod( 'giornalismo-author-bio' ) == 1 ) {
+			$html = '<section class="author-bio clearfix">';
+			if ( get_avatar( get_the_author_meta( 'email' ) ) ) {
+				$html .= '<div class="mug-shot">' . get_avatar( get_the_author_meta( 'email' ), $size = 96 ) . '</div>';
+			}
+			if ( esc_attr( get_theme_mod( 'giornalismo-author-position' ) ) ) {
+				$position = ', ' . get_the_author_meta( 'author-position' );
+			} else {
+				$position = '';
+			}
+			$html .= '<h3 class="title">' . __( 'About ', 'giornalismo' ) . get_the_author_meta( 'display_name' ) . $position . '</h3>';
+			$html .= '<p class="bio">' . get_the_author_meta( 'description' ) . '</p>';
+			$html .= giornalismo_author_social_area();
+			$html .= '</section>';
 		}
-		if ( esc_attr( get_theme_mod( 'giornalismo-author-position' ) ) ) {
-			$position = ', ' . get_the_author_meta( 'author-position' );
-		} else {
-			$position = '';
-		}
-		$html .= '<h3 class="title">' . __( 'About ', 'giornalismo' ) . get_the_author_meta( 'display_name' ) . $position . '</h3>';
-		$html .= '<p class="bio">' . get_the_author_meta( 'description' ) . '</p>';
-		$html .= giornalismo_author_social_area();
-		$html .= '</section>';
 
 		return $html;
 	}
@@ -638,7 +640,7 @@ if ( ! function_exists( 'giornalismo_author_social_area' ) ) {
 if ( ! function_exists ( 'giornalismo_author_byline' ) ) {
 	function giornalismo_author_byline()
 	{
-		if ( esc_attr( get_theme_mod( 'giornalismo-author-twitter-handle' ) == 1) and ( get_the_author_meta( 'twitter-handle' ) ) ) {
+		if ( esc_attr( get_theme_mod( 'giornalismo-twitter-handle' ) == 1) and ( get_the_author_meta( 'twitter-handle' ) ) ) {
 			$html = __( 'Written by ', 'giornalismo' ) . '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a>, <a href="' . get_the_author_meta( 'twitter-link' ) . ' target="_blank">' . get_the_author_meta( 'twitter-handle' ) . '</a>, ';
 		} else {
 			$html = __( 'Written by ', 'giornalismo' ) . '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a>, ';

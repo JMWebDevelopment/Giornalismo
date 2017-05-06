@@ -37,6 +37,7 @@ get_header(); ?>
 			<!--Grab the story lines if there are any-->
 			<?php echo giornalismo_story_lines(); ?>
 			<?php the_content(); ?>
+            <?php wp_link_pages(); ?>
 			<p class="tags"><?php the_tags( '<strong>' . __( 'Tags: ', 'giornalismo' ) . '</strong>' ); ?></p>
 		</article>
 		<?php if ( get_theme_mod( 'giornalismo-post-navigation' ) == 1 ) { ?>
