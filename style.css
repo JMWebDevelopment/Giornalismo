@@ -339,7 +339,7 @@ p {
      padding: 0;
      font-family: 'Roboto', sans-serif;
      font-weight: 300;
-     font-size: 16px;
+     font-size: 14px;
      color: #000000;
 }
 
@@ -1228,13 +1228,6 @@ A. Top Story
      margin-bottom: 3px;
 }
 
-.top-story p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-}
-
 .top-story .read-more {
      float: right;
      position: relative;
@@ -1334,13 +1327,6 @@ B. Column One
      color: #000000;
      margin-top: 5px;
      margin-bottom: 3px;
-}
-
-.column-one .column-one-story p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
 }
 
 .column-one .read-more {
@@ -1446,13 +1432,6 @@ C. Column Two
      color: #000000;
      margin-top: 5px;
      margin-bottom: 3px;
-}
-
-.column-two .column-two-story p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
 }
 
 .column-two .read-more {
@@ -1562,12 +1541,6 @@ D. Column Three
      margin-bottom: 3px;
 }
 
-.column-three .column-three-story p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-}
 .column-three .read-more {
      float: right;
      position: relative;
@@ -1664,12 +1637,6 @@ VII. Single Post
      margin-bottom: 3px;
 }
 
-.post-single p.tags{
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-}
 /*
 A. Story Lines
 ------------------------------------------- */
@@ -2091,10 +2058,7 @@ p.subscribe-to-comments input {
 p.subscribe-to-comments label {
      top:-2px;
      color:#666;
-} 
-.comment-rss {
-     background:url('images/rss_32.png') no-repeat;
-} 
+}
 .comment-total {
      text-align: center;
      font-size: 1.5em;
@@ -2207,13 +2171,6 @@ A. General
      color: #000000;
      margin-top: 5px;
      margin-bottom: 3px;
-}
-
-.index .story p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
 }
 
 .index .story .read-more {
@@ -2339,12 +2296,6 @@ A. General
      padding-bottom: 10px;
 }
 
-.page-single p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-}
 /*
 B. Staff Page
 ------------------------------------------- */
@@ -2397,15 +2348,6 @@ B. Staff Page
      margin-bottom: 5px;
 }
 
-.staff .bio p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-     margin-top: 5px;
-     margin-bottom: 3px;
-}
-
 .staff .writer .social-links {
      width: 100%;
      height: 50px;
@@ -2442,12 +2384,6 @@ C. 404 Page
      color: #000000;
 }
 
-.post-404 p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
-}
 /*
 XI. Widgets
 ------------------------------------------- */
@@ -2471,13 +2407,6 @@ XI. Widgets
      font-size: 24px;
      color: #000000;
      margin: 2px;
-}
-
-.widget-body p {
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-     font-size: 14px;
-     color: #000000;
 }
 
 /*
