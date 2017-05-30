@@ -2,7 +2,7 @@
 Contributers: Jacob Martella
 Tags: two-columns,three-columns,left-sidebar,right-sidebar,custom-header,custom-menu,editor-style,featured-images,theme-options
 Requires at least: 4.0
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: 1.4
 
 == Description ==
@@ -158,6 +158,12 @@ add_action( 'wp_enqueue_scripts', 'giornalismo_child_theme_styles', 10 ); ?>'
 If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (http://jacobmartella.com/giornalismo-wordpress-theme).
 
 == Changelog ==
+= 1.5 =
+- Added view more links to the bottom of the columns on the homepage. If a category is selected for the column, the link goes to the category page. If not, it goes to page 2.
+- Fixed the issue with the left sidebar not showing.
+- Removed specific styling for all body paragraphs.
+- Tested with WordPress 4.8.
+
 = 1.4 =
 - Fixed: Issue that made the date the same for all posts on the homepage.
 - Tested with WordPress 4.7.
