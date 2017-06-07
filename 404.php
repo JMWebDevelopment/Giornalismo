@@ -6,7 +6,7 @@
 *
 * @author Jacob Martella
 * @package Giornalism
-* @version 1.4
+* @version 1.5
 */
 get_header();
 get_sidebar();
