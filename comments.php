@@ -1,44 +1,67 @@
 <?php
 /**
-* Comments.php
-*
-* Comments template for Giornalismo
-*
-* @author Jacob Martella
-* @package Giornalismo
-* @version 1.5
-*/
+ * The template for displaying comments
+ *
+ * This is the template that displays the area of the page that contains both the current comments
+ * and the comment form.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package wp_rig
+ */
+
+namespace WP_Rig\WP_Rig;
+
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() ) {
+	return;
+}
+
+wp_rig()->print_styles( 'wp-rig-comments' );
+
 ?>
-<?php
-	if ( ! empty( $_SERVER[ 'SCRIPT_FILENAME' ] ) && 'comments.php' == basename( $_SERVER[ 'SCRIPT_FILENAME' ] ) )
-		die ( __( 'Please do not load this page directly. Thanks!', 'giornalismo' ) );
- 
-	if ( post_password_required() ) { ?>
-		<p class="nocomments"><?php _e( 'This post is password protected. Enter the password to view comments.', 'giornalismo' ); ?></p>
+<div id="comments" class="comments-area">
 	<?php
-		return;
+	// You can start editing here -- including this comment!
+	if ( have_comments() ) {
+		?>
+		<h2 class="comments-title">
+			<?php
+			$comment_count = get_comments_number();
+			if ( 1 === $comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wp-rig' ),
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
+			} else {
+				printf(
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'wp-rig' ) ),
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					number_format_i18n( $comment_count ),
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
+			}
+			?>
+		</h2><!-- .comments-title -->
+
+		<?php the_comments_navigation(); ?>
+
+		<?php wp_rig()->the_comments(); ?>
+
+		<?php
+		if ( ! comments_open() ) {
+			?>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp-rig' ); ?></p>
+			<?php
+		}
 	}
-?>
-<?php if ( have_comments() ) : ?>
-	<h3 class="comments"><?php comments_number( __( 'No Responses', 'giornalismo' ), __( 'One Response', 'giornalismo' ), __( '% Responses', 'giornalismo' ) );?> <?php __( 'to' ,'giornalismo' ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
-	<ol class="commentlist">
-		<?php wp_list_comments( 'type=comment&callback=giornalismo_advanced_comment' );
-                ?>
-	</ol>
-	<div class="clear"></div>
-	<div class="comment-navigation">
-		<div class="older"><?php previous_comments_link() ?></div>
-		<div class="newer"><?php next_comments_link() ?></div>
-	</div>
- <?php else : ?>
-	<?php if ( comments_open() ) : ?>
-		<!-- If comments are open, but there are no comments. -->
-	 <?php else :?>
-		<!-- If comments are closed. -->
-	<?php endif; ?>
-<?php endif; ?>
-<?php if ( comments_open() ) : ?>
-<div class="respond">
-<?php comment_form(); ?>
-</div>
-<?php endif; ?>
+
+	comment_form();
+	?>
+</div><!-- #comments -->

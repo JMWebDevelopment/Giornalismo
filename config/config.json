@@ -1,0 +1,25 @@
+{
+  "theme": {
+    "slug": "giornalismo",
+    "name": "Giornalismo",
+    "author": "Jacob Martella Web Development",
+    "PHPNamespace": "JM_Web_Development\\Giornalismo",
+    "underscoreCase": "giornalismo",
+    "constant": "GIORNALISMO",
+    "camelCase": "Giornalismo",
+    "camelCaseVar": "giornalismo"
+  },
+  "dev": {
+    "browserSync": {
+      "live": true,
+      "proxyURL": "wordpressdev.dev.cc:3000",
+      "bypassPort": "3000",
+      "https": false
+    },
+    "styles": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
+  }
+}

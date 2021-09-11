@@ -1,20 +1,21 @@
 <?php
 /**
-* 404.php
-*
-* 404 template for Giornalismo
-*
-* @author Jacob Martella
-* @package Giornalism
-* @version 1.5
-*/
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package wp_rig
+ */
+
+namespace WP_Rig\WP_Rig;
+
 get_header();
-get_sidebar();
+
+wp_rig()->print_styles( 'wp-rig-content' );
+
 ?>
-<main class="post-404">
-	<div class="not-found"></div>
-	<h3 class="not-found-header"><?php _e( 'Whoops! That\'s not here.', 'giornalismo' ) ; ?></h3>
-	<p><?php _e( 'We\'re sorry but the post or page you were looking for isn\'t here. ', 'giornalismo' ); ?><a href="<?php echo esc_url(home_url()); ?>"><?php _e( 'Click here', 'giornalismo' ); ?></a><?php _e( ' to return to the homepage or use the search bar below to search for what you were looking for.', 'giornalismo' ); ?></p>
-	<?php get_search_form(); ?>
-</main>
-<?php get_footer(); ?>
+	<main id="primary" class="site-main">
+		<?php get_template_part( 'template-parts/content/error', '404' ); ?>
+	</main><!-- #primary -->
+<?php
+get_footer();

@@ -1,236 +1,253 @@
-=== Giornalismo Wordpress Theme ===
-Contributers: Jacob Martella
-Tags: two-columns,three-columns,left-sidebar,right-sidebar,custom-header,custom-menu,editor-style,featured-images,theme-options
-Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: 1.5
+=== WP Rig ===
+Contributors: mor10, bamadesigner, ataylorme, felixarntz, et.al
+Tags:
+Requires at least: 4.8
+Tested up to: 4.9.8
+Requires PHP: 7.0
+Stable tag: 2.0.1
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+A progressive theme development rig for WordPress, WP Rig is built to promote the latest best practices for progressive web content and optimization.
 
 == Description ==
-Give your site the look of a newspaper front page, but with a modern day look. With Giornalismo, your readers will know about everything going on with a top story section and up to three columns full of stories right up front. Once inside, it will be easy for readers to know the important details, with story highlights, and navigate within the site, with related stories and latest posts. Giornalismo is completely responsive, allowing readers to take your stories wherever they go.
+Building a theme from WP Rig means adopting this approach and the core principles it is built on:
+* Accessibility
+* [Lazy-loading of images ](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
+* Mobile-first
+* Progressive enhancement
+* [Resilient Web Design](https://resilientwebdesign.com/)
+* Progressive Web App enabled
+* AMP-ready
 
 == Installation ==
-= Via WordPress Admin =
-- From your sites admin, go to Themes > Install Themes.
-- In the search box, type 'Giornalismo' and press enter.
-- Locate the entry for 'Giornalismo' (there should be only one) and click the 'Install' link.
-- When installation is finished, click the 'Activate' link.
+WP Rig has been tested on Linux, Mac, and Windows.
 
-= Manual Install =
-- Download the file from the theme page.
-- Unzip the file.
-- Using an FTP client (I recommend FireZilla), upload the 'giornalismo' file to your Wordpress theme folder. Make sure the file you upload simply says 'Giornalismo' with no numbers after it. Otherwise, it won't work.
-- Go into your Wordpress Admin, navigate to 'Appearance > Themes'.
-- Find the Giornalismo listing on this page and click 'Activate'.
+=== Requirements ===
+WP Rig requires the following dependencies. Full installation instructions are provided at their respective websites.
 
-== Features ==
-= Menus =
-Giornalismo comes with up to two menus for your liking. The main menu is always displayed between the header section and the main body of each page. The top menu is optional and can be set to be shown in the WordPress Customizer under the "General Settings" tab.
+* [PHP](http://php.net/) 7.0
+* [npm](https://www.npmjs.com/)
+* [Composer](https://getcomposer.org/) (installed globally)
 
-= Custom Header =
-While the suggested practice is to let the header be the site title and description, there is the option to upload a custom header image. To upload the image, go to Appearance->Header in the WordPress admin area. For the best display, header images should be 530px by 150px.
+=== How to install WP Rig: ===
+1. Clone or download this repository to the themes folder of a WordPress site on your development environment.
+2. Configure theme settings, including the theme slug and name.
+  * View `./config/config.default.json` for the default settings.
+  * Place custom theme settings in `./config/config.json` to override default settings.
+    * You do not have to include all settings from config.default.json. Just the settings you want to override.
+  * Place local-only theme settings in `./config/config.local.json`, e.g. potentially sensitive info like the path to your BrowserSync certificate.
+    * Again, only include the settings you want to override.
+3. In command line, run `npm install` to install necessary node and Composer dependencies.
+4. In command line, run `npm run build` to generate the theme.
+5. In WordPress admin, activate the theme.
 
-= Featured Photos =
-This theme relies a lot on featured photos and it is recommended that each post comes with a featured photo. The optimal size for featured photos is 735px by 440px.
+==== Defining custom settings for the project ====
 
-= Customizable Homepage =
-Giornalismo leaves a number of options open to users, including the homepage. Users can completely customize what posts show up in the homepage and where they show up. Each column can either display posts from a category or the latest posts in order and each column can show a different number of posts. Users can also select which category shows up in the top story slot at the top. All of these options can be found in the WordPress Customizer under the "Homepage Options" tab.
+Here is an example of creating a custom theme config file for the project. In this example, we want a custom slug, name, and author.
 
-= Sidebars =
-There are a couple of different options when it comes to the sidebars. There's the generic right sidebar layout, then there's the left sidebar layout and finally there's the two sidebar layout. It is important to note that if the two sidebar layout is in use, the third column on the home page will not appear.
+Place the following in your `./config/config.json` file. This config will be versioned in your repo so all developers use the same settings.
 
-= Story Highlights =
-One of the best features your readers will enjoy is the story highlights feature. Shown at the top of the post right underneath the post meta, you can enter up to three key points for each story. This will highlight the most important parts of the story so the reader knows what's going on. To implement this feature, install the "Giornalismo Story Details" plugin (see the How To's section).
+```{
+  "theme": {
+    "slug": "newthemeslug",
+    "name": "New Theme Name",
+    "author": "Name of the theme author"
+  }
+}```
 
-= Post Details =
-In addition to the story highlights, Giornalismo also has spots for a photo credit and caption for featured photos and a spot to place an embedded video in place of a featured photo. Like the story highlights, you will need to install the "Giornalismo Story Details" plugin. To make the YouTube embed work, on the YouTube video you want to embed, click share, embed and copy the source link. Make sure the url has the "/embed/" in the middle of it.
+==== Defining custom settings for your local environment ====
 
-= Related Stories/Latest Stories =
-Want the readers to be able to dig deeper into your content without adding another plugin? Giornalismo has that covered. The theme has the ability to show related stories and latest stories from a category on the single post view. To implement these features, select the respective checkboxes in the "General Settings" tab of the WordPress Customizer.
+Some theme settings should only be set for your local environment. For example, if you want to set local information for BrowserSync.
 
-= Staff Page =
-Giornalismo also has a special staff page template to show off your staff of however many peope you have. To create this page, add a new page and select "Staff" in the template dropdown menu.
+Place the following in your `./config/config.local.json` file. This config will not be tracked in your repo and will only be executed in your local development environment.
 
-= Header Ads =
-There is a spot in the upper right hand side of the header for a widget area. This spot is recommended for ads if you wish. To implement this feature, see the "Header Ads" How To section.
+```{
+  "browserSync": {
+    "live": true,
+    "proxyURL": "localwprigenv.test",
+    "https": true,
+    "keyPath": "/path/to/my/browsersync/key",
+    "certPath": "/path/to/my/browsersync/certificate"
+  }
+}```
 
-= Breaking News =
-Giornalismo also comes with built-in support for the "JM Breaking News" plugin. Simply install the plugin (details in the How To's section), and create a new breaking news post and set a time limit. The banner will show up without having to add any code.
+=== Recommended code editor extensions ===
+To take full advantage of the features in WP Rig, your code editor needs support for the following features:
 
-= Breadcrumbs =
-Let your readers know where they are on your site with breadcrumbs at the top of the page. Click the checkbox in the "General Settings" tab of the WordPress Customizer to implement this feature.
+* [EditorConfig](http://editorconfig.org/#download)
+* [ESLint](https://eslint.org/docs/user-guide/integrations)
+* [PHP CodeSniffer (phpCS)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki)
 
-= Social Links =
-Social media is everything these days and Giornalismo makes it easy to display links to your social media pages. Just enter your links in the respective text boxes in the "Social Options" section in the WordPress Customizer and the links will automatically show in the header. The theme currently supports Facebook, Twitter, Google+ and RSS feed options with more social media sites to come down the road.
+== Working with WP Rig ==
+WP Rig can be used in any development environment. It does not require any specific platform or server setup. It also does not have an opinion about what local or virtual server solution the developer uses.
 
-= Editor Styles =
-Also, with Giornalismo you'll know exactly how your theme is going to look from the font to the link color to blockquotes and tables. Everything will be styled in the editor exactly as it will be on the page.
+=== BrowserSync ===
+WP Rig uses [BrowserSync](https://browsersync.io/) to enable synchronized browser testing.
 
-= Author Details =
-Lastly, allow your writers to talk about and promote themselves. Giornalismo has support for author bios, photos and social media links at the bottom of each post as well as on the staff page template. Install the "Extra User Details" and follow the directions in the "Author Details" part of the How To's section.
+Before first run, visit the [BrowserSync wiki page](https://github.com/wprig/wprig/wiki/BrowserSync).
 
-== How To's ==
+=== Enabling HTTPS ===
+In order to enable HTTPS with BrowserSync, you must supply a valid certificate and key with the Subject Alternative Name of `localhost`. If needed, WP Rig can generate a key and certificate valid for `localhost` for you with the command `npm run generateCert`.
 
-Video tutorials are available on the theme page at http://jacobmartella.com/giornalismo-wordpress-theme
+For more information, and instructions, visit the [BrowserSync wiki page](https://github.com/wprig/wprig/wiki/BrowserSync).
 
-= Setting up the Giornalismo Story Details Plugin =
-- In the WordPress Dashboard, go to Plugins->Add New.
-- Search for "Giornalismo Story Details" and install and activate the plugin.
-- In the post editor screen, the write panel should show up below the editor.
-- For the YouTube video field, the link must be from the url bar at the top of the browser. This is different from the video tutorial on for this theme and plugin.
+=== Gulp ===
+WP Rig uses a [Gulp 4](https://gulpjs.com/) build process to generate and optimize the code for the theme. All development is done in the `/dev` folder and Gulp preprocesses, transpiles, and compiles the files into the root folder. The root folder files become the active theme. WordPress ignores anything in the `/dev` folder.
 
-= Setting up the JM Breaking News Plugin =
-- In the WordPress Dashboard, go to Plugins->Add New.
-- Search for "JM Breaking News" and install and activate the plugin.
-- Add a new breaking news post. The title is the text that will be on the banner. Add the link if there is one, determine if the link should open in a new window and set a time length for the banner to show on the site.
+**Note:** If you have previously used Gulp, you may encounter seemingly random errors that prevent the build process from running. To fix this issue, [upgrade to Gulp 4 following the steps outlined in the WP Rig Wiki](https://github.com/wprig/wprig/wiki/Updating-to-Gulp-4).
 
-= Setting up the Simple Ads Manager =
-- In the WordPress Dashboard, go to Plugins->Add New.
-- Search for "Simple Ads Manager" and install and activate the plugin.
-- Create a new ad place and enter a custom height and width. The height and width needs to be 340px by 100px.
-- After saving the place, click "Ad Places" on the left, then hover over the ad and click "New Ad".
-- Then either upload an image or input code and save.
-- Then go to the "Widgets" section, add the "Ads Place" widget to the "Header Right" sidebar and select the ad place. The ad(s) should then show up in the header.
+JavaScript files are automatically linted using [ESLint](https://eslint.org/) in accordance with [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/).
 
-= Setting up the Extra User Details Plugin =
-- In the WordPress Dashboard, go to Plugins->Add New.
-- Search for "Extra User Details" and install and activate the plugin.
-- Go to Users->Extra User Details to add the extra fields.
-- The field name can be anything you want it, but you must use the following meta keys for it to work: facebook, twitter-link, twitter-handle, google-plus and author-position.
-- The fields will show up on the author's profile page in the admin and the links will show up in the author bios on the front end once they are filled out.
+PHP and CSS files are automatically linted using [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) in accordance with [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/). To take full advantage of this setup, configure your code editor / IDE to automatically test for the WordPress Coding Standards.
 
-= Setting up the Category Color Plugin =
-- In the WordPress Dashboard, go to Plugins->Add New.
-- Search for "Category" and install and activate the plugin.
-- Go to Posts->Categories and click on the category you want to edit.
-- Select a color for the category. Be sure to have wp_debug set to "false" to avoid errors being printed on the site.
-- The color currently only shows up on the home page.
+Details on how to enable PHPCS in VS Code can be found in the [WP Rig Wiki](https://github.com/wprig/wprig/wiki/Enabling-PHPCodeSniffer-(PHPCS)-in-VS-Code). More details on how to work with PHPCS and WordPress Coding Standards can be found at the [WordPress Coding Standards Wiki](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki). `composer run-phpcs` runs PHPCS locally.
 
-= Setting up a Child Theme =
-When customizing a theme, the best practice is to create a child theme. This way, when you update the parent theme, all of your changes will still remain intact. Creating a child theme is very simple if you use the steps below.
-- Using your preferred FTP client, navigate to the "themes" directy inside the "wp-content" directory and create a directory titled "giornalismo-child".
-- Once there, create a style.css file and add the following lines of code in there and save.
-	/*
-	Theme Name: Giornalimso Child
-	Description: Child theme for Giornalismo theme
-	Author: <Your Name>
-	Template: giornalismo
-	*/
-- Then create a functions.php file and add the following code and save.
-	<?php function giornalismo_child_theme_styles() {
-		wp_enqueue_style( 'main_css', get_stylesheet_uri() );
-	}
-	add_action( 'wp_enqueue_scripts', 'giornalismo_child_theme_styles', 10 ); ?>
+=== `build` process ===
+`npm run build` is the regular development process. While this process is running, files in the `./dev/` folder will be automatically compiled to the live theme and BrowserSync will update if it is enabled.
 
-= Customization Guide =
-This section is a complete guide to the CSS classes that you can use to customize the theme. All of these CSS classes center around individual categories and their slugs.
-- .top-menu .category-{category-slug}, .main-menu .category-{category-slug}
-	- These classes will add a different background for the specific category in either menu. In order for the changes you make in the CSS to work with menus, go to the menu section in the WordPress Admin, go to screen options and make sure 'CSS Classes' is checked and save. Then in the menu item you want to change the background, or other aspect, add the 'category-{category-slug}'' part into the CSS classes.
-- .category-{category-slug} .label-head
-	- This class affects the label head for a category when that category is selected for a column.
-- .category-{category-slug}.label-head
-	- This class affects the label head for a story in a specific category when a column does not have a category selected for it.
-- .category-{category-slug} .read-more
-	- This class affects the read more for all posts in a sepcific category.
-- .breadcrumbs li.category-{category-slug}
-	- This class affects the list item for both the story and it's specific category in the breadcrumbs section.
-- .category-{category-slug} .title
-	- This class affects the title for stories in a specific category.
-- .category-{category-slug}
-	- This class affects everything about posts in a specific category.
+=== `translate` process ===
+`npm run translate` generates a `.pot` file for the theme to enable translation. The translation file will be stored in `./languages/`.
 
-Obviously there are more ways to customize the theme and some digging around in the CSS and template files will turn those up. But these are the basic changes you might want to try to make your site unique.
+=== `bundle` process ===
+`npm run bundle` generates a `[themename].zip` archive containing the finished theme. This runs all relevant tasks in series ending with the translation task and the bundle task and stores a new zip archive in the root theme folder.
 
+To bundle the theme without creating a zip archive, define the `export:compress` setting in `./config/config.json` to `false`:
 
-'/*
-Theme Name: Giornalimso Child
-Description: Child theme for Giornalismo theme
-Author: Giornalismo
-Template: giornalismo
-*/'
-- Then create a functions.php file and add the following code and save.
-'<?php function giornalismo_child_theme_styles() {
-	wp_enqueue_style( 'main_css', get_stylesheet_uri() );
+```javascript
+export: {
+	compress: false
 }
-add_action( 'wp_enqueue_scripts', 'giornalismo_child_theme_styles', 10 ); ?>'
-- Any template files, such as header.php or single.php, in this directory will override the parent template files. Any style changes will also override the parent theme.
+```
 
-== Support ==
-If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (http://jacobmartella.com/giornalismo-wordpress-theme).
+== Advanced Features ==
+WP Rig gives the developer an out of the box environment with support for modern technologies including ES2015, CSS grid, CSS custom properties (variables), CSS nesting and more, without making any configurations. Just write code and WP Rig handles the heavy lifting for you.
 
-== Changelog ==
-= 1.5 =
-- Added view more links to the bottom of the columns on the homepage. If a category is selected for the column, the link goes to the category page. If not, it goes to page 2.
-- Fixed the issue with the left sidebar not showing.
-- Removed specific styling for all body paragraphs.
-- Tested with WordPress 4.8.
+Configuring the behavior of WP Rig is done by editing `./config/config.json`. Here the developer can set the theme name and theme author name (for translation files), and local server settings for BrowserSync. Additionally, compression of JavaScript and CSS files can be turned off for debugging purposes.
 
-= 1.4 =
-- Fixed: Issue that made the date the same for all posts on the homepage.
-- Tested with WordPress 4.7.
+Place your custom theme settings in `./config/config.json` to override default settings, located in `./config/config.default.json`. Place local-only/untracked theme settings in `./config/config.local.json`. For example, if you want to set local information for BrowserSync.
 
-= 1.3.2 =
-- Fixed: Issue with email button sending readers to a URL instead of opening up an email.
+=== Lazy-loading images ===
+WP Rig [lazy loads](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/) all images out of the box to improve performance. When lazy-loading images is enabled in the theme, the user will see a Theme Options feature in Customizer allowing them to toggle the feature off.
 
-= 1.3.1 =
-- Fixed: Issue with gravatars not showing up on single posts.
+=== AMP-ready ===
+The theme generated by WP Rig is AMP-ready meaning it works hand-in-hand with the official AMP plugin and does not require further configuration to work with AMP features. The AMP plugin allows you to [opt-in to `amp` theme support via the plugin settings page](https://github.com/Automattic/amp-wp/wiki/Adding-Theme-Support) but you can also force enable AMP support in a theme by adding `add_theme_support( 'amp' );` in `./dev/functions.php`.
 
-= 1.3 =
-- Added red, blue, green and purple color schemes to be selected from the customizer.
-- Added single post navigation that can be toggled on and off in the customizer.
-- Made the body text of tables white to help with readability issues.
-- Made the height of all images 'auto'.
-- Tested with WordPress 4.6.
+==== AMP and custom JavaScript ====
+When AMP support is enabled, JavaScript and other features are automatically disabled if the site admin has enabled the [official AMP plugin](https://en-ca.wordpress.org/plugins/amp/). Developers can selectively enable/disable features within the theme using the `wprig_is_amp()` conditional. For more see [Implementing Interactivity](https://github.com/Automattic/amp-wp/wiki/Implementing-Interactivity).
 
-= 1.2.2 =
-- Added code to first column to let the user control whether the byline and number of comments are displayed.
+== WP Rig features ==
+WP Rig takes a component-based approach to WordPress themes. Out of the box, the compiled theme uses `index.php` as the core template file for all views (index, archives, single posts, pages, etc). The `/optional` folder holds optional template files that can be accessed via the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/). To activate these files, move or copy them into the root `/dev` folder. The `/optional` folder is ignored by the Gulp build process.
 
-= 1.2.1 =
-- Fixed: Syntax error that caused the second column on the homepage to display incorrectly.
+The separation of Pluggable and External features into their own folders allows the theme developer to swap out any feature for an external feature (AMP components) or non-php feature (JavaScript framework etc) without interfering with the core theme functions.
 
-= 1.2 =
-- Added theme options to allow the user to control whether the author's byline and number of comments are shown.
-- Made date translatable and allows the user to change the format of the date using the date_format option.
-- Wrapped custom functions in 'if (function_exists())' to make it easier to customize with child theme.
-- Tested with WordPress 4.5.
+Pluggable functions and features (eg custom header, sliders, other interactive components) are separated into the `/pluggable` folder for easy access. When custom stylesheets and/or JavaScript files are needed, the pluggable component and its dependent files should be placed in a sub-folder to retain separation of concerns.
 
-= 1.1 =
-- Styled tags
-- Added support for the Category Color plugin
-- Tested with WordPress 4.4
+External features and add-ons are separated into the `/external` folder and are managed the same way as Pluggable functions.
 
-= 1.0.4 =
-- FIXED: Changed header_image() to get_header_image() in functions.php to fix issue with the header image URL incorrectly outputting to the screen instead of the image itself.
+Images and graphics are placed in the `/images` folder and are optimized automatically.
 
-= 1.0.3 =
-- Initial release to the WordPress Theme Directory
+Global JavaScript files are placed in the `/js` folder and linted and optimized automatically. External JavaScript libraries are placed in the `/js/libs` folder. _These files are not linted or optimized by the Gulp process_.
+
+Global stylesheets and stylesheets related to root-level php files are placed in the `/css` folder and are optimized automatically.
+
+Content loop files are placed in the `/template-parts` folder.
+
+`style.css` is loaded in `<head>` through a `wp_enqueue_style()` call in `functions.php`. It is the main stylesheet and serves up global styles and layouts only.
+
+== Progressive Features ==
+
+=== Progressive loading of CSS ===
+To further componentize the theme, WP Rig employs progressive loading of CSS through [in-body `<link>` tags](https://jakearchibald.com/2016/link-in-body/). Component-specific styles are held in component-specific stylesheets and loaded at component level. The `wprig_add_body_style()` in `./dev/inc/template-functions.php` can be used to conditionally preload in-body stylesheets for improved performance.
+This approach has several advantages:
+* The main stylesheet file size is reduced
+* Styles are only loaded if and when a component is present in the view.
+* Stylesheets are associated with their components making them easier to work with.
+* Leverages HTTP/2 multiplexing and can be extended to include server push etc.
+* Component-level stylesheets are cached and can be individually updated without forcing reload of all styles on the site.
+
+To improve the performance of the theme, progressively loaded stylesheets can be conditionally preloaded. This is done using the `wprig_add_body_style()` function in `./dev/inc/template-functions.php`. When preloading a stylesheet, use the console in Chrome developer tools to ensure no unnecessary stylesheets are loaded. A warning will appear letting you know if a stylesheet is preloaded but not used.
+
+=== Modern CSS, custom properties (variables), autoprefixing, etc ===
+All CSS is processed through [PostCSS](http://postcss.org/) and leveraging [postcss-preset-env](https://preset-env.cssdb.org/) to allow the use of modern and future CSS markup like [custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables). Variables are defined in `./dev/config/cssVariables` and applied to all CSS files as they are processed.
+postcss-preset-env (previously cssnext) passes all CSS through Autoprefixer to ensure backward compatibility. [Target browsers](https://github.com/browserslist/browserslist) are defined in `.browserslistrc`.
+
+=== Modern layouts through CSS grid, flex, and float ===
+The theme generated by WP Rig is mobile-first and accessible. It uses the modern layout modules CSS grid and flex to support a minimalist HTML structure.
+
+For backward compatibility with browsers who do not support modern layout modules, WP Rig provides the mobile-first layout across all screen widths and serves two-dimensional layouts as a progressive enhancement.
+
+The CSS philosophy of WP Rig breaks down as follows:
+- Mobile layout for all screen sizes as fallback.
+- Two-dimensional layouts using CSS grid.
+- One dimensional block/list-based displays using flex.
+- In-content wrapping using float and clear.
 
 == License ==
-GNU General Public License
-http://www.gnu.org/licenses/gpl.html
+WP Rig is released under [GNU General Public License v3.0 (or later)](https://github.com/wprig/wprig/blob/master/LICENSE).
 
-= Photo License =
-Except where otherwise noted, all photos in the screenshot are also licensed under the GNU General Public License. Copyright 2015 Jacob Martella
+= Changelog =
 
-= Social Media Icons License =
-All of the social media icons are licensed under the GNU General Public License (http://www.gnu.org/licenses/gpl.html).
+== 2.0.0 ===
+- Full refactor of dev file structure. See [#133](https://github.com/wprig/wprig/pull/133). Props @ataylorme.
+- Full refactor of Gulp process. See [#47](https://github.com/wprig/wprig/pull/47). Props @ataylorme.
+- Full refactor of PHP codebase, leveraging PHP7 features. See [#185](https://github.com/wprig/wprig/pull/185). Props @felixarntz.
+- Tweak template parts for more granular adjustments and overriding in child themes. See [#244](https://github.com/wprig/wprig/pull/244). Props @felixarntz.
+- Add support for SSL certificates. See [#92](https://github.com/wprig/wprig/pull/92). Props @ataylorme.
+- Fix theme slug replacement process and use `wp-rig` instead of `wprig` throughout the codebase. See [#93](https://github.com/wprig/wprig/pull/93). Props @felixarntz.
+- Watch for theme config changes and rebuild more efficiently. See [#123](https://github.com/wprig/wprig/pull/123). Props @ataylorme.
+- Respect PHP 7.0 and WordPress 4.5 version requirements, use `functions.php` as plain 5.2-compatible entry file. See [#59](https://github.com/wprig/wprig/pull/59). Props @ataylorme, @felixarntz.
+- Add unit and integration tests infrastructure. See [#114](https://github.com/wprig/wprig/pull/114). Props @felixarntz.
+- Add theme support for responsive embeds. See [#219](https://github.com/wprig/wprig/pull/219). Props @benoitchantre.
+- Add the privacy policy link. See [#213](https://github.com/wprig/wprig/pull/213). Props @benoitchantre.
+- Use `filemtime()` only in development for asset versions. See [#164](https://github.com/wprig/wprig/pull/164). Props @benoitchantre.
+- Retrieve the theme version dynamically for asset versions in production. See [#176](https://github.com/wprig/wprig/pull/176), [#190](https://github.com/wprig/wprig/pull/190), [#200](https://github.com/wprig/wprig/pull/200). Props @benoitchantre.
+- Allow disabling PHPCS in development workflow. See [#170](https://github.com/wprig/wprig/pull/170). Props @ataylorme.
+- Add `500.php` and `offline.php` templates for PWA support. See [#212](https://github.com/wprig/wprig/pull/212). Props @felixarntz.
+- Print the static `skip-link-focus-fix` script for IE11 inline instead of requiring an extra request. See [#139](https://github.com/wprig/wprig/pull/139). Props @westonruter.
+- Add gif extension to processed image paths. See [#117](https://github.com/wprig/wprig/pull/117). Props @ataylorme.
+- Add `stylelint`. See [#56](https://github.com/wprig/wprig/pull/56). Props @ataylorme.
+- Update PHPCompatibility to version 9 and remove deprecated coding standards annotations. See [#249](https://github.com/wprig/wprig/pull/249). Props @felixarntz.
+- Fix numerous CSS bugs and Gutenberg compatibility issues. See [#127](https://github.com/wprig/wprig/pull/127), [#173](https://github.com/wprig/wprig/pull/173), [#179](https://github.com/wprig/wprig/pull/179), [#188](https://github.com/wprig/wprig/pull/188), [#193](https://github.com/wprig/wprig/pull/193), [#196](https://github.com/wprig/wprig/pull/196), [#197](https://github.com/wprig/wprig/pull/197), [#202](https://github.com/wprig/wprig/pull/202), [#206](https://github.com/wprig/wprig/pull/206), [#299](https://github.com/wprig/wprig/pull/299). Props @benoitchantre, @mor10, @jdelia.
+- Add abstracted theme config file. See [#233](https://github.com/wprig/wprig/pull/233). Props @Shelob9.
+- Add theme screenshot file. See [#263](https://github.com/wprig/wprig/pull/263). Props @bamadesigner.
+- Ensure `content.css` stylesheet always loads when needed. See [#141](https://github.com/wprig/wprig/pull/141). Props @bamadesigner.
+- Replace `require-uncached` with `import-fresh`. [`require-uncached`](https://www.npmjs.com/package/require-uncached) has been deprecated in favor of [`import-fresh`](https://www.npmjs.com/package/import-fresh). See [#296](https://github.com/wprig/wprig/pull/296). Props @ataylorme.
+- Upgrade WordPress coding standards to 2.0. See [#288](https://github.com/wprig/wprig/pull/295). Props @ataylorme, @benoitchantre.
+- Use pure CSS files for CSS custom properties and media queries
+`/assets/css/src/custom-properties.css` for custom properties.
+`/assets/css/src/custom-media.css` for custom media queries.
+See [#281](https://github.com/wprig/wprig/pull/281). Props @mor10.
+- Use `.browserslistrc` for browser support definitions. See [#227](https://github.com/wprig/wprig/pull/227). Props @ataylorme.
+- Allow adjusting the mechanism for how stylesheets are loaded, for better compatibility with contexts like AMP or Customizer. See [#319](https://github.com/wprig/wprig/pull/319). Props @felixarntz.
 
-= Scripts License =
-All of the scripts used in this theme are licensed under the GNU General Public License (http://www.gnu.org/licenses/gpl.html).
+== 1.0.5 ==
+- Do not initialize menus until DOM is loaded. See [#140](https://github.com/wprig/wprig/pull/140). Props @bamadesigner.
+- Fix PHPCodeSniffer issues and violations. Props @mor10, @felixarntz.
+- Fix incorrect grammar in comment. See [#151](https://github.com/wprig/wprig/pull/151). Props @ecotechie.
 
-= TGM Plugin Activation License =
-The TGM Plugin Activation file used in this theme is used under the GNU General Public License version 2 (http://opensource.org/licenses/gpl-2.0.php). You can find out more about this here: https://github.com/thomasgriffin/TGM-Plugin-Activation.
+== 1.0.4 ==
+- Update CSS (front and editor styles) to meet current Gutenberg recommendations as of October 1, 2018. Props mor10.
+- Enable default block styles by default in functions.php. Props mor10.
+- Add readme.txt file as per [Theme Handbook](https://developer.wordpress.org/themes/release/writing-documentation/). Props mor10.
 
-= Fonts License =
-Lato-Light.ttf: Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic (team@latofonts.com) with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1.
-Lato-Regular.ttf: Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic (team@latofonts.com) with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1.
-Lato-Bold.ttf: Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic (team@latofonts.com) with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1.
-Oswald-Regular.ttf: Copyright (c) 2011-2012, Vernon Adams (vern@newtypography.co.uk), with Reserved Font Names 'Oswald'
-Oswald-Bold.ttf: Copyright (c) 2011-2012, Vernon Adams (vern@newtypography.co.uk), with Reserved Font Names 'Oswald'
-Roboto-Light.ttf: Copyright 2011 Google Inc. All Rights Reserved.
-Roboto-Regular.ttf: Copyright 2011 Google Inc. All Rights Reserved.
-Roboto-Bold.ttf: Copyright 2011 Google Inc. All Rights Reserved.
-SourceSansPro-Regular.ttf: Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
-SourceSansPro-Semibold.ttf: Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
-SourceSansPro-Bold.ttf: Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
-Canterbury was created by Dieter Steffmann and is used under a "free" license. You can find more of his work here: http://moorstation.org/typoasis/designers/steffmann/index.htm.
-Quattrocento-Bold.ttf: Copyright (c) 2011, Pablo Impallari (www.impallari.com|impallari@gmail.com), Copyright (c) 2011, Igino Marini. (www.ikern.com|mail@iginomarini.com), Copyright (c) 2011, Brenda Gallo. (gbrenda1987@gmail.com), with Reserved Font Name Quattrocento.
+== 1.0.3 ==
+- Add Gutenberg editor-font-sizes. Props @atanas-angelov-dev
+- Improve conditional logic in wprig_add_body_style(). Props @iliman
+- Update WordPress Coding Standards to 1.0.0. Props @mor10
+
+== 1.0.2 ==
+- Updated theme support for Gutenberg color palette with a single array attribute. Props @webmandesign
+- `./verbose/` folder no longer holds PHP files. Resolves duplicate functionality as described in [#51](https://github.com/wprig/wprig/issues/51).
+- Update Composer dependencies to latest versions (and to remove update nag).
+- Use slug for naming language file and ZIP bundle. Props @felixarntz.
+- Fixed bug with is_amp_endpoint() being called too soon. Props @iliman.
+
+== 1.0.1 ==
+- PHP process updated to run conditionally on theme name and theme slug rename and on first run. Props @hellofromtonya.
+- Introduce guard clause to simplify wprig_is_amp() condition around wprig_scripts(). Props @Tabrisrp.
+- Remove extraneous variable $post_count from index.php. Props @Soean.
+
+== Initial release ==
+- cssnext replaced with postcss-preset-env. No change in functionality. Props @mor10
+- Separate theme name and theme slug in `themeConfig.js`. Props @felixarntz.
