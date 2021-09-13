@@ -21,11 +21,23 @@
 # Imports
 --------------------------------------------------------------*/
 @import "_custom-properties.css";
+@import "_custom-mixins.css";
 @import "_reset.css";
 @import "_typography.css";
 @import "_elements.css";
 @import "_links.css";
 @import "_font-awesome.css";
+@import "_header.css";
+
+@font-face {
+	font-family: 'Canterbury';
+	src: url("../webfonts/Canterbury.ttf");
+}
+
+@font-face {
+	font-family: 'OptimusPrincepsSemiBold';
+	src: url(../webfonts/OptimusPrincepsSemiBold.ttf);
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -206,272 +218,6 @@ select {
 
 select:focus {
 	background-color: var(--color-white);
-}
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-
-.site-header {
-	padding-bottom: 1em;
-}
-
-.header-image {
-	margin: 0 auto;
-}
-
-.header-image img {
-	display: block;
-	margin: 0 auto;
-}
-
-.custom-logo-link {
-	display: inline-block;
-	margin: 0 auto 1em;
-}
-
-.site-branding {
-	text-align: center;
-	padding: 60px 0 1.75em;
-}
-
-.site-title {
-	margin: 0 1em;
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-	font-size: 38px;
-	font-weight: 700;
-	line-height: 1.2;
-}
-
-.site-title a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.site-description {
-	margin: 0.4375em 0 0;
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-	font-size: 17px;
-	font-weight: inherit;
-	line-height: 1.4;
-	word-wrap: break-word;
-	color: #757575;
-}
-
-/*--------------------------------------------------------------
-## Basic navigation menus - handles submenu and small screen toggle
---------------------------------------------------------------*/
-.nav--toggle-small .menu-toggle {
-	display: block;
-	margin: 1.2em auto;
-	padding: 0.6em 1.2em 0.5em;
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-	font-size: 80%;
-	text-transform: uppercase;
-	border: 2px solid var(--border-color-dark);
-	border-radius: 0;
-	background: transparent;
-}
-
-.nav--toggle-small .menu {
-	display: none;
-}
-
-.nav--toggle-sub .dropdown,
-.nav--toggle-sub .dropdown-toggle {
-	display: none;
-}
-
-@media (--narrow-menu-query) {
-
-	.nav--toggle-small.nav--toggled-on .menu {
-		display: block;
-	}
-}
-
-@media (--wide-menu-query) {
-
-	.nav--toggle-small .menu-toggle {
-		display: none;
-	}
-
-	.nav--toggle-small .menu {
-		display: block;
-	}
-
-	.nav--toggle-sub ul ul {
-		display: none;
-		position: absolute;
-		top: 100%;
-		flex-direction: column;
-		background: #fff;
-		margin-left: 0;
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		z-index: 100;
-	}
-
-	.nav--toggle-sub .dropdown,
-	.nav--toggle-sub .dropdown-toggle {
-		display: block;
-		background: transparent;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		width: var(--dropdown-symbol-width);
-		height: var(--dropdown-symbol-width);
-		font-size: inherit;
-		line-height: inherit;
-		margin: 0;
-		padding: 0;
-		border: none;
-		border-radius: 0;
-		transform: translateY(-50%);
-		overflow: visible;
-	}
-
-	.nav--toggle-sub .dropdown-symbol {
-		display: block;
-		background: transparent;
-		position: absolute;
-		right: 20%;
-		top: 35%;
-		width: 60%;
-		height: 60%;
-		border: solid var(--border-color-dark);
-		border-width: 0 2px 2px 0;
-		transform: translateY(-50%) rotate(45deg);
-	}
-
-	.nav--toggle-sub ul ul .dropdown,
-	.nav--toggle-sub ul ul .dropdown-toggle {
-		top: 40%;
-		right: 0.2em;
-	}
-
-	.nav--toggle-sub ul ul .dropdown-symbol {
-		transform: rotate(-45deg);
-	}
-
-	.nav--toggle-sub .dropdown-toggle:hover,
-	.nav--toggle-sub .menu-item--has-toggle:hover .dropdown-toggle {
-		pointer-events: none;
-	}
-
-	/* Need menu-item-has-children for non-JS */
-	.nav--toggle-sub li.menu-item-has-children,
-	.nav--toggle-sub li.menu-item--has-toggle {
-		position: relative;
-		padding-right: var(--dropdown-symbol-width);
-	}
-
-	/*
-	 * If the dropdown toggle is active with JS, then
-	 * we'll take care of showing the submenu with JS.
-	 */
-	.nav--toggle-sub li:hover > ul,
-	.nav--toggle-sub li.menu-item--toggled-on > ul,
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
-		display: block;
-	}
-
-	/*
-	 * "focus-within" is an alternative to focus class for
-	 * supporting browsers (all but IE/Edge) for no-JS context
-	 * (e.g. AMP) See https://caniuse.com/#feat=css-focus-within
-	 *
-	 * This selector needs to stay separated, otherwise submenus
-	 * will not be displayed with IE/Edge.
-	 */
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within > ul {
-		display: block;
-	}
-}
-
-/*--------------------------------------------------------------
-## Main navigation menu
---------------------------------------------------------------*/
-.main-navigation {
-	display: block;
-	margin: 0 auto 2em;
-	padding: 0 1em;
-	max-width: var(--content-width);
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-}
-
-.main-navigation a {
-	display: block;
-	width: 100%;
-	padding: 0.5em 1em 0.5em 0;
-	text-decoration: none;
-	color: var(--global-font-color);
-}
-
-.main-navigation a:hover,
-.main-navigation a:focus {
-	text-decoration: underline;
-}
-
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a {
-	font-weight: 600;
-}
-
-.main-navigation ul {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.main-navigation ul ul li {
-	padding-left: 1em;
-}
-
-@media (--wide-menu-query) {
-
-	.main-navigation ul li a {
-		padding: 0.4em 0.5em;
-	}
-
-	.main-navigation ul li {
-		margin: 0 0 0 0.5em;
-	}
-
-	.main-navigation ul li:first-child {
-		margin-left: 0;
-	}
-
-	.main-navigation ul ul a {
-		width: 200px;
-	}
-
-	/* stylelint-disable */
-	.main-navigation ul ul li {
-		padding-left: 0;
-		margin-left: 0;
-	}
-	/* stylelint-enable */
-
-	.main-navigation ul ul li a {
-		width: 218px;
-		background: none;
-	}
-
-	.main-navigation ul ul ul {
-		top: 0;
-		left: 100%;
-		min-height: 100%;
-	}
-
-	.main-navigation .menu {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
 }
 
 /*--------------------------------------------------------------

@@ -36,9 +36,29 @@ namespace WP_Rig\WP_Rig;
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-rig' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<?php get_template_part( 'template-parts/header/custom_header' ); ?>
+		<?php get_template_part( 'template-parts/header/top', 'navigation' ); ?>
 
-		<?php get_template_part( 'template-parts/header/branding' ); ?>
+		<div class="wrap">
+
+			<div class="header-main">
+
+				<?php get_template_part( 'template-parts/header/custom_header' ); ?>
+
+				<?php get_template_part( 'template-parts/header/branding' ); ?>
+
+			</div>
+
+			<?php get_template_part( 'template-parts/header/widget', 'area' ); ?>
+
+		</div>
+
+		<?php
+		if ( function_exists( 'jm_breaking_news' ) ) {
+			echo wp_kses_post( jm_breaking_news() );
+		}
+		?>
 
 		<?php get_template_part( 'template-parts/header/navigation' ); ?>
+
+		<?php get_template_part( 'template-parts/header/date' ); ?>
 	</header><!-- #masthead -->

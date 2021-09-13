@@ -124,6 +124,10 @@ const paths = {
 		],
 		dest: `${ rootPath }/languages/${ nameFieldDefaults.slug }.pot`,
 	},
+	webfonts: {
+		src: `${ assetsDir }/webfonts/*.{eot,svg,ttf,woff,woff2}`,
+		dest: `${ assetsDir }/webfonts/`,
+	},
 };
 
 // Add rootPath to filesToCopy and additionalFilesToCopy

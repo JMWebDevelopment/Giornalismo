@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the header navigation menu
+ * Template part for displaying the header top navigation menu
  *
  * @package wp_rig
  */
@@ -13,7 +13,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 ?>
 
-<nav id="site-navigation" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
+<nav id="top-site-navigation" class="top-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>"
 	<?php
 	if ( wp_rig()->is_amp() ) {
 		?>
@@ -36,7 +36,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	}
 	?>
 
-	<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open main menu', 'wp-rig' ); ?>" aria-controls="main-menu" aria-expanded="false"
+	<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open top menu', 'wp-rig' ); ?>" aria-controls="top-menu" aria-expanded="false"
 		<?php
 		if ( wp_rig()->is_amp() ) {
 			?>
@@ -49,7 +49,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 		<?php esc_html_e( 'Menu', 'wp-rig' ); ?>
 	</button>
 
-	<div class="primary-menu-container">
-		<?php wp_rig()->display_primary_nav_menu( array( 'menu_id' => 'main-menu' ) ); ?>
+	<div class="secondary-menu-container">
+		<?php wp_rig()->display_secondary_nav_menu( array( 'menu_id' => 'top-menu' ) ); ?>
 	</div>
 </nav><!-- #site-navigation -->
