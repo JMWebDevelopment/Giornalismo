@@ -50,7 +50,7 @@ export function stylesAfterReplacementStream() {
 	const config = getThemeConfig();
 
 	const postcssPlugins = [
-		stylelint(),
+		require( 'postcss-mixins' ),
 		postcssPresetEnv( {
 			importFrom: (
 				configValueDefined( 'config.dev.styles.importFrom' ) ?

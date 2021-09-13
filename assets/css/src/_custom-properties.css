@@ -10,8 +10,8 @@
 	--dropdown-symbol-width: 0.7em;
 
 	/* Typography */
-	--global-font-family: "Crimson Text", serif;
-	--highlight-font-family: "Roboto Condensed", "Helvetica Neue", "Arial Narrow", sans-serif;
+	--global-font-family: "Roboto", serif;
+	--highlight-font-family: "Oswald", "Helvetica Neue", "Arial Narrow", sans-serif;
 	--global-font-size: 20;
 	--global-font-line-height: 1.4;
 
@@ -25,11 +25,21 @@
 	--global-font-color: #333;
 	--border-color-dark: #333;
 	--border-color-light: #ccc;
-	--color-link: #0073aa;
-	--color-link-visited: #333;
-	--color-link-active: #00a0d2;
+	--color-link: #6e6e6e;
+	--color-link-visited: #6e6e6e;
+	--color-link-active: #6e6e6e;
 	--color-quote-border: #000;
 	--color-quote-citation: #6c7781;
+
+	--color-black: #000;
+	--color-off-black: #262626;
+	--color-grey: #d8d8d8;
+	--color-grey-rgb: 216, 216, 216;
+	--color-dark-grey: #6e6e6e;
+	--color-dark-grey-rgb: 110, 110, 110;
+	--color-light-grey: #b8b8b8;
+	--color-off-white: #ddd;
+	--color-white: #fff;
 
 	/* Custom editor colors */
 	--color-theme-primary: #e36d60;

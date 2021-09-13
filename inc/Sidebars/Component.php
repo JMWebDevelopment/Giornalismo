@@ -27,7 +27,9 @@ use function dynamic_sidebar;
  */
 class Component implements Component_Interface, Templating_Component_Interface {
 
-	const PRIMARY_SIDEBAR_SLUG = 'sidebar-1';
+	const LEFT_SIDEBAR_SLUG   = 'left_sidebar';
+	const RIGHT_SIDEBAR_SLUG  = 'right_sidebar';
+	const HEADER_SIDEBAR_SLUG = 'header_widget_area';
 
 	/**
 	 * Gets the unique identifier for the theme component.
@@ -55,8 +57,12 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 */
 	public function template_tags() : array {
 		return array(
-			'is_primary_sidebar_active' => array( $this, 'is_primary_sidebar_active' ),
-			'display_primary_sidebar'   => array( $this, 'display_primary_sidebar' ),
+			'is_right_sidebar_active'  => array( $this, 'is_right_sidebar_active' ),
+			'display_right_sidebar'    => array( $this, 'display_right_sidebar' ),
+			'is_left_sidebar_active'   => array( $this, 'is_left_sidebar_active' ),
+			'display_left_sidebar'     => array( $this, 'display_left_sidebar' ),
+			'is_header_sidebar_active' => array( $this, 'is_header_sidebar_active' ),
+			'display_header_sidebar'   => array( $this, 'display_header_sidebar' ),
 		);
 	}
 
@@ -66,9 +72,33 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	public function action_register_sidebars() {
 		register_sidebar(
 			array(
-				'name'          => esc_html__( 'Sidebar', 'wp-rig' ),
-				'id'            => static::PRIMARY_SIDEBAR_SLUG,
+				'name'          => esc_html__( 'Left Sidebar', 'wp-rig' ),
+				'id'            => static::LEFT_SIDEBAR_SLUG,
 				'description'   => esc_html__( 'Add widgets here.', 'wp-rig' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Right Sidebar', 'wp-rig' ),
+				'id'            => static::RIGHT_SIDEBAR_SLUG,
+				'description'   => esc_html__( 'Add widgets here.', 'wp-rig' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Header Widget Area', 'wp-rig' ),
+				'id'            => static::HEADER_SIDEBAR_SLUG,
+				'description'   => esc_html__( 'Use this area to display an ad in the header area.', 'wp-rig' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -84,12 +114,18 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @return array Filtered body classes.
 	 */
 	public function filter_body_classes( array $classes ) : array {
-		if ( $this->is_primary_sidebar_active() ) {
+		if ( 'right-sidebar' === get_theme_mod( 'giornalismo-layout' ) ) {
 			global $template;
 
-			if ( ! in_array( basename( $template ), array( 'front-page.php', '404.php', '500.php', 'offline.php' ) ) ) {
-				$classes[] = 'has-sidebar';
-			}
+			$classes[] = 'has-right-sidebar';
+		} elseif ( 'left-sidebar' === get_theme_mod( 'giornalismo-layout' ) ) {
+			global $template;
+
+			$classes[] = 'has-left-sidebar';
+		} elseif ( 'two-sidebars' === get_theme_mod( 'giornalismo-layout' ) ) {
+			global $template;
+
+			$classes[] = 'has-two-sidebars';
 		}
 
 		return $classes;
@@ -100,14 +136,46 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return bool True if the primary sidebar is active, false otherwise.
 	 */
-	public function is_primary_sidebar_active() : bool {
-		return (bool) is_active_sidebar( static::PRIMARY_SIDEBAR_SLUG );
+	public function is_left_sidebar_active() : bool {
+		return (bool) is_active_sidebar( static::LEFT_SIDEBAR_SLUG );
 	}
 
 	/**
 	 * Displays the primary sidebar.
 	 */
-	public function display_primary_sidebar() {
-		dynamic_sidebar( static::PRIMARY_SIDEBAR_SLUG );
+	public function display_left_sidebar() {
+		dynamic_sidebar( static::LEFT_SIDEBAR_SLUG );
+	}
+
+	/**
+	 * Checks whether the primary sidebar is active.
+	 *
+	 * @return bool True if the primary sidebar is active, false otherwise.
+	 */
+	public function is_right_sidebar_active() : bool {
+		return (bool) is_active_sidebar( static::RIGHT_SIDEBAR_SLUG );
+	}
+
+	/**
+	 * Displays the primary sidebar.
+	 */
+	public function display_right_sidebar() {
+		dynamic_sidebar( static::RIGHT_SIDEBAR_SLUG );
+	}
+
+	/**
+	 * Checks whether the primary sidebar is active.
+	 *
+	 * @return bool True if the primary sidebar is active, false otherwise.
+	 */
+	public function is_header_sidebar_active() : bool {
+		return (bool) is_active_sidebar( static::HEADER_SIDEBAR_SLUG );
+	}
+
+	/**
+	 * Displays the primary sidebar.
+	 */
+	public function display_header_sidebar() {
+		dynamic_sidebar( static::HEADER_SIDEBAR_SLUG );
 	}
 }

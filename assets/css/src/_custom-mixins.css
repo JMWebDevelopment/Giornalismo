@@ -1,0 +1,16 @@
+/* stylelint-disable */
+@define-mixin roboto $fontSize, $fontWeight, $color, $text-transform: none {
+	font-family: 'Roboto', sans-serif;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	color: $color;
+	text-transform: $text-transform;
+}
+@define-mixin oswald $fontSize, $fontWeight, $color, $text-transform: none {
+	font-family: 'Oswald', sans-serif;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	color: $color;
+	text-transform: $text-transform;
+}
+/* stylelint-enable */
