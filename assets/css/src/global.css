@@ -28,6 +28,7 @@
 @import "_links.css";
 @import "_font-awesome.css";
 @import "_header.css";
+@import "_footer.css";
 
 @font-face {
 	font-family: 'Canterbury';
@@ -324,20 +325,6 @@ select:focus {
 
 .pagination .current {
 	border-color: var(--border-color-dark);
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.site-footer {
-	margin: 1em 0 0;
-	padding: 2em 0;
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-}
-
-.site-info {
-	text-align: center;
 }
 
 /*--------------------------------------------------------------

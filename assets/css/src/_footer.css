@@ -1,0 +1,55 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-info {
+	text-align: center;
+}
+
+.site-footer {
+	padding: 10px 1rem;
+	text-align: center;
+	background-color: var(--color-black);
+
+	& .site-info {
+		padding: 0;
+		margin: 0;
+		max-width: none;
+
+		& .social-links {
+
+			& a {
+				display: inline-block;
+				margin-right: 15px;
+				color: var(--color-white);
+
+				&:hover,
+				&:focus {
+					color: var(--color-light-grey);
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		& p {
+			@mixin roboto 16px, var(--color-white), 400, none;
+			color: var(--color-white);
+			margin: 0;
+
+			& a {
+				color: var(--color-light-grey);
+
+				&:hover,
+				&:focus {
+					color: var(--color-off-white);
+				}
+			}
+		}
+	}
+}

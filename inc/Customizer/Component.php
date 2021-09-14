@@ -51,7 +51,7 @@ class Component implements Component_Interface {
 				'priority'       => 10,
 				'capability'     => 'edit_theme_options',
 				'theme_supports' => '',
-				'title'          => esc_html__( 'Sports Bench Main Theme', 'wp-rig' ),
+				'title'          => esc_html__( 'Giornalismo Options', 'wp-rig' ),
 			)
 		);
 
@@ -97,13 +97,13 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-layout',
 			array(
-				'label'     => esc_html_e( 'Layout', 'wp-rig' ),
+				'label'     => esc_html__( 'Layout', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'select',
 				'choices'   => array(
-					'right-sidebar' => esc_html_e( 'Right Sidebar', 'wp-rig' ),
-					'left-sidebar'  => esc_html_e( 'Left Sidebar', 'wp-rig' ),
-					'two-sidebars'  => esc_html_e( 'Two Sidebars', 'wp-rig' ),
+					'right-sidebar' => esc_html__( 'Right Sidebar', 'wp-rig' ),
+					'left-sidebar'  => esc_html__( 'Left Sidebar', 'wp-rig' ),
+					'two-sidebars'  => esc_html__( 'Two Sidebars', 'wp-rig' ),
 				),
 			)
 		);
@@ -119,15 +119,15 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-color-theme',
 			array(
-				'label'     => esc_html_e( 'Color Theme', 'wp-rig' ),
+				'label'     => esc_html__( 'Color Theme', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'select',
 				'choices'   => array(
-					'default'   => esc_html_e( 'Default', 'wp-rig' ),
-					'blue'      => esc_html_e( 'Blue', 'wp-rig' ),
-					'green'     => esc_html_e( 'Green', 'wp-rig' ),
-					'purple'    => esc_html_e( 'Purple', 'wp-rig' ),
-					'red'       => esc_html_e( 'Red', 'wp-rig' ),
+					'default'   => esc_html__( 'Default', 'wp-rig' ),
+					'blue'      => esc_html__( 'Blue', 'wp-rig' ),
+					'green'     => esc_html__( 'Green', 'wp-rig' ),
+					'purple'    => esc_html__( 'Purple', 'wp-rig' ),
+					'red'       => esc_html__( 'Red', 'wp-rig' ),
 				),
 			)
 		);
@@ -143,7 +143,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-top-menu',
 			array(
-				'label'     => esc_html_e( 'Top Menu', 'wp-rig' ),
+				'label'     => esc_html__( 'Top Menu', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -160,7 +160,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-todays-date',
 			array(
-				'label'     => esc_html_e( 'Show Today\'s Date', 'wp-rig' ),
+				'label'     => esc_html__( 'Show Today\'s Date', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -177,7 +177,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-author-bio',
 			array(
-				'label'     => esc_html_e( 'Display the Author\'s Bio After Posts', 'wp-rig' ),
+				'label'     => esc_html__( 'Display the Author\'s Bio After Posts', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -194,7 +194,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-author-position',
 			array(
-				'label'     => esc_html_e( 'Display the Author\'s Position', 'wp-rig' ),
+				'label'     => esc_html__( 'Display the Author\'s Position', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -211,7 +211,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-author-byline',
 			array(
-				'label'     => esc_html_e( 'Display the Author\'s Byline', 'wp-rig' ),
+				'label'     => esc_html__( 'Display the Author\'s Byline', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -229,7 +229,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-post-comments',
 			array(
-				'label'     => esc_html_e( 'Display the Number of Comments on a Post', 'wp-rig' ),
+				'label'     => esc_html__( 'Display the Number of Comments on a Post', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -246,7 +246,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-breadcrumbs',
 			array(
-				'label'     => esc_html_e( 'Display Breadcrumbs', 'wp-rig' ),
+				'label'     => esc_html__( 'Display Breadcrumbs', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -263,7 +263,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-related-stories',
 			array(
-				'label'     => esc_html_e( 'Show Related Stories', 'wp-rig' ),
+				'label'     => esc_html__( 'Show Related Stories', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -280,7 +280,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-latest-stories',
 			array(
-				'label'     => esc_html_e( 'Show latest posts from a category on the single post template', 'wp-rig' ),
+				'label'     => esc_html__( 'Show latest posts from a category on the single post template', 'wp-rig' ),
 				'section'   => 'giornalismo_basic_options',
 				'type'      => 'checkbox',
 			)
@@ -290,7 +290,7 @@ class Component implements Component_Interface {
 		 * Homepage options.
 		 */
 		$cats             = get_categories();
-		$cat_args['none'] = esc_html_e( 'None', 'wp-rig' );
+		$cat_args['none'] = esc_html__( 'None', 'wp-rig' );
 		foreach ( $cats as $cat ) {
 			$cat_args[ $cat->term_id ] = $cat->name;
 		}
@@ -306,8 +306,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-top-story-category',
 			array(
-				'label'     => esc_html_e( 'Top Story Category', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Top Story Category', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'select',
 				'choices'   => $cat_args,
 			)
@@ -324,8 +324,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-one-category',
 			array(
-				'label'     => esc_html_e( 'Column One Category', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Column One Category', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'select',
 				'choices'   => $cat_args,
 			)
@@ -342,8 +342,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-one-count',
 			array(
-				'label'     => esc_html_e( 'Number of Stories in the First Column', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Number of Stories in the First Column', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'text',
 			)
 		);
@@ -359,8 +359,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-two-category',
 			array(
-				'label'     => esc_html_e( 'Column Two Category', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Column Two Category', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'select',
 				'choices'   => $cat_args,
 			)
@@ -377,8 +377,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-two-count',
 			array(
-				'label'     => esc_html_e( 'Number of Stories in the Second Column', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Number of Stories in the Second Column', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'text',
 			)
 		);
@@ -394,8 +394,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-three-category',
 			array(
-				'label'     => esc_html_e( 'Column Three Category', 'wp-rig' ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Column Three Category', 'wp-rig' ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'select',
 				'choices'   => $cat_args,
 			)
@@ -412,8 +412,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-column-three-count',
 			array(
-				'label'     => esc_html_e( 'Number of Stories in the Third Column', 'wp-rig'  ),
-				'section'   => 'home',
+				'label'     => esc_html__( 'Number of Stories in the Third Column', 'wp-rig'  ),
+				'section'   => 'giornalismo_homepage_options',
 				'type'      => 'text',
 			)
 		);
@@ -432,8 +432,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-facebook',
 			array(
-				'label'     => esc_html_e( 'Facebook Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Facebook Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -449,25 +449,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-twitter',
 			array(
-				'label'     => esc_html_e( 'Twitter Link', 'wp-rig' ),
-				'section'   => 'social',
-				'type'      => 'text',
-			)
-		);
-
-		$wp_customize->add_setting(
-			'giornalismo-google-plus',
-			array(
-				'default'           => '',
-				'sanitize_callback' => array( $this, 'sanitize_link' ),
-			)
-		);
-
-		$wp_customize->add_control(
-			'giornalismo-google-plus',
-			array(
-				'label'     => esc_html_e( 'Google+ Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Twitter Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -483,8 +466,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-youtube',
 			array(
-				'label'     => esc_html_e( 'YouTube Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'YouTube Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -500,8 +483,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-linkedin',
 			array(
-				'label'     => esc_html_e( 'LinkedIn Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'LinkedIn Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -517,8 +500,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-tumblr',
 			array(
-				'label'     => esc_html_e( 'Tumblr Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Tumblr Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -534,8 +517,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-instagram',
 			array(
-				'label'     => esc_html_e( 'Instagram Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Instagram Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -551,8 +534,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-pinterest',
 			array(
-				'label'     => esc_html_e( 'Pinterest Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Pinterest Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -568,8 +551,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-rss-feed',
 			array(
-				'label'     => esc_html_e( 'RSS Feed Link', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'RSS Feed Link', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'text',
 			)
 		);
@@ -585,8 +568,8 @@ class Component implements Component_Interface {
 		$wp_customize->add_control(
 			'giornalismo-twitter-handle',
 			array(
-				'label'     => esc_html_e( 'Show Author\'s Twitter Handle', 'wp-rig' ),
-				'section'   => 'social',
+				'label'     => esc_html__( 'Show Author\'s Twitter Handle', 'wp-rig' ),
+				'section'   => 'giornalismo_social_media_options',
 				'type'      => 'checkbox',
 			)
 		);
@@ -605,32 +588,32 @@ class Component implements Component_Interface {
 		);
 	}
 
-	public function giornalismo_sanitize_link( $input ) {
+	public function sanitize_link( $input ) {
 		return esc_url_raw( $input );
 	}
 
-	public function giornalismo_sanitize_select( $input, $setting ) {
+	public function sanitize_select( $input, $setting ) {
 		$input = sanitize_key( $input );
 		$choices = $setting->manager->get_control( $setting->id )->choices;
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
-	public function giornalismo_sanitize_checkbox( $input ) {
+	public function sanitize_checkbox( $input ) {
 		return ( ( isset( $input ) && true == $input ) ? 1 : 0 );
 	}
 
-	public function giornalismo_sanitize_category( $input, $setting ) {
+	public function sanitize_category( $input, $setting ) {
 		$input = sanitize_key( $input );
 		$choices = $setting->manager->get_control( $setting->id )->choices;
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
-	public function giornalismo_sanitize_num( $input, $setting ) {
+	public function sanitize_num( $input, $setting ) {
 		$input = absint( $input );
 		return ( $input ? $input : $setting->default );
 	}
 
-	public function giornalismo_sanitize_text( $input ) {
+	public function sanitize_text( $input ) {
 		return wp_filter_nohtml_kses( $input );
 	}
 }
