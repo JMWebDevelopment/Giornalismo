@@ -1,0 +1,15 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+.page {
+
+	& .entry-header {
+		margin: 0 0 2rem;
+		padding: 0 0 1rem;
+		border-bottom: 1px solid var(--color-black);
+
+		& h1 {
+			margin: 0;
+		}
+	}
+}

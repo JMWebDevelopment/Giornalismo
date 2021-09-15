@@ -14,16 +14,20 @@ get_header();
 wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
-	<main id="primary" class="site-main">
+	<div class="site-container">
+		<main id="primary" class="site-main">
+			<?php
+
+			while ( have_posts() ) {
+				the_post();
+
+				get_template_part( 'template-parts/content/entry', get_post_type() );
+			}
+			?>
+		</main><!-- #primary -->
 		<?php
-
-		while ( have_posts() ) {
-			the_post();
-
-			get_template_part( 'template-parts/content/entry', get_post_type() );
-		}
+		get_sidebar();
 		?>
-	</main><!-- #primary -->
+	</div>
 <?php
-get_sidebar();
 get_footer();
