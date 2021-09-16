@@ -24,6 +24,7 @@ wp_rig()->print_styles( 'wp-rig-content' );
 				?>
 				<article id="<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
+						<?php echo wp_kses_post( wp_rig()->display_breadcrumbs() ); ?>
 						<h1><?php the_title(); ?></h1>
 					</header>
 
