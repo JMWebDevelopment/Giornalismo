@@ -9,6 +9,7 @@ namespace WP_Rig\WP_Rig\Single_Post;
 
 use WP_Rig\WP_Rig\Component_Interface;
 use WP_Rig\WP_Rig\Templating_Component_Interface;
+use function WP_Rig\WP_Rig\wp_rig;
 use WP_Post;
 use WP_Query;
 use function add_action;
@@ -39,7 +40,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	/**
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
-	public function initialize() {}
+	public function initialize() {
+		add_action( 'wp_enqueue_scripts', [ $this, 'action_enqueue_flex_video_script' ] );
+	}
 
 	/**
 	 * Gets template tags to expose as methods on the Template_Tags class instance, accessible through `wp_rig()`.
@@ -57,6 +60,24 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			'display_latest_posts'    => array( $this, 'display_latest_posts' ),
 			'display_author_bio'      => array( $this, 'display_author_bio' ),
 		);
+	}
+
+	/**
+	 * Loads the script for adding the flex-video class to videos.
+	 *
+	 * @since 2.0
+	 */
+	public function action_enqueue_flex_video_script() {
+		wp_enqueue_script(
+			'wp-rig-flex-video',
+			get_theme_file_uri( '/assets/js/flex-video.min.js' ),
+			[ 'jquery' ],
+			wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/flex-video.min.js' ) ),
+			false
+		);
+		wp_script_add_data( 'wp-rig-flex-video', 'async', true );
+		wp_script_add_data( 'wp-rig-flex-video', 'precache', true );
+
 	}
 
 	public function display_author_byline() {

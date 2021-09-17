@@ -371,10 +371,11 @@ input[type="submit"] {
 	border-radius: 3px;
 	background: var(--color-off-black);
 	color: #fff;
-	font-size: 0.75rem;
+	ont-size: 1rem;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: .6em 1em .6em;
 	cursor: pointer;
+	display: inline-block;
 }
 /* stylelint-enable */
 
