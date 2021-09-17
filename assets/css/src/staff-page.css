@@ -1,0 +1,97 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+.page {
+
+	& .entry-header {
+		margin: 0 0 2rem;
+		padding: 0 0 1rem;
+		border-bottom: 1px solid var(--color-black);
+
+		& h1 {
+			margin: 0;
+		}
+	}
+
+	& .entry-content {
+
+		& .author-bio {
+			display: flex;
+			flex-wrap: wrap;
+			background-color: var(--color-off-white);
+			padding: 10px;
+			margin-bottom: 1rem;
+
+			@supports ( grid-area: auto ) {
+				display: grid;
+				grid-template-columns: 1fr;
+			}
+
+			& .mugshot {
+				flex-basis: 100%;
+				padding: 0 10px;
+
+				& img {
+					border-radius: 10px;
+				}
+			}
+
+			& .author-info {
+				flex-basis: 100%;
+				padding: 0 10px;
+
+				& .name-title {
+					@mixin oswald 24px, var(--color-black), 400, none;
+					margin: 0 0 0.5rem;
+				}
+
+				& .bio {
+					font-size: 16px;
+					margin: 0 0 1rem;
+				}
+
+				& .author-social-area {
+
+					& a {
+						display: inline-block;
+						margin-right: 15px;
+						color: var(--color-black);
+
+						&:hover,
+						&:focus {
+							color: var(--color-dark-grey);
+						}
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--medium-up) {
+
+	.page {
+
+		& .entry-content {
+
+			& .author-bio {
+
+				@supports ( grid-area: auto ) {
+					grid-template-columns: 15fr 85fr;
+				}
+
+				& .mugshot {
+					flex-basis: 15%;
+				}
+
+				& .author-info {
+					flex-basis: 85%;
+				}
+			}
+		}
+	}
+}

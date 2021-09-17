@@ -59,6 +59,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			'display_related_posts'   => array( $this, 'display_related_posts' ),
 			'display_latest_posts'    => array( $this, 'display_latest_posts' ),
 			'display_author_bio'      => array( $this, 'display_author_bio' ),
+			'author_social_area'      => array( $this, 'author_social_area' ),
 		);
 	}
 
