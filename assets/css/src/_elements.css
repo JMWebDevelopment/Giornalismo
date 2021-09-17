@@ -77,46 +77,48 @@ figure {
 	margin: 0.5em 0;
 }
 
-table {
+table,
+.wp-block-table table {
 	margin: 0 0 1.5em;
 	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-	line-height: 2;
-	margin-bottom: 40px;
-	margin-bottom: 4rem;
-	border: 1px solid var(--color-black);
-
-	& th,
-	& td {
-		text-align: left;
-		color: #fff;
-		padding: 4px;
-	}
+	margin-bottom: 2rem;
 
 	& thead {
+
+		& tr {
+			border-bottom: 0;
+		}
 
 		& th {
 			background-color: var(--color-off-black);
 			@mixin oswald 18px, var(--color-white), 400, uppercase;
 			padding: 4px;
+			border: 0;
+			text-align: center;
 		}
 	}
 
 	& tbody {
 
-		& a {
-			color: #e4e4e4;
-		}
-
 		& tr {
 
+			& td {
+				font-size: 16px;
+				border: 0;
+			}
+
+			& th {
+				border: 0;
+			}
+
 			&:nth-child(odd) {
-				background-color: #aaa;
+				background-color: var(--color-white);
 			}
 
 			&:nth-child(even) {
-				background-color: #ccc;
+				background-color: var(--color-off-white);
 			}
 		}
 	}

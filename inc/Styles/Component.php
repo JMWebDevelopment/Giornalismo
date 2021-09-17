@@ -305,6 +305,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return true;
 				},
 			),
+			'wp-rig-single' => array(
+				'file'             => 'single.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'single.php' === basename( $template );
+				},
+			),
 			'wp-rig-front-page' => array(
 				'file'             => 'front-page.min.css',
 				'preload_callback' => function() {

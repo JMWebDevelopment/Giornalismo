@@ -13,7 +13,7 @@
 .comments-title,
 .comment-reply-title {
 	margin-bottom: 1em;
-	font-size: 2em;
+	font-size: 24px;
 	font-weight: 900;
 }
 
@@ -70,12 +70,12 @@
 	left: -70px;
 	width: 50px;
 	height: 50px;
-	border-radius: 50px;
+	border-radius: 10px;
 }
 
 .bypostauthor .avatar {
 	box-sizing: content-box;
-	border: 5px solid var(--border-color-light);
+	border: 2px solid var(--color-dark-grey);
 	margin-top: -5px;
 	margin-left: -5px;
 }
@@ -141,17 +141,18 @@
 }
 
 .comment-reply-link,
+.comment-reply-link:visited,
 .comment-form .form-submit input {
 	display: inline-block;
 	padding: 0.5em 1.4em;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	font-size: 85%;
-	color: var(--global-font-color);
+	color: var(--color-white);
 	line-height: 1.3;
 	text-decoration: none;
-	background: transparent;
-	border: 1px solid var(--border-color-light);
+	background: var(--color-off-black);
+	border: 1px solid var(--color-off-black);
 	border-radius: 0;
 }
 
@@ -159,7 +160,8 @@
 .comment-reply-link:focus,
 .comment-form .form-submit input:hover,
 .comment-form .form-submit input:focus {
-	border-color: var(--border-color-dark);
+	background-color: var(--color-off-white);
+	color: var(--color-black);
 	cursor: pointer;
 }
 
