@@ -86,6 +86,8 @@
 
 			& .story-article {
 				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid var(--color-black);
 
 				& .label-head {
 					margin: 0 0 10px;

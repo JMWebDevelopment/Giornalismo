@@ -1,7 +1,8 @@
 @import "_custom-properties.css";
 @import "_custom-mixins.css";
 
-.page {
+.page,
+.error404 {
 
 	& .entry-header {
 		margin: 0 0 2rem;
@@ -10,6 +11,43 @@
 
 		& h1 {
 			margin: 0;
+		}
+	}
+
+	& .search-form {
+
+		& label {
+			width: 100%;
+			display: inline-block;
+			clear: none;
+			margin-bottom: 10px;
+
+			& input {
+				width: 100%;
+			}
+		}
+
+		& .search-submit {
+			width: 100%;
+		}
+	}
+}
+
+@media (--medium-up) {
+
+	.page,
+	.error404 {
+
+		& .search-form {
+
+			& label {
+				width: 70%;
+				margin-bottom: 0;
+			}
+
+			& .search-submit {
+				width: 25%;
+			}
 		}
 	}
 }
