@@ -40,6 +40,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'excerpt_more', array( $this, 'edit_read_more' ) );
+		add_action( 'template_include', array( $this, 'change_page_two' ) );
+		add_action( 'get_the_archive_title', array( $this, 'archive_title' ) );
 	}
 
 	/**
@@ -55,5 +57,32 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 	public function edit_read_more( $more ) {
 		return '...';
+	}
+
+	public function change_page_two( $template ) {
+		if ( is_front_page() && is_paged() ) {
+			$template = locate_template( array( 'index.php' ) );
+		}
+		return $template;
+	}
+
+	public function archive_title( $title ) {
+		if ( is_day() ) {
+			$title = esc_html__( 'Archives for ', 'wp-rig' ) . get_the_date( get_option( 'date_format' ) );
+		} elseif ( is_month() ) {
+			$title = esc_html__( 'Archives for ', 'wp-rig' ) . get_the_time( 'F Y' );
+		} elseif ( is_year() ) {
+			$title = esc_html__( 'Archives for ', 'wp-rig' ) . get_the_time( 'Y' );
+		} elseif ( is_category() ) {
+			$title = single_cat_title( '', false );
+		} elseif ( is_search() ) {
+			$title = esc_html__( 'Search results for ', 'wp-rig' ) . get_search_query();
+		} elseif ( is_tag() ) {
+			$title = single_tag_title( '', false );
+		} else {
+			$page  = get_query_var( 'paged' );
+			$title = esc_html__( 'Page ', 'wp-rig' ) . $page;
+		}
+		return $title;
 	}
 }

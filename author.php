@@ -20,6 +20,7 @@ wp_rig()->print_styles( 'wp-rig-archive' );
 			<div class="entry-header">
 				<?php echo wp_kses_post( wp_rig()->display_breadcrumbs() ); ?>
 				<h1><?php the_archive_title(); ?></h1>
+				<?php get_template_part( 'template-parts/author/profile' ); ?>
 			</div>
 			<div class="archive-posts">
 				<?php

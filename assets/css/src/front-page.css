@@ -116,9 +116,9 @@
 						color: var(--color-white);
 
 						&:hover,
-					&:focus {
-						color: var(--color-black);
-					}
+						&:focus {
+							color: var(--color-black);
+						}
 					}
 				}
 			}

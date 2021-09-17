@@ -110,7 +110,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				$html .= '</li>';
 			} elseif ( is_search() ) {
 				$html .= '<li class="breadcrumbs-active">' . esc_html__( 'Search Results: ', 'wp-rig' );
-				get_search_query();
+				$html .= get_search_query();
 				$html .= '</li>';
 			} elseif ( is_page_template( 'page-staff-page.php' ) ) {
 				$html .= '<li class="breadcrumbs-active">' . esc_html__( 'Staff', 'wp-rig' ) . '</li>';
