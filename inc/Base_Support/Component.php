@@ -48,6 +48,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		add_filter( 'embed_defaults', array( $this, 'filter_embed_dimensions' ) );
 		add_filter( 'theme_scandir_exclusions', array( $this, 'filter_scandir_exclusions_for_optional_templates' ) );
 		add_filter( 'script_loader_tag', array( $this, 'filter_script_loader_tag' ), 10, 2 );
+		add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
 	}
 
 	/**
@@ -91,6 +92,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		require_once( get_template_directory() . '/inc/Base_Support/class-tgm-plugin-activation.php' );
 	}
 
 	/**
@@ -201,5 +204,45 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		return $this->get_version();
+	}
+
+	public function register_required_plugins() {
+		$plugins = array(
+			array(
+				'name'      => 'JM Breaking News',
+				'slug'      => 'jm-breaking-news',
+				'required'  => false,
+			),
+			array(
+				'name'      => 'Extra User Details',
+				'slug'      => 'extra-user-details',
+				'required'  => false,
+			),
+			array(
+				'name'      => 'Story Lines',
+				'slug'      => 'story-lines',
+				'required'  => false,
+			),
+		);
+
+		/**
+		 * Array of configuration settings. Amend each line as needed.
+		 * If you want the default strings to be available under your own theme domain,
+		 * leave the strings uncommented.
+		 * Some of the strings are added into a sprintf, so see the comments at the
+		 * end of each line for what each argument will be.
+		 */
+		$config = array(
+			'default_path' => '',                      // Default absolute path to pre-packaged plugins.
+			'menu'         => 'tgmpa-install-plugins', // Menu slug.
+			'has_notices'  => true,                    // Show admin notices or not.
+			'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+			'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+			'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+			'message'      => '',                      // Message to output right before the plugins table.
+		);
+
+		tgmpa( $plugins, $config );
+
 	}
 }
