@@ -347,6 +347,27 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return 'blue' === get_theme_mod( 'giornalismo-color-theme' );
 				},
 			),
+			'wp-rig-green' => array(
+				'file'             => 'green.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'green' === get_theme_mod( 'giornalismo-color-theme' );
+				},
+			),
+			'wp-rig-purple' => array(
+				'file'             => 'purple.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'purple' === get_theme_mod( 'giornalismo-color-theme' );
+				},
+			),
+			'wp-rig-red' => array(
+				'file'             => 'red.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'red' === get_theme_mod( 'giornalismo-color-theme' );
+				},
+			),
 		);
 
 		/**

@@ -1,0 +1,307 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+:root {
+	--green-theme-color: #0c7a00;
+	--dark-green-theme-color: #004d00;
+}
+
+body.has-green-theme {
+
+	& a,
+	& a:link,
+	& a:visited {
+		color: var(--green-theme-color);
+	}
+
+	& a:hover,
+	& a:focus {
+		color: var(--dark-green-theme-color);
+	}
+
+	& .button,
+	& .button:visited,
+	& .button:link,
+	& button,
+	& input[type="button"],
+	& input[type="reset"],
+	& input[type="submit"] {
+		color: var(--color-white);
+		border: 1px solid var(--dark-green-theme-color);
+		background: var(--dark-green-theme-color);
+	}
+
+	& .button:hover,
+	& .button:visited:hover,
+	& .button:link:hover,
+	& button:hover,
+	& input[type="button"]:hover,
+	& input[type="reset"]:hover,
+	& input[type="submit"]:hover {
+		border-color: var(--dark-green-theme-color);
+		color: var(--dark-green-theme-color);
+		background-color: var(--color-off-white);
+	}
+
+	& .button:active,
+	& .button:focus,
+	& .button:visited:active,
+	& .button:visited:focus,
+	& .button:link:active,
+	& .button:link:focus,
+	& button:active,
+	& button:focus,
+	& input[type="button"]:active,
+	& input[type="button"]:focus,
+	& input[type="reset"]:active,
+	& input[type="reset"]:focus,
+	& input[type="submit"]:active,
+	& input[type="submit"]:focus {
+		border-color: var(--dark-green-theme-color);
+		color: var(--dark-green-theme-color);
+		background-color: var(--color-off-white);
+	}
+
+	& table,
+	& .wp-block-table table {
+
+		& thead {
+
+			& th {
+				background-color: var(--green-theme-color);
+			}
+		}
+	}
+
+	& .main-navigation {
+		background-color: var(--green-theme-color);
+
+		& .menu {
+
+			& li {
+
+				& a {
+					color: var(--color-white);
+				}
+
+				& .sub-menu {
+					background-color: var(--green-theme-color);
+				}
+			}
+		}
+	}
+
+	& .top-navigation {
+		background-color: var(--dark-green-theme-color);
+
+		& .menu {
+
+			& li {
+
+				& a {
+					color: var(--color-white);
+				}
+
+				& .sub-menu {
+					background-color: var(--dark-green-theme-color);
+				}
+			}
+		}
+	}
+
+	& .site-title {
+		color: var(--green-theme-color);
+	}
+
+	& .site-title a {
+		color: var(--green-theme-color);
+	}
+
+	& .site-description {
+		color: var(--dark-green-theme-color);
+	}
+
+	& .site-footer {
+		background-color: var(--dark-green-theme-color);
+
+		& p {
+			color: var(--color-white);
+
+			& a {
+				color: var(--color-white);
+
+				&:hover,
+				&:focus {
+					color: var(--color-off-white);
+				}
+			}
+		}
+	}
+
+	& .widget-title {
+		color: var(--green-theme-color);
+		border-top: 1px solid var(--dark-green-theme-color);
+		border-bottom: 1px solid var(--dark-green-theme-color);
+	}
+
+	& .widget_calendar {
+
+		& .wp-calendar-table {
+
+			& thead {
+
+				& tr {
+					background-color: var(--dark-green-theme-color);
+
+					& th,
+					& td {
+						background-color: var(--dark-green-theme-color);
+					}
+				}
+			}
+
+			& tbody {
+
+				& tr {
+
+					& .pad {
+						background-color: var(--dark-green-theme-color);
+					}
+
+					& td {
+						border-color: var(--dark-green-theme-color);
+
+						& a {
+							color: var(--dark-green-theme-color);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& .tagcloud a {
+		background-color: var(--dark-green-theme-color);
+
+		&:hover {
+			background-color: var(--color-off-white);
+			color: var(--dark-green-theme-color);
+		}
+	}
+
+	&.home {
+
+		& .site-main {
+
+			& .column {
+				border-color: var(--dark-green-theme-color);
+
+				& .label-head {
+					background-color: var(--dark-green-theme-color);
+				}
+			}
+
+			& .story-article {
+				border-color: var(--dark-green-theme-color);
+
+				& .label-head {
+					background-color: var(--dark-green-theme-color);
+				}
+			}
+		}
+	}
+
+	& #left-sidebar,
+	& #right-sidebar {
+		border-color: var(--dark-green-theme-color);
+	}
+
+	& .breadcrumbs {
+
+		& li {
+			background-color: var(--dark-green-theme-color);
+			color: var(--color-white);
+
+			& a {
+				color: var(--color-white);
+			}
+		}
+
+		& .separator {
+			color: var(--dark-green-theme-color);
+		}
+	}
+
+	&.single {
+
+		& .site-main {
+
+			& .post-footer {
+
+				& .post-navigation {
+
+					& .previous-post,
+					& .next-post {
+
+						& p {
+							color: var(--dark-green-theme-color);
+
+							& a {
+								color: var(--dark-green-theme-color);
+							}
+						}
+					}
+				}
+
+				& .related-stories,
+				& .latest-category {
+
+					& h2 {
+						background-color: var(--dark-green-theme-color);
+					}
+
+					& .stories-container {
+
+						& .story {
+
+							& p {
+								color: var(--dark-green-theme-color);
+
+								& a {
+									color: var(--dark-green-theme-color);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.page,
+	&.error404 {
+
+		& .entry-header {
+			border-color: var(--dark-green-theme-color);
+		}
+	}
+
+	&.archive,
+	&.blog,
+	&.search {
+
+		& .site-main {
+
+			& .archive-posts {
+
+				& .story-article {
+					border-color: var(--dark-green-theme-color);
+
+					& .label-head {
+						background-color: var(--dark-green-theme-color);
+					}
+				}
+			}
+		}
+	}
+}
