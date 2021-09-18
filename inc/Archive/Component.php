@@ -79,6 +79,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$title = esc_html__( 'Search results for ', 'wp-rig' ) . get_search_query();
 		} elseif ( is_tag() ) {
 			$title = single_tag_title( '', false );
+		} elseif ( is_author() ) {
+			$title = get_the_author();
 		} else {
 			$page  = get_query_var( 'paged' );
 			$title = esc_html__( 'Page ', 'wp-rig' ) . $page;

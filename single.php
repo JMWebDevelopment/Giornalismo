@@ -13,6 +13,7 @@ get_header();
 
 wp_rig()->print_styles( 'wp-rig-single' );
 wp_rig()->print_styles( 'wp-rig-content' );
+wp_rig()->load_color_stylesheet();
 
 ?>
 	<div class="site-container">

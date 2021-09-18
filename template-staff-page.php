@@ -15,6 +15,7 @@ get_header();
 
 wp_rig()->print_styles( 'wp-rig-staff-page' );
 wp_rig()->print_styles( 'wp-rig-content' );
+wp_rig()->load_color_stylesheet();
 
 ?>
 	<div class="site-container">

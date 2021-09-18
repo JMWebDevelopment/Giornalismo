@@ -156,6 +156,7 @@ class Theme {
 			new Breadcrumbs\Component(),
 			new Single_Post\Component(),
 			new Archive\Component(),
+			new Colors\Component(),
 		);
 
 		if ( defined( 'JETPACK__VERSION' ) ) {

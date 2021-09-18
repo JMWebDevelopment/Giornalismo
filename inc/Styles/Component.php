@@ -340,6 +340,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return 'page.php' === basename( $template ) || is_404();
 				},
 			),
+			'wp-rig-blue' => array(
+				'file'             => 'blue.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'blue' === get_theme_mod( 'giornalismo-color-theme' );
+				},
+			),
 		);
 
 		/**
