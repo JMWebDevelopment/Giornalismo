@@ -258,7 +258,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @return bool True if preloading stylesheets and injecting them is enabled, false otherwise.
 	 */
 	protected function preloading_styles_enabled() {
-		$preloading_styles_enabled = ! wp_rig()->is_amp();
+		$preloading_styles_enabled = true;
 
 		/**
 		 * Filters whether to preload stylesheets and inject their link tags within the page content.
