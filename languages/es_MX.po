@@ -1,0 +1,588 @@
+# Copyright (C) 2021 WP Rig
+# This file is distributed under the same license as the WP Rig package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Rig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: WP Rig\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: es_MX\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:24
+#, fuzzy
+msgid "404 - Article Not Found"
+msgstr "404 - Artículo no encontrado"
+
+#: 404.php:28
+#, fuzzy
+msgid "The article you were looking for was not found."
+msgstr "No se ha encontrado el artículo que buscaba."
+
+#: 404.php:29
+#, fuzzy
+msgid ""
+"Please use the search bar below to search for the content you're looking for."
+msgstr ""
+"Utilice la barra de búsqueda que aparece a continuación para buscar el "
+"contenido que desea."
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s comentario en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios en &ldquo;%2$s&rdquo;"
+
+#: comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Un comentario en &ldquo;%1$s&rdquo;"
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: sidebar.php:21
+#, fuzzy
+msgid "Left Asides"
+msgstr "Lados de la izquierda"
+
+#: sidebar.php:30
+#, fuzzy
+msgid "Right Asides"
+msgstr "Lado derecho"
+
+#: single.php:33
+msgid "Tags: "
+msgstr "Etiquetas: "
+
+#: template-staff-page.php:3, inc/Breadcrumbs/Component.php:116
+msgid "Staff"
+msgstr "Personal"
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: inc/back-compat.php:25
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s and PHP version %2$s. You "
+"are running versions %3$s and %4$s respectively. Please update and try again."
+msgstr ""
+"WP Rig requiere al menos la versión %1$s de WordPress y la versión %2$s de "
+"PHP. Usted está ejecutando las versiones %3$s y %4$s respectivamente. Por "
+"favor, actualice e intente de nuevo."
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: inc/back-compat.php:30
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s. You are running version "
+"%2$s. Please update and try again."
+msgstr ""
+"WP Rig requiere al menos la versión %1$s de WordPress. Estás utilizando la "
+"versión %2$s. Por favor, actualice e inténtelo de nuevo."
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: inc/back-compat.php:35
+#, fuzzy
+msgid ""
+"WP Rig requires at least PHP version %1$s. You are running version %2$s. "
+"Please update and try again."
+msgstr ""
+"WP Rig requiere al menos la versión %1$s de PHP. Usted está ejecutando la "
+"versión %2$s. Por favor, actualice e intente de nuevo."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Template_Tags.php:54
+#, fuzzy
+msgid ""
+"The theme templating component %1$s does not implement the %2$s interface."
+msgstr ""
+"El componente de plantillas del tema %1$s no implementa la interfaz %2$s."
+
+#. translators: %s: template tag name
+#: inc/Template_Tags.php:81
+#, fuzzy
+msgid "The template tag %s does not exist."
+msgstr "La etiqueta de plantilla %s no existe."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:110
+#, fuzzy
+msgid ""
+"The template tag method %1$s registered by theme component %2$s must either "
+"be a callable or an array."
+msgstr ""
+"El método de la etiqueta de plantilla %1$s registrado por el componente "
+"temático %2$s debe ser un callable o un array."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:121
+#, fuzzy
+msgid ""
+"The template tag method %1$s registered by theme component %2$s conflicts "
+"with an already registered template tag of the same name."
+msgstr ""
+"El método de etiqueta de plantilla %1$s registrado por el componente "
+"temático %2$s entra en conflicto con una etiqueta de plantilla ya registrada "
+"con el mismo nombre."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Theme.php:57
+#, fuzzy
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr "El componente temático %1$s no implementa la interfaz %2$s."
+
+#. translators: %s: slug
+#: inc/Theme.php:120
+#, fuzzy
+msgid "No theme component with the slug %s exists."
+msgstr "No existe ningún componente temático con el slug %s."
+
+#: inc/Accessibility/Component.php:64
+msgid "Expand child menu"
+msgstr "Expanda el menú secundario"
+
+#: inc/Accessibility/Component.php:65
+msgid "Collapse child menu"
+msgstr "Contraer menú secundario"
+
+#: inc/Archive/Component.php:86
+msgid "Page "
+msgstr "Página "
+
+#: inc/Archive/Component.php:79
+msgid "Search results for "
+msgstr "Resultados de búsqueda para "
+
+#: inc/Archive/Component.php:75, inc/Archive/Component.php:73,
+#: inc/Archive/Component.php:71
+msgid "Archives for "
+msgstr "Archivo para"
+
+#: inc/Breadcrumbs/Component.php:63
+msgid "Home"
+msgstr "Inicio"
+
+#: inc/Breadcrumbs/Component.php:112
+msgid "Search Results: "
+msgstr "Resultados de Búsqueda: "
+
+#: inc/Breadcrumbs/Component.php:109
+msgid "Blog Archives"
+msgstr "Archivos del blog"
+
+#: inc/Breadcrumbs/Component.php:105
+msgid "Author Archive: "
+msgstr "Archivo del autor: "
+
+#: inc/Comments/Component.php:144
+#, fuzzy
+msgid "New comment(s)"
+msgstr "Nuevo(s) comentario(s)"
+
+#: inc/Customizer/Component.php:54
+#, fuzzy
+msgid "Giornalismo Options"
+msgstr "Opciones de giornalismo"
+
+#: inc/Customizer/Component.php:61
+msgid "Basic Options"
+msgstr "Opciones Básicas"
+
+#: inc/Customizer/Component.php:70
+msgid "Homepage Options"
+msgstr "Opciones de portada"
+
+#: inc/Customizer/Component.php:79
+msgid "Social Media Options"
+msgstr "Selecciona imagen desde la librería de medios"
+
+#: inc/Customizer/Component.php:100
+msgid "Layout"
+msgstr "Diseño"
+
+#: inc/Customizer/Component.php:104, inc/Sidebars/Component.php:87
+msgid "Right Sidebar"
+msgstr "Barra lateral derecha"
+
+#: inc/Customizer/Component.php:105, inc/Sidebars/Component.php:75
+msgid "Left Sidebar"
+msgstr "Barra lateral izquierda"
+
+#: inc/Customizer/Component.php:106
+#, fuzzy
+msgid "Two Sidebars"
+msgstr "Dos barras laterales"
+
+#: inc/Customizer/Component.php:122
+msgid "Color Theme"
+msgstr "Tema de color"
+
+#: inc/Customizer/Component.php:126
+msgid "Default"
+msgstr "Por defecto"
+
+#: inc/Customizer/Component.php:127, inc/Editor/Component.php:85
+msgid "Blue"
+msgstr "Azul"
+
+#: inc/Customizer/Component.php:128, inc/Editor/Component.php:80
+msgid "Green"
+msgstr "Verde"
+
+#: inc/Customizer/Component.php:129
+msgid "Purple"
+msgstr "Púrpura"
+
+#: inc/Customizer/Component.php:130, inc/Editor/Component.php:75
+msgid "Red"
+msgstr "Rojo"
+
+#: inc/Customizer/Component.php:146, inc/Nav_Menus/Component.php:73
+msgid "Top Menu"
+msgstr "Menú Superior"
+
+#: inc/Customizer/Component.php:163
+#, fuzzy
+msgid "Show Today's Date"
+msgstr "Mostrar la fecha de hoy"
+
+#: inc/Customizer/Component.php:180
+#, fuzzy
+msgid "Display the Author's Bio After Posts"
+msgstr "Mostrar la biografía del autor después de las publicaciones"
+
+#: inc/Customizer/Component.php:197
+#, fuzzy
+msgid "Display the Author's Position"
+msgstr "Mostrar la posición del autor"
+
+#: inc/Customizer/Component.php:214
+#, fuzzy
+msgid "Display the Author's Byline"
+msgstr "Mostrar el título del autor"
+
+#: inc/Customizer/Component.php:232
+#, fuzzy
+msgid "Display the Number of Comments on a Post"
+msgstr "Mostrar el número de comentarios de una entrada"
+
+#: inc/Customizer/Component.php:249
+#, fuzzy
+msgid "Display Breadcrumbs"
+msgstr "Mostrar migas de pan"
+
+#: inc/Customizer/Component.php:266
+#, fuzzy
+msgid "Show Related Stories"
+msgstr "Mostrar historias relacionadas"
+
+#: inc/Customizer/Component.php:283
+#, fuzzy
+msgid "Show latest posts from a category on the single post template"
+msgstr ""
+"Mostrar las últimas publicaciones de una categoría en la plantilla de una "
+"sola publicación"
+
+#: inc/Customizer/Component.php:293
+msgid "None"
+msgstr "Ninguna\v"
+
+#: inc/Customizer/Component.php:309
+#, fuzzy
+msgid "Top Story Category"
+msgstr "Categoría de historias principales"
+
+#: inc/Customizer/Component.php:327
+#, fuzzy
+msgid "Column One Category"
+msgstr "Columna Uno Categoría"
+
+#: inc/Customizer/Component.php:345
+#, fuzzy
+msgid "Number of Stories in the First Column"
+msgstr "Número de historias en la primera columna"
+
+#: inc/Customizer/Component.php:362
+#, fuzzy
+msgid "Column Two Category"
+msgstr "Columna dos Categoría"
+
+#: inc/Customizer/Component.php:380
+#, fuzzy
+msgid "Number of Stories in the Second Column"
+msgstr "Número de historias en la segunda columna"
+
+#: inc/Customizer/Component.php:397
+#, fuzzy
+msgid "Column Three Category"
+msgstr "Columna tres Categoría"
+
+#: inc/Customizer/Component.php:415
+#, fuzzy
+msgid "Number of Stories in the Third Column"
+msgstr "Número de historias en la tercera columna"
+
+#: inc/Customizer/Component.php:435
+msgid "Facebook Link"
+msgstr "Enlace de Facebook"
+
+#: inc/Customizer/Component.php:452
+msgid "Twitter Link"
+msgstr "Enlace de Twitter"
+
+#: inc/Customizer/Component.php:469
+msgid "YouTube Link"
+msgstr "YouTube Link"
+
+#: inc/Customizer/Component.php:486
+#, fuzzy
+msgid "LinkedIn Link"
+msgstr "Enlace a LinkedIn"
+
+#: inc/Customizer/Component.php:503
+msgid "Tumblr Link"
+msgstr "Enlace de Tumblr"
+
+#: inc/Customizer/Component.php:520
+msgid "Instagram Link"
+msgstr "Enlace Instagram"
+
+#: inc/Customizer/Component.php:537
+msgid "Pinterest Link"
+msgstr "Enlace Pinterest"
+
+#: inc/Customizer/Component.php:554
+#, fuzzy
+msgid "RSS Feed Link"
+msgstr "Enlace al canal RSS"
+
+#: inc/Customizer/Component.php:571
+#, fuzzy
+msgid "Show Author's Twitter Handle"
+msgstr "Mostrar la dirección de Twitter del autor"
+
+#: inc/Editor/Component.php:65
+msgid "Primary"
+msgstr "Primario"
+
+#: inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr "Secundario"
+
+#: inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr "Amarillo"
+
+#: inc/Editor/Component.php:95
+msgid "Black"
+msgstr "Negro"
+
+#: inc/Editor/Component.php:100
+msgid "Grey"
+msgstr "Gris"
+
+#: inc/Editor/Component.php:105
+msgid "White"
+msgstr "Blanco"
+
+#: inc/Editor/Component.php:110
+#, fuzzy
+msgid "Dusty daylight"
+msgstr "La luz del día polvorienta"
+
+#: inc/Editor/Component.php:115
+#, fuzzy
+msgid "Dusty sun"
+msgstr "Sol polvoriento"
+
+#: inc/Editor/Component.php:132
+msgid "Small"
+msgstr "Pequeño"
+
+#: inc/Editor/Component.php:133
+msgid "S"
+msgstr "S"
+
+#: inc/Editor/Component.php:138
+msgid "Medium"
+msgstr "Mediano"
+
+#: inc/Editor/Component.php:139
+msgid "M"
+msgstr "M"
+
+#: inc/Editor/Component.php:144
+msgid "Large"
+msgstr "Grande"
+
+#: inc/Editor/Component.php:145
+msgid "L"
+msgstr "L"
+
+#: inc/Editor/Component.php:150
+msgid "Larger"
+msgstr "Más grande"
+
+#: inc/Editor/Component.php:151
+msgid "XL"
+msgstr "EG"
+
+#. translators: %s: Post title.
+#: inc/Excerpts/Component.php:44
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuar leyendo<span class = \"screen-reader-text\"> \"%s\" </span>"
+
+#: inc/Nav_Menus/Component.php:72
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#: inc/Sidebars/Component.php:77, inc/Sidebars/Component.php:89
+msgid "Add widgets here."
+msgstr "Agregue Widgets aquí."
+
+#: inc/Sidebars/Component.php:99, template-parts/header/widget-area.php:14
+#, fuzzy
+msgid "Header Widget Area"
+msgstr "Área del widget de cabecera"
+
+#: inc/Sidebars/Component.php:101
+#, fuzzy
+msgid "Use this area to display an ad in the header area."
+msgstr "Utilice esta zona para mostrar un anuncio en la zona de la cabecera."
+
+#: inc/Single_Post/Component.php:88, inc/Single_Post/Component.php:86
+msgid "Written by "
+msgstr "Autoría de "
+
+#: inc/Single_Post/Component.php:101
+#, fuzzy
+msgid "Story Highlights"
+msgstr "Lo más destacado de la historia"
+
+#: inc/Single_Post/Component.php:151
+msgid "Related Stories"
+msgstr "Historias relacionadas"
+
+#: inc/Single_Post/Component.php:178
+#, fuzzy
+msgid "More Stories From "
+msgstr "Más historias de"
+
+#: inc/Single_Post/Component.php:220
+msgid "About "
+msgstr "Acerca de "
+
+#: inc/Single_Post/Component.php:233, inc/Social_Media/Component.php:62,
+#: inc/Social_Media/Component.php:74
+msgid "Facebook Profile"
+msgstr "Perfil de Facebook"
+
+#: inc/Single_Post/Component.php:236, inc/Social_Media/Component.php:65
+#, fuzzy
+msgid "Twitter Profile"
+msgstr "Perfil de Twitter"
+
+#: inc/Single_Post/Component.php:239
+#, fuzzy
+msgid "Email the Author"
+msgstr "Envíe un correo electrónico al autor"
+
+#: inc/Social_Media/Component.php:68
+#, fuzzy
+msgid "YouTube Channel"
+msgstr "Canal de YouTube"
+
+#: inc/Social_Media/Component.php:71
+#, fuzzy
+msgid "Tumblr Blog"
+msgstr "Blog de Tumblr"
+
+#: inc/Social_Media/Component.php:79, inc/Social_Media/Component.php:77
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#. translators: %s: stylesheet handle
+#: inc/Styles/Component.php:237
+#, fuzzy
+msgid "Invalid theme stylesheet handle: %s"
+msgstr "Manejador de hoja de estilo de tema inválido: %s"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "0 Comments"
+msgstr "0 Comentarios"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "Comments Off"
+msgstr "Comentarios desactivados"
+
+#: template-parts/archive/post.php:61, template-parts/home/post.php:61
+msgid "Read More"
+msgstr "Leer más"
+
+#: template-parts/archive/post.php:61, template-parts/home/post.php:61
+msgid "about"
+msgstr "Acerca de"
+
+#: template-parts/header/navigation.php:16,
+#: template-parts/header/top-navigation.php:16
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: template-parts/header/navigation.php:18
+#, fuzzy
+msgid "Open main menu"
+msgstr "Abrir el menú principal"
+
+#: template-parts/header/navigation.php:19,
+#: template-parts/header/top-navigation.php:19
+msgid "Menu"
+msgstr "Menú"
+
+#: template-parts/header/top-navigation.php:18
+#, fuzzy
+msgid "Open top menu"
+msgstr "Menú superior abierto"
+
+#: template-parts/home/column-one.php:47,
+#: template-parts/home/column-three.php:47,
+#: template-parts/home/column-two.php:47
+#, fuzzy
+msgid "View More &rsaquo;&rsaquo;"
+msgstr "Ver más ''"
+
+#: template-parts/home/column-one.php:43,
+#: template-parts/home/column-three.php:43,
+#: template-parts/home/column-two.php:43
+msgid "View More"
+msgstr "Ver más"

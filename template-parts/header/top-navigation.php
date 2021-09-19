@@ -13,7 +13,9 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 ?>
 
-<nav id="top-site-navigation" class="top-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>">>
+<nav id="top-site-navigation" class="top-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>">
+
+	<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open top menu', 'wp-rig' ); ?>" aria-controls="top-menu" aria-expanded="false">
 		<?php esc_html_e( 'Menu', 'wp-rig' ); ?>
 	</button>
 

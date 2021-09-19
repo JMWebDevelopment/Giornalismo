@@ -1,0 +1,574 @@
+# Copyright (C) 2021 WP Rig
+# This file is distributed under the same license as the WP Rig package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Rig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: WP Rig\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:24
+#, fuzzy
+msgid "404 - Article Not Found"
+msgstr "404 - Статья не найдена"
+
+#: 404.php:28
+#, fuzzy
+msgid "The article you were looking for was not found."
+msgstr "Статья, которую вы искали, не найдена."
+
+#: 404.php:29
+#, fuzzy
+msgid ""
+"Please use the search bar below to search for the content you're looking for."
+msgstr ""
+"Пожалуйста, воспользуйтесь строкой поиска ниже, чтобы найти нужный вам "
+"контент."
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s комментарий к &ldquo;%2$s&rdquo;"
+msgstr[1] ""
+msgstr[2] ""
+
+#: comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Один комментарий о &ldquo;%1$s&rdquo;"
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#: sidebar.php:21
+#, fuzzy
+msgid "Left Asides"
+msgstr "Левые стороны"
+
+#: sidebar.php:30
+#, fuzzy
+msgid "Right Asides"
+msgstr "Правые стороны"
+
+#: single.php:33
+msgid "Tags: "
+msgstr "Теги: "
+
+#: template-staff-page.php:3, inc/Breadcrumbs/Component.php:116
+msgid "Staff"
+msgstr "Сотрудники"
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: inc/back-compat.php:25
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s and PHP version %2$s. You "
+"are running versions %3$s and %4$s respectively. Please update and try again."
+msgstr ""
+"WP Rig требует как минимум WordPress версии %1$s и PHP версии %2$s. Вы "
+"используете версии %3$s и %4$s соответственно. Пожалуйста, обновите версию и "
+"попробуйте снова."
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: inc/back-compat.php:30
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s. You are running version "
+"%2$s. Please update and try again."
+msgstr ""
+"WP Rig требует как минимум WordPress версии %1$s. Вы используете версию "
+"%2$s. Пожалуйста, обновите ее и попробуйте снова."
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: inc/back-compat.php:35
+#, fuzzy
+msgid ""
+"WP Rig requires at least PHP version %1$s. You are running version %2$s. "
+"Please update and try again."
+msgstr ""
+"Для работы WP Rig требуется PHP версии не ниже %1$s. Вы используете версию "
+"%2$s. Пожалуйста, обновите ее и попробуйте снова."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Template_Tags.php:54
+msgid ""
+"The theme templating component %1$s does not implement the %2$s interface."
+msgstr "Компонент темизации %1$s не реализует интерфейс %2$s."
+
+#. translators: %s: template tag name
+#: inc/Template_Tags.php:81
+msgid "The template tag %s does not exist."
+msgstr "Тег шаблона %s не существует."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:110
+msgid ""
+"The template tag method %1$s registered by theme component %2$s must either "
+"be a callable or an array."
+msgstr ""
+"Метод тега шаблона %1$s зарегистрированный компонентом темы %2$s должен быть "
+"либо вызываемым, либо массивом."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:121
+msgid ""
+"The template tag method %1$s registered by theme component %2$s conflicts "
+"with an already registered template tag of the same name."
+msgstr ""
+"Метод тега шаблона %1$s, зарегистрированный компонентом темы %2$s, "
+"конфликтует с уже зарегистрированным тегом шаблона с тем же именем."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Theme.php:57
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr "Компонент темы %1$s не реализует интерфейс %2$s."
+
+#. translators: %s: slug
+#: inc/Theme.php:120
+msgid "No theme component with the slug %s exists."
+msgstr "Не существует компонента темы по ссылке %s."
+
+#: inc/Accessibility/Component.php:64
+msgid "Expand child menu"
+msgstr "Развернуть дочернее меню"
+
+#: inc/Accessibility/Component.php:65
+msgid "Collapse child menu"
+msgstr "Свернуть дочернее меню"
+
+#: inc/Archive/Component.php:86
+msgid "Page "
+msgstr "Страница"
+
+#: inc/Archive/Component.php:79
+msgid "Search results for "
+msgstr "Результаты поиска для"
+
+#: inc/Archive/Component.php:75, inc/Archive/Component.php:73,
+#: inc/Archive/Component.php:71
+msgid "Archives for "
+msgstr "Архивы для "
+
+#: inc/Breadcrumbs/Component.php:63
+msgid "Home"
+msgstr "Главная"
+
+#: inc/Breadcrumbs/Component.php:112
+msgid "Search Results: "
+msgstr "Результаты Поиска:"
+
+#: inc/Breadcrumbs/Component.php:109
+msgid "Blog Archives"
+msgstr "Архив блога"
+
+#: inc/Breadcrumbs/Component.php:105
+msgid "Author Archive: "
+msgstr "Автор Архива:"
+
+#: inc/Comments/Component.php:144
+msgid "New comment(s)"
+msgstr "Новый комментарий (и)"
+
+#: inc/Customizer/Component.php:54
+#, fuzzy
+msgid "Giornalismo Options"
+msgstr "Варианты джорнализма"
+
+#: inc/Customizer/Component.php:61
+msgid "Basic Options"
+msgstr "Основные параметры"
+
+#: inc/Customizer/Component.php:70
+msgid "Homepage Options"
+msgstr "Настройки Главной страницы"
+
+#: inc/Customizer/Component.php:79
+msgid "Social Media Options"
+msgstr "Опции Social Media"
+
+#: inc/Customizer/Component.php:100
+msgid "Layout"
+msgstr "Макет"
+
+#: inc/Customizer/Component.php:104, inc/Sidebars/Component.php:87
+msgid "Right Sidebar"
+msgstr "Правая боковая панель"
+
+#: inc/Customizer/Component.php:105, inc/Sidebars/Component.php:75
+msgid "Left Sidebar"
+msgstr "Левая боковая панель"
+
+#: inc/Customizer/Component.php:106
+msgid "Two Sidebars"
+msgstr "Два сайдбара"
+
+#: inc/Customizer/Component.php:122
+msgid "Color Theme"
+msgstr "Цветовая схема"
+
+#: inc/Customizer/Component.php:126
+msgid "Default"
+msgstr "По умолчанию"
+
+#: inc/Customizer/Component.php:127, inc/Editor/Component.php:85
+msgid "Blue"
+msgstr "Синий"
+
+#: inc/Customizer/Component.php:128, inc/Editor/Component.php:80
+msgid "Green"
+msgstr "Зеленый"
+
+#: inc/Customizer/Component.php:129
+msgid "Purple"
+msgstr "Пурпурный"
+
+#: inc/Customizer/Component.php:130, inc/Editor/Component.php:75
+msgid "Red"
+msgstr "Красный"
+
+#: inc/Customizer/Component.php:146, inc/Nav_Menus/Component.php:73
+msgid "Top Menu"
+msgstr "Верхнее меню"
+
+#: inc/Customizer/Component.php:163
+#, fuzzy
+msgid "Show Today's Date"
+msgstr "Показать сегодняшнюю дату"
+
+#: inc/Customizer/Component.php:180
+#, fuzzy
+msgid "Display the Author's Bio After Posts"
+msgstr "Отображение био автора после сообщений"
+
+#: inc/Customizer/Component.php:197
+#, fuzzy
+msgid "Display the Author's Position"
+msgstr "Отображение позиции автора"
+
+#: inc/Customizer/Component.php:214
+#, fuzzy
+msgid "Display the Author's Byline"
+msgstr "Отображение авторского заголовка"
+
+#: inc/Customizer/Component.php:232
+#, fuzzy
+msgid "Display the Number of Comments on a Post"
+msgstr "Отображение количества комментариев к сообщению"
+
+#: inc/Customizer/Component.php:249
+msgid "Display Breadcrumbs"
+msgstr "Показать хлебные крошки"
+
+#: inc/Customizer/Component.php:266
+#, fuzzy
+msgid "Show Related Stories"
+msgstr "Показать похожие истории"
+
+#: inc/Customizer/Component.php:283
+#, fuzzy
+msgid "Show latest posts from a category on the single post template"
+msgstr ""
+"Показывать последние сообщения из категории в шаблоне отдельного сообщения"
+
+#: inc/Customizer/Component.php:293
+msgid "None"
+msgstr "Нет"
+
+#: inc/Customizer/Component.php:309
+#, fuzzy
+msgid "Top Story Category"
+msgstr "Категория Top Story"
+
+#: inc/Customizer/Component.php:327
+#, fuzzy
+msgid "Column One Category"
+msgstr "Первая колонка Категория"
+
+#: inc/Customizer/Component.php:345
+#, fuzzy
+msgid "Number of Stories in the First Column"
+msgstr "Количество рассказов в первой колонке"
+
+#: inc/Customizer/Component.php:362
+#, fuzzy
+msgid "Column Two Category"
+msgstr "Колонка вторая Категория"
+
+#: inc/Customizer/Component.php:380
+#, fuzzy
+msgid "Number of Stories in the Second Column"
+msgstr "Количество рассказов во второй колонке"
+
+#: inc/Customizer/Component.php:397
+#, fuzzy
+msgid "Column Three Category"
+msgstr "Колонка три Категория"
+
+#: inc/Customizer/Component.php:415
+#, fuzzy
+msgid "Number of Stories in the Third Column"
+msgstr "Количество рассказов в третьей колонке"
+
+#: inc/Customizer/Component.php:435
+msgid "Facebook Link"
+msgstr "Ссылка на Facebook"
+
+#: inc/Customizer/Component.php:452
+msgid "Twitter Link"
+msgstr "Ссылка на Twitter"
+
+#: inc/Customizer/Component.php:469
+msgid "YouTube Link"
+msgstr "Ссылка На YouTube "
+
+#: inc/Customizer/Component.php:486
+msgid "LinkedIn Link"
+msgstr "Ссылка на LinkedIn"
+
+#: inc/Customizer/Component.php:503
+msgid "Tumblr Link"
+msgstr "Ссылка на Tumblr"
+
+#: inc/Customizer/Component.php:520
+msgid "Instagram Link"
+msgstr "Ссылка на Instagram"
+
+#: inc/Customizer/Component.php:537
+msgid "Pinterest Link"
+msgstr "Ссылка на Pinterest"
+
+#: inc/Customizer/Component.php:554
+#, fuzzy
+msgid "RSS Feed Link"
+msgstr "Ссылка на RSS-канал"
+
+#: inc/Customizer/Component.php:571
+#, fuzzy
+msgid "Show Author's Twitter Handle"
+msgstr "Показать Твиттер автора"
+
+#: inc/Editor/Component.php:65
+msgid "Primary"
+msgstr "Основной"
+
+#: inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr "Вторичный"
+
+#: inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr "Желтый"
+
+#: inc/Editor/Component.php:95
+msgid "Black"
+msgstr "Черный"
+
+#: inc/Editor/Component.php:100
+msgid "Grey"
+msgstr "Серый"
+
+#: inc/Editor/Component.php:105
+msgid "White"
+msgstr "Белый"
+
+#: inc/Editor/Component.php:110
+#, fuzzy
+msgid "Dusty daylight"
+msgstr "Пыльный дневной свет"
+
+#: inc/Editor/Component.php:115
+#, fuzzy
+msgid "Dusty sun"
+msgstr "Пыльное солнце"
+
+#: inc/Editor/Component.php:132
+msgid "Small"
+msgstr "Маленький"
+
+#: inc/Editor/Component.php:133
+msgid "S"
+msgstr "S"
+
+#: inc/Editor/Component.php:138
+msgid "Medium"
+msgstr "Средний"
+
+#: inc/Editor/Component.php:139
+msgid "M"
+msgstr "M"
+
+#: inc/Editor/Component.php:144
+msgid "Large"
+msgstr "Большой"
+
+#: inc/Editor/Component.php:145
+msgid "L"
+msgstr "L"
+
+#: inc/Editor/Component.php:150
+msgid "Larger"
+msgstr "Больше"
+
+#: inc/Editor/Component.php:151
+msgid "XL"
+msgstr "XL"
+
+#. translators: %s: Post title.
+#: inc/Excerpts/Component.php:44
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Продолжить чтение<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: inc/Nav_Menus/Component.php:72
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: inc/Sidebars/Component.php:77, inc/Sidebars/Component.php:89
+msgid "Add widgets here."
+msgstr "Добавьте сюда виджеты."
+
+#: inc/Sidebars/Component.php:99, template-parts/header/widget-area.php:14
+msgid "Header Widget Area"
+msgstr "Область виджетов в хедере"
+
+#: inc/Sidebars/Component.php:101
+#, fuzzy
+msgid "Use this area to display an ad in the header area."
+msgstr ""
+"Используйте эту область для отображения объявления в области заголовка."
+
+#: inc/Single_Post/Component.php:88, inc/Single_Post/Component.php:86
+msgid "Written by "
+msgstr "Автор:"
+
+#: inc/Single_Post/Component.php:101
+msgid "Story Highlights"
+msgstr "История Особенности"
+
+#: inc/Single_Post/Component.php:151
+msgid "Related Stories"
+msgstr "Похожие материалы"
+
+#: inc/Single_Post/Component.php:178
+#, fuzzy
+msgid "More Stories From "
+msgstr "Другие истории из"
+
+#: inc/Single_Post/Component.php:220
+msgid "About "
+msgstr "Об "
+
+#: inc/Single_Post/Component.php:233, inc/Social_Media/Component.php:62,
+#: inc/Social_Media/Component.php:74
+msgid "Facebook Profile"
+msgstr "Профиль в Facebook"
+
+#: inc/Single_Post/Component.php:236, inc/Social_Media/Component.php:65
+msgid "Twitter Profile"
+msgstr "Профиль Twitter"
+
+#: inc/Single_Post/Component.php:239
+#, fuzzy
+msgid "Email the Author"
+msgstr "Написать автору"
+
+#: inc/Social_Media/Component.php:68
+msgid "YouTube Channel"
+msgstr "YouTube канал"
+
+#: inc/Social_Media/Component.php:71
+msgid "Tumblr Blog"
+msgstr "Блог Tumblr"
+
+#: inc/Social_Media/Component.php:79, inc/Social_Media/Component.php:77
+msgid "RSS Feed"
+msgstr "RSS лента"
+
+#. translators: %s: stylesheet handle
+#: inc/Styles/Component.php:237
+msgid "Invalid theme stylesheet handle: %s"
+msgstr "Ошибки в таблице стилей темы: %s"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "0 Comments"
+msgstr "0 Комментариев"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "1 Comment"
+msgstr "1 Комментарий"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "% Comments"
+msgstr "% Комментариев"
+
+#: template-parts/archive/post.php:55, template-parts/home/post.php:55,
+#: template-parts/single-post/header.php:54
+msgid "Comments Off"
+msgstr "Комментарии отключены"
+
+#: template-parts/archive/post.php:61, template-parts/home/post.php:61
+#, fuzzy
+msgid "Read More"
+msgstr "Подробнее"
+
+#: template-parts/archive/post.php:61, template-parts/home/post.php:61
+msgid "about"
+msgstr "о нас"
+
+#: template-parts/header/navigation.php:16,
+#: template-parts/header/top-navigation.php:16
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: template-parts/header/navigation.php:18
+#, fuzzy
+msgid "Open main menu"
+msgstr "Открыть главное меню"
+
+#: template-parts/header/navigation.php:19,
+#: template-parts/header/top-navigation.php:19
+msgid "Menu"
+msgstr "Меню"
+
+#: template-parts/header/top-navigation.php:18
+#, fuzzy
+msgid "Open top menu"
+msgstr "Открытое верхнее меню"
+
+#: template-parts/home/column-one.php:47,
+#: template-parts/home/column-three.php:47,
+#: template-parts/home/column-two.php:47
+#, fuzzy
+msgid "View More &rsaquo;&rsaquo;"
+msgstr "Посмотреть еще ''"
+
+#: template-parts/home/column-one.php:43,
+#: template-parts/home/column-three.php:43,
+#: template-parts/home/column-two.php:43
+#, fuzzy
+msgid "View More"
+msgstr "Подробнее"

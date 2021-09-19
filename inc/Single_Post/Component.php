@@ -154,7 +154,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						$related_stories->the_post();
 						$html .= '<article id="' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
 						if ( has_post_thumbnail() ) {
-							$html .= '<div class="photo"><a href="' . get_the_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</a></div>';
+							$html .= '<div class="photo">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</div>';
 						}
 						$html .= '<p class="headline"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></p>';
 						$html .= '</article>';
@@ -190,7 +190,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					$latest_stories->the_post();
 					$html .= '<article id="' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
 					if ( has_post_thumbnail() ) {
-						$html .= '<div class="photo"><a href="' . get_the_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</a></div>';
+						$html .= '<div class="photo">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</div>';
 					}
 					$html .= '<p class="headline"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></p>';
 					$html .= '</article>';
@@ -233,10 +233,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$html .= '<a href="' . esc_url( get_the_author_meta( 'facebook' ) ) . '" target="_blank"><span class="fab fa-facebook-f"><span class="screen-reader-text">' . esc_html__( 'Facebook Profile', 'wp-rig' ) . '</span></span></a>';
 		}
 		if ( get_the_author_meta( 'twitter-link' ) ) {
-			$html .= '<a href="' . esc_url( get_the_author_meta( 'twitter-link' ) ) . '" target="_blank"><span class="fab fa-twitter"><span class="screen-reader-text">' . esc_html__( 'Twitter Profile', 'wp-rig' ) . '</span></span>';
+			$html .= '<a href="' . esc_url( get_the_author_meta( 'twitter-link' ) ) . '" target="_blank"><span class="fab fa-twitter"><span class="screen-reader-text">' . esc_html__( 'Twitter Profile', 'wp-rig' ) . '</span></span></a>';
 		}
 		if ( esc_url( get_the_author_meta( 'email' ) ) ) {
-			$html .= '<a href="mailto:' . get_the_author_meta( 'email' ) . '"><span class="fal fa-envelope"><span class="screen-reader-text">' . esc_html__( 'Email the Author', 'wp-rig' ) . '</span></span>';
+			$html .= '<a href="mailto:' . get_the_author_meta( 'email' ) . '"><span class="fal fa-envelope"><span class="screen-reader-text">' . esc_html__( 'Email the Author', 'wp-rig' ) . '</span></span></a>';
 		}
 		$html .= '</div>';
 
