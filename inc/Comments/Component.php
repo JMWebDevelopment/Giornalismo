@@ -109,7 +109,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			)
 		);
 
-		$amp_live_list = wp_rig()->using_amp_live_list_comments();
+		$amp_live_list = false;
 
 		if ( $amp_live_list ) {
 			$comment_order     = get_option( 'comment_order' );

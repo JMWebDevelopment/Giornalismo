@@ -71,6 +71,20 @@ body.has-green-theme {
 				background-color: var(--green-theme-color);
 			}
 		}
+
+		& tbody {
+
+			& tr {
+
+				& td,
+				& th {
+
+					& a {
+						color: var(--dark-green-theme-color);
+					}
+				}
+			}
+		}
 	}
 
 	& .main-navigation {
@@ -250,6 +264,20 @@ body.has-green-theme {
 								color: var(--dark-green-theme-color);
 							}
 						}
+					}
+				}
+
+				& .comment-form .form-submit input,
+				& .comment-reply-link,
+				& .comment-reply-link:visited {
+					color: var(--color-white);
+					background: var(--dark-green-theme-color);
+					border: 1px solid var(--dark-green-theme-color);
+
+					&:hover,
+					&:focus {
+						color: var(--dark-green-theme-color);
+						background: var(--color-white);
 					}
 				}
 

@@ -97,6 +97,10 @@ table,
 			padding: 4px;
 			border: 0;
 			text-align: center;
+
+			& a {
+				color: var(--color-off-black);
+			}
 		}
 	}
 
@@ -107,10 +111,18 @@ table,
 			& td {
 				font-size: 16px;
 				border: 0;
+
+				& a {
+					color: var(--color-off-black);
+				}
 			}
 
 			& th {
 				border: 0;
+
+				& a {
+					color: var(--color-off-black);
+				}
 			}
 
 			&:nth-child(odd) {

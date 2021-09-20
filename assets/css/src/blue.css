@@ -253,6 +253,20 @@ body.has-blue-theme {
 					}
 				}
 
+				& .comment-form .form-submit input,
+				& .comment-reply-link,
+				& .comment-reply-link:visited {
+					color: var(--color-white);
+					background: var(--dark-blue-theme-color);
+					border: 1px solid var(--dark-blue-theme-color);
+
+					&:hover,
+					&:focus {
+						color: var(--dark-blue-theme-color);
+						background: var(--color-white);
+					}
+				}
+
 				& .related-stories,
 				& .latest-category {
 

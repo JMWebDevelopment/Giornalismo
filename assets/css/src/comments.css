@@ -194,6 +194,12 @@
 	padding-bottom: 0.4em;
 }
 
+.comment-form [type="text"],
+.comment-form [type="email"],
+.comment-form [type="url"] {
+	width: 100%;
+}
+
 .comment-form-cookies-consent {
 	display: flex;
 }

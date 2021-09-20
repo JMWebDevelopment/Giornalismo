@@ -152,7 +152,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					$html .= '<div class="stories-container">';
 					while ( $related_stories->have_posts() ) {
 						$related_stories->the_post();
-						$html .= '<article id="' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
+						$html .= '<article id="latest-' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
 						if ( has_post_thumbnail() ) {
 							$html .= '<div class="photo">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</div>';
 						}
@@ -188,7 +188,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				$html .= '<div class="stories-container">';
 				while ( $latest_stories->have_posts() ) {
 					$latest_stories->the_post();
-					$html .= '<article id="' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
+					$html .= '<article id="related-' . get_the_ID() . '" class="' . esc_attr( implode( ' ', get_post_class( 'story' ) ) ) . '">';
 					if ( has_post_thumbnail() ) {
 						$html .= '<div class="photo">' . get_the_post_thumbnail( get_the_ID(), 'giornalismo-single' ) . '</div>';
 					}
