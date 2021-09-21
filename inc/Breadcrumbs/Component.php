@@ -53,6 +53,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		);
 	}
 
+	/**
+	 * Displays the breadcrumbs for a post or page.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string       The HTML for the breadcrumbs section.
+	 */
 	public function display_breadcrumbs() {
 		global $post;
 		$html = '<ul class="breadcrumbs">';

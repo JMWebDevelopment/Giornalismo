@@ -55,10 +55,26 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array();
 	}
 
+	/**
+	 * Changes the read more text for excerpts.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $more      The default read more text.
+	 * @return string           The new read more text.
+	 */
 	public function edit_read_more( $more ) {
 		return '...';
 	}
 
+	/**
+	 * Changes the template for the second page of base results to the index.php file.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $template      The current template to use.
+	 * @return string               The new template to use.
+	 */
 	public function change_page_two( $template ) {
 		if ( is_front_page() && is_paged() ) {
 			$template = locate_template( array( 'index.php' ) );
@@ -66,6 +82,14 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $template;
 	}
 
+	/**
+	 * Sets the title for the different archive pages.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param string $title      The current title for the page.
+	 * @return string            The new title for the page.
+	 */
 	public function archive_title( $title ) {
 		if ( is_day() ) {
 			$title = esc_html__( 'Archives for ', 'wp-rig' ) . get_the_date( get_option( 'date_format' ) );

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying a post in the archive template
+ * Template part for displaying the author bio section in the author archive template
  *
  * @package wp_rig
  */

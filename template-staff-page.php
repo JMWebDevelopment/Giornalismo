@@ -2,7 +2,7 @@
 /**
  * Template Name: Staff
  *
- * The template for displaying all pages
+ * The template for displaying the staff page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

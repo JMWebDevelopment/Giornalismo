@@ -81,6 +81,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 	}
 
+	/**
+	 * Displays the byline for the author of the post.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string      The HTML for the byline.
+	 */
 	public function display_author_byline() {
 		if ( 1 === esc_attr( get_theme_mod( 'giornalismo-twitter-handle' ) ) && ( get_the_author_meta( 'twitter-handle' ) ) ) {
 			$html = esc_html__( 'Written by ', 'wp-rig' ) . '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a>, <a href="' . get_the_author_meta( 'twitter-link' ) . ' target="_blank">' . get_the_author_meta( 'twitter-handle' ) . '</a>, ';
@@ -90,6 +97,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $html;
 	}
 
+	/**
+	 * Displays the story lines for the post.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string      The HTML for the story lines.
+	 */
 	public function display_story_lines() {
 		$html = '';
 		if ( get_post_meta( get_the_ID(), 'giornalismo_highlight_one', true ) || get_post_meta( get_the_ID(), 'giornalismo_highlight_two', true ) || get_post_meta( get_the_ID(), 'giornalismo_highlight_three', true ) ) {
@@ -116,6 +130,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $html;
 	}
 
+	/**
+	 * Displays the post navigation.
+	 *
+	 * @since 2.0.0
+	 */
 	public function display_post_navigation() {
 		$prev_post = get_previous_post();
 		$next_post = get_next_post();
@@ -133,6 +152,14 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		<?php
 	}
 
+	/**
+	 * Displays the related posts.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param int $id      The id for the current post.
+	 * @return string      The HTML for the related posts section.
+	 */
 	public function display_related_posts( $id ) {
 		$html = '';
 		if ( '1' === esc_attr( get_theme_mod( 'giornalismo-related-stories' ) ) ) {
@@ -169,6 +196,14 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $html;
 	}
 
+	/**
+	 * Displays the latest posts.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param array $category      The list of categories for a post.
+	 * @return string              The HTML for the latest posts section.
+	 */
 	public function display_latest_posts( $category ) {
 		$html = '';
 		if ( '1' === esc_attr( get_theme_mod( 'giornalismo-latest-stories' ) ) ) {
@@ -204,6 +239,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $html;
 	}
 
+	/**
+	 * Displays the author bio section.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string      The HTML for the author bio section.
+	 */
 	public function display_author_bio() {
 		$html = '';
 		if ( get_theme_mod( 'giornalismo-author-bio' ) ) {
@@ -227,6 +269,13 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $html;
 	}
 
+	/**
+	 * Displays the social media section for an author bio.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string      The HTML for the social media section.
+	 */
 	public function author_social_area() {
 		$html = '<div class="author-social-area">';
 		if ( get_the_author_meta( 'facebook' ) ) {

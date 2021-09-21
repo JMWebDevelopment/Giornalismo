@@ -9,7 +9,6 @@
 
 namespace WP_Rig\WP_Rig;
 
-
 get_header();
 
 wp_rig()->print_styles( 'wp-rig-front-page' );

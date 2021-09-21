@@ -131,8 +131,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	/**
 	 * Adds custom classes to indicate what color theme is being used to the array of body classes.
 	 *
-	 * @param array $classes Classes for the body element.
-	 * @return array Filtered body classes.
+	 * @since 2.0.0
+	 *
+	 * @param array $classes      Classes for the body element.
+	 * @return array              Filtered body classes.
 	 */
 	public function filter_body_classes( array $classes ) : array {
 		if ( 'red' === get_theme_mod( 'giornalismo-color-theme' ) ) {

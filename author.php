@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying author archive pages
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the single post content section
+ * Template part for displaying the content section on the single post template
  *
  * @package wp_rig
  */

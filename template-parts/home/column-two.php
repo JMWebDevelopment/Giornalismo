@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying a post on the homepage
+ * Template part for displaying the second column on the homepage
  *
  * @package wp_rig
  */

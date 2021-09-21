@@ -56,6 +56,13 @@ class Component implements Templating_Component_Interface, Component_Interface {
 		];
 	}
 
+	/**
+	 * Displays social media links for the site.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string      The HTML for the social media section.
+	 */
 	public function social_media_links() {
 		$html = '<div class="social-links">';
 		if ( esc_attr( get_theme_mod( 'giornalismo-facebook' ) ) ) {

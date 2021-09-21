@@ -206,6 +206,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $this->get_version();
 	}
 
+	/**
+	 * Adds in the recommended plugins to use for the theme.
+	 *
+	 * @since 2.0.0
+	 */
 	public function register_required_plugins() {
 		$plugins = array(
 			array(

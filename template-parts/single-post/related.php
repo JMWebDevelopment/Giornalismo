@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the single post header
+ * Template part for displaying the related posts section on the single post template
  *
  * @package wp_rig
  */
