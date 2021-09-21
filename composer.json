@@ -1,0 +1,39 @@
+{
+  "name": "jmwebdevelopment/giornalismo",
+  "description": "Give your site the look of a newspaper front page, but with a modern day look. With Giornalismo, your readers will know about everything going on with a top story section and up to three colums full of stories right up front. Once inside, it will be easy for readers to know the important details, with story highlights, and navigate within the site, with related stories and latest posts. Giornalismo is completely responsive, allowing readers to take your stories wherever they go",
+  "type": "wordpress-theme",
+  "license": "GPL-3.0-or-later",
+  "require-dev": {
+    "php": ">=7.0",
+    "wp-coding-standards/wpcs": "^2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "phpunit/phpunit": "^6",
+    "brain/monkey": "^2",
+    "phpcompatibility/php-compatibility": "^9"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "WP_Rig\\WP_Rig\\": "inc"
+    }
+  },
+  "scripts": {
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ],
+    "phpcbf-dev": "\"vendor/bin/phpcbf\"",
+    "run-phpcbf": [
+      "@phpcbf-dev"
+    ],
+    "phpcs-dev": "\"vendor/bin/phpcs\"",
+    "run-phpcs": [
+      "@phpcs-dev"
+    ],
+    "phpunit-dev": "\"vendor/bin/phpunit\"",
+    "phpunit-integration-dev": "\"vendor/bin/phpunit\" -c \"phpunit.integration.xml.dist\""
+  }
+}

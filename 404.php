@@ -1,20 +1,39 @@
 <?php
 /**
-* 404.php
-*
-* 404 template for Giornalismo
-*
-* @author Jacob Martella
-* @package Giornalism
-* @version 1.5
-*/
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package wp_rig
+ */
+
+namespace WP_Rig\WP_Rig;
+
 get_header();
-get_sidebar();
+
+wp_rig()->print_styles( 'wp-rig-page' );
+wp_rig()->print_styles( 'wp-rig-content' );
+wp_rig()->load_color_stylesheet();
+
 ?>
-<main class="post-404">
-	<div class="not-found"></div>
-	<h3 class="not-found-header"><?php _e( 'Whoops! That\'s not here.', 'giornalismo' ) ; ?></h3>
-	<p><?php _e( 'We\'re sorry but the post or page you were looking for isn\'t here. ', 'giornalismo' ); ?><a href="<?php echo esc_url(home_url()); ?>"><?php _e( 'Click here', 'giornalismo' ); ?></a><?php _e( ' to return to the homepage or use the search bar below to search for what you were looking for.', 'giornalismo' ); ?></p>
-	<?php get_search_form(); ?>
-</main>
-<?php get_footer(); ?>
+	<div class="site-container">
+		<main id="primary" class="site-main">
+			<article id="<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php echo wp_kses_post( wp_rig()->display_breadcrumbs() ); ?>
+					<h1 class="single-title"><?php esc_html_e( '404 - Article Not Found', 'wp-rig' ); ?></h1>
+				</header>
+
+				<div class="entry-content">
+					<p class="single-meta"><?php esc_html_e( 'The article you were looking for was not found.', 'wp-rig' ); ?></p>
+					<p><?php esc_html_e( 'Please use the search bar below to search for the content you\'re looking for.', 'wp-rig' ); ?></p>
+					<?php get_search_form(); ?>
+				</div>
+			</article>
+		</main><!-- #primary -->
+		<?php
+		get_sidebar();
+		?>
+	</div>
+<?php
+get_footer();

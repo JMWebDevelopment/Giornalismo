@@ -1,0 +1,459 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header {
+	padding-bottom: 1em;
+}
+
+.header-image {
+	margin: 0 auto;
+}
+
+.header-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.custom-logo-link {
+	display: inline-block;
+	margin: 0 auto 1em;
+}
+
+.site-branding {
+	text-align: left;
+	padding: 60px 0 1.75em;
+}
+
+.site-title {
+	font-family: Canterbury, serif;
+	font-size: 72px;
+	font-weight: 100;
+	color: var(--color-black);
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: var(--color-black);
+}
+
+.site-description {
+	font-family: Quattrocento, serif;
+	font-size: 30px;
+	color: var(--color-black);
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+## Basic navigation menus - handles submenu and small screen toggle
+--------------------------------------------------------------*/
+.nav--toggle-small .menu-toggle {
+	display: block;
+	margin: 1.2em auto;
+	padding: 0.6em 1.2em 0.5em;
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+	font-size: 80%;
+	text-transform: uppercase;
+	border: 2px solid var(--border-color-dark);
+	border-radius: 0;
+	background: transparent;
+}
+
+.nav--toggle-small .menu {
+	display: none;
+}
+
+.nav--toggle-sub .dropdown,
+.nav--toggle-sub .dropdown-toggle {
+	display: none;
+}
+
+@media (--narrow-menu-query) {
+
+	.nav--toggle-small.nav--toggled-on .menu {
+		display: block;
+	}
+}
+
+@media (--wide-menu-query) {
+
+	.nav--toggle-small .menu-toggle {
+		display: none;
+	}
+
+	.nav--toggle-small .menu {
+		display: block;
+	}
+
+	.nav--toggle-sub ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		flex-direction: column;
+		background: #fff;
+		margin-left: 0;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		z-index: 100;
+	}
+
+	.nav--toggle-sub .dropdown,
+	.nav--toggle-sub .dropdown-toggle {
+		display: block;
+		background: transparent;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: var(--dropdown-symbol-width);
+		height: var(--dropdown-symbol-width);
+		font-size: inherit;
+		line-height: inherit;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		transform: translateY(-50%);
+		overflow: visible;
+	}
+
+	.nav--toggle-sub .dropdown-symbol {
+		display: block;
+		background: transparent;
+		position: absolute;
+		right: 20%;
+		top: 35%;
+		width: 60%;
+		height: 60%;
+		border: solid var(--border-color-dark);
+		border-width: 0 2px 2px 0;
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.nav--toggle-sub ul ul .dropdown,
+	.nav--toggle-sub ul ul .dropdown-toggle {
+		top: 40%;
+		right: 0.2em;
+	}
+
+	.nav--toggle-sub ul ul .dropdown-symbol {
+		transform: rotate(-45deg);
+	}
+
+	.nav--toggle-sub .dropdown-toggle:hover,
+	.nav--toggle-sub .menu-item--has-toggle:hover .dropdown-toggle {
+		pointer-events: none;
+	}
+
+	/* Need menu-item-has-children for non-JS */
+	.nav--toggle-sub li.menu-item-has-children,
+	.nav--toggle-sub li.menu-item--has-toggle {
+		position: relative;
+		padding-right: var(--dropdown-symbol-width);
+	}
+
+	/*
+	 * If the dropdown toggle is active with JS, then
+	 * we'll take care of showing the submenu with JS.
+	 */
+	.nav--toggle-sub li:hover > ul,
+	.nav--toggle-sub li.menu-item--toggled-on > ul,
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
+		display: block;
+	}
+
+	/*
+	 * "focus-within" is an alternative to focus class for
+	 * supporting browsers (all but IE/Edge) for no-JS context
+	 * (e.g. AMP) See https://caniuse.com/#feat=css-focus-within
+	 *
+	 * This selector needs to stay separated, otherwise submenus
+	 * will not be displayed with IE/Edge.
+	 */
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within > ul {
+		display: block;
+	}
+}
+
+/*--------------------------------------------------------------
+## Main navigation menu
+--------------------------------------------------------------*/
+.main-navigation,
+.top-navigation {
+	display: block;
+	margin: 0 auto 2em;
+	padding: 0 1em;
+	max-width: var(--content-width);
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+}
+
+.main-navigation a,
+.top-navigation a {
+	display: block;
+	width: 100%;
+	padding: 0.5em 1em 0.5em 0;
+	text-decoration: none;
+	color: var(--global-font-color);
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus,
+.top-navigation a:hover,
+.top-navigation a:focus {
+	text-decoration: underline;
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.top-navigation .current-menu-item > a,
+.top-navigation .current-menu-ancestor > a {
+	font-weight: 600;
+}
+
+.main-navigation ul,
+.top-navigation ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-navigation ul ul li,
+.top-navigation ul ul li {
+	padding-left: 1em;
+}
+
+@media (--wide-menu-query) {
+
+	.main-navigation ul li a,
+	.top-navigation ul li a {
+		padding: 0.4em 0.5em;
+	}
+
+	.main-navigation ul li,
+	.top-navigation ul li {
+		margin: 0 0 0 0.5em;
+	}
+
+	.main-navigation ul li:first-child,
+	.top-navigation ul li:first-child {
+		margin-left: 0;
+	}
+
+	.main-navigation ul ul a,
+	.top-navigation ul ul a {
+		width: 200px;
+	}
+
+	/* stylelint-disable */
+	.main-navigation ul ul li,
+	.top-navigation ul ul li {
+		padding-left: 0;
+		margin-left: 0;
+	}
+	/* stylelint-enable */
+
+	.main-navigation ul ul li a,
+	.top-navigation ul ul li a {
+		width: 218px;
+		background: none;
+	}
+
+	.main-navigation ul ul ul,
+	.top-navigation ul ul ul {
+		top: 0;
+		left: 100%;
+		min-height: 100%;
+	}
+
+	.main-navigation .menu,
+	.top-navigation .menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.main-navigation {
+	background-color: var(--color-off-black);
+	max-width: none;
+	margin-bottom: 0;
+
+	& .menu {
+		max-width: 75rem;
+		margin: 0 auto;
+		justify-content: left;
+
+		& li {
+
+			& .dropdown-symbol {
+				border: solid var(--color-white);
+				border-width: 0 2px 2px 0;
+			}
+
+			& a {
+				color: var(--color-white);
+			}
+
+			& .sub-menu {
+				background-color: var(--color-off-black);
+			}
+		}
+	}
+}
+
+.top-navigation {
+	background-color: var(--color-black);
+	max-width: none;
+	margin-bottom: 0;
+
+	& .menu {
+		max-width: 75rem;
+		margin: 0 auto;
+		justify-content: left;
+
+		& li {
+
+			& .dropdown-symbol {
+				border: solid var(--color-white);
+				border-width: 0 2px 2px 0;
+			}
+
+			& a {
+				color: var(--color-white);
+			}
+
+			& .sub-menu {
+				background-color: var(--color-black);
+			}
+		}
+	}
+}
+
+.date-container {
+	border-bottom: 1px solid var(--color-black);
+	text-align: center;
+	padding: 5px 10px;
+	max-width: none;
+	margin-bottom: 1rem;
+
+	& p {
+		font-family: Georgia, serif;
+		font-size: 20px;
+		color: var(--color-black);
+		margin: 0;
+		font-weight: 700;
+	}
+}
+
+.site-header {
+
+	& .wrap {
+		max-width: 75rem;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+
+		@supports ( grid-area: auto ) {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-row-gap: 10px;
+		}
+
+		& .header-main {
+			flex-basis: 100%;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 10px;
+
+			@supports ( grid-area: auto ) {
+				padding: 0;
+				margin-bottom: 0;
+			}
+
+			& .site-branding {
+				padding: 0;
+				text-align: center;
+			}
+		}
+
+		& .header-widget-area {
+			flex-basis: 100%;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+
+			@supports ( grid-area: auto ) {
+				padding: 0;
+			}
+
+			& .widget {
+				margin-bottom: 0;
+				text-align: center;
+
+				& > div,
+				& > figure {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (--large-up) {
+
+	.site-header {
+
+		& .wrap {
+
+			@supports ( grid-area: auto ) {
+				grid-template-columns: 2fr 1fr;
+				grid-column-gap: 10px;
+				grid-row-gap: 0;
+			}
+
+			& .header-main {
+				flex-basis: 66.7%;
+				padding: 0 10px;
+				margin-bottom: 0;
+
+				@supports ( grid-area: auto ) {
+					padding: 0;
+				}
+
+				& .site-branding {
+					text-align: left;
+				}
+			}
+
+			& .header-widget-area {
+				flex-basis: 66.7%;
+				padding: 0 10px;
+
+				@supports ( grid-area: auto ) {
+					padding: 0;
+				}
+
+				& .widget {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+.breaking-news-box {
+	max-width: 75rem;
+	margin: 0 auto 10px;
+}

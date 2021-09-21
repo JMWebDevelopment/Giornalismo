@@ -1,0 +1,167 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* stylelint-disable */
+html {
+	box-sizing: border-box;
+}
+/* stylelint-enable */
+
+/**
+ * Inherit box-sizing to make it easier to change the property for
+ * components that leverage other behavior; see
+ * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* stylelint-disable */
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+/* stylelint-enable */
+
+/* stylelint-disable */
+hr {
+	background-color: var(--border-color-light);
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+/* stylelint-enable */
+
+ul,
+ol {
+	margin: 0 0 1.5em 0;
+	padding-left: 1.5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* stylelint-disable */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+/* stylelint-enable */
+
+/* Extra wide images within figure tags don't overflow the content area. */
+figure {
+	margin: 0.5em 0;
+}
+
+table,
+.wp-block-table table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 2rem;
+
+	& thead {
+
+		& tr {
+			border-bottom: 0;
+		}
+
+		& th {
+			background-color: var(--color-off-black);
+			@mixin oswald 18px, var(--color-white), 400, uppercase;
+			padding: 4px;
+			border: 0;
+			text-align: center;
+
+			& a {
+				color: var(--color-off-black);
+			}
+		}
+	}
+
+	& tbody {
+
+		& tr {
+
+			& td {
+				font-size: 16px;
+				border: 0;
+
+				& a {
+					color: var(--color-off-black);
+				}
+			}
+
+			& th {
+				border: 0;
+
+				& a {
+					color: var(--color-off-black);
+				}
+			}
+
+			&:nth-child(odd) {
+				background-color: var(--color-white);
+			}
+
+			&:nth-child(even) {
+				background-color: var(--color-off-white);
+			}
+		}
+	}
+}
+
+/* Responsive Embeds */
+.responsive-embed,
+.flex-video {
+	position: relative;
+	height: 0;
+	margin-bottom: 1rem;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+.responsive-embed iframe,
+.responsive-embed object,
+.responsive-embed embed,
+.responsive-embed video,
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.responsive-embed.widescreen,
+.flex-video.widescreen {
+	padding-bottom: 56.25%;
+}

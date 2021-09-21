@@ -2,8 +2,8 @@
 Contributers: Jacob Martella
 Tags: two-columns,three-columns,left-sidebar,right-sidebar,custom-header,custom-menu,editor-style,featured-images,theme-options
 Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: 1.5
+Tested up to: 5.8.1
+Stable tag: 2.0
 
 == Description ==
 Give your site the look of a newspaper front page, but with a modern day look. With Giornalismo, your readers will know about everything going on with a top story section and up to three columns full of stories right up front. Once inside, it will be easy for readers to know the important details, with story highlights, and navigate within the site, with related stories and latest posts. Giornalismo is completely responsive, allowing readers to take your stories wherever they go.
@@ -158,6 +158,10 @@ add_action( 'wp_enqueue_scripts', 'giornalismo_child_theme_styles', 10 ); ?>'
 If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (http://jacobmartella.com/giornalismo-wordpress-theme).
 
 == Changelog ==
+= 2.0 =
+- Redeveloped the theme using WP Rig as a starter theme.
+- Tested with WordPress 5.8.1.
+
 = 1.5 =
 - Added view more links to the bottom of the columns on the homepage. If a category is selected for the column, the link goes to the category page. If not, it goes to page 2.
 - Fixed the issue with the left sidebar not showing.
@@ -211,9 +215,6 @@ http://www.gnu.org/licenses/gpl.html
 = Photo License =
 Except where otherwise noted, all photos in the screenshot are also licensed under the GNU General Public License. Copyright 2015 Jacob Martella
 
-= Social Media Icons License =
-All of the social media icons are licensed under the GNU General Public License (http://www.gnu.org/licenses/gpl.html).
-
 = Scripts License =
 All of the scripts used in this theme are licensed under the GNU General Public License (http://www.gnu.org/licenses/gpl.html).
 
@@ -234,3 +235,4 @@ SourceSansPro-Semibold.ttf: Copyright 2010, 2012 Adobe Systems Incorporated (htt
 SourceSansPro-Bold.ttf: Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
 Canterbury was created by Dieter Steffmann and is used under a "free" license. You can find more of his work here: http://moorstation.org/typoasis/designers/steffmann/index.htm.
 Quattrocento-Bold.ttf: Copyright (c) 2011, Pablo Impallari (www.impallari.com|impallari@gmail.com), Copyright (c) 2011, Igino Marini. (www.ikern.com|mail@iginomarini.com), Copyright (c) 2011, Brenda Gallo. (gbrenda1987@gmail.com), with Reserved Font Name Quattrocento.
+Font Awesome: SIL OFL 1.1 (Font), MIT License (Code)

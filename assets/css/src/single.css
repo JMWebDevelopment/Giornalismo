@@ -1,0 +1,233 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+.single {
+
+	& .site-main {
+
+		& .post-header {
+
+			& .caption,
+			& .photo-credit {
+				font-size: 16px;
+				margin: 0 0 0.5em;
+			}
+
+			& h1 {
+				margin: 0 0 1rem;
+			}
+
+			& .byline {
+				font-size: 16px;
+				margin: 0 0 0.5em;
+			}
+		}
+
+		& .story-lines {
+			width: 100%;
+			max-width: 300px;
+			float: left;
+			margin: 0 10px 10px 0;
+			padding: 0;
+			background-color: var(--color-black);
+
+			& .title {
+				@mixin oswald 18px, var(--color-white), 700, uppercase;
+				background-color: var(--color-off-black);
+				padding: 3px 5px;
+				margin: 0;
+				text-align: center;
+			}
+
+			& ul {
+				padding: 10px;
+				color: var(--color-white);
+				list-style-position: inside;
+				font-size: 16px;
+			}
+		}
+
+		& .post-footer {
+
+			& .post-navigation {
+				display: flex;
+				flex-wrap: wrap;
+
+				@supports ( grid-area: auto ) {
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+
+				& .previous-post,
+				& .next-post {
+					flex-basis: 100%;
+					padding: 0 10px;
+					display: flex;
+					flex-direction: column;
+
+					& p {
+						@mixin oswald 18px, var(--color-black), 700, uppercase;
+						text-align: center;
+						margin-top: auto;
+
+						& a {
+							color: var(--color-black);
+						}
+					}
+				}
+			}
+
+			& .related-stories,
+			& .latest-category {
+
+				& h2 {
+					color: var(--color-white);
+					background-color: var(--color-off-black);
+					padding: 5px 0 5px 5px;
+					margin-top: 0;
+					font-weight: 400;
+				}
+
+				& .stories-container {
+					display: flex;
+					flex-wrap: wrap;
+
+					@supports ( grid-area: auto ) {
+						display: grid;
+						grid-template-columns: 1fr;
+					}
+
+					& .story {
+						flex-basis: 100%;
+						padding: 0 10px;
+						display: flex;
+						flex-direction: column;
+
+						& p {
+							@mixin oswald 18px, var(--color-black), 700, uppercase;
+							text-align: center;
+							margin-top: auto;
+
+							& a {
+								color: var(--color-black);
+							}
+						}
+					}
+				}
+			}
+
+			& .author-bio {
+				display: flex;
+				flex-wrap: wrap;
+				background-color: var(--color-off-white);
+				padding: 10px;
+				margin-bottom: 2rem;
+
+				@supports ( grid-area: auto ) {
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+
+				& .mugshot {
+					flex-basis: 100%;
+					padding: 0 10px;
+
+					& img {
+						border-radius: 10px;
+					}
+				}
+
+				& .author-info {
+					flex-basis: 100%;
+					padding: 0 10px;
+
+					& .title {
+						@mixin oswald 20px, var(--color-black), 400, none;
+						margin: 0 0 0.5rem;
+					}
+
+					& .bio {
+						font-size: 16px;
+						margin: 0 0 1rem;
+					}
+
+					& .author-social-area {
+
+						& a {
+							display: inline-block;
+							margin-right: 15px;
+							color: var(--color-black);
+
+							&:hover,
+							&:focus {
+								color: var(--color-dark-grey);
+							}
+
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--medium-up) {
+
+	.single {
+
+		& .site-main {
+
+			& .post-footer {
+
+				& .post-navigation {
+
+					@supports ( grid-area: auto ) {
+						grid-template-columns: 1fr 1fr;
+					}
+
+					& .previous-post,
+					& .next-post {
+						flex-basis: 50%;
+					}
+				}
+
+				& .related-stories,
+				& .latest-category {
+
+					& .stories-container {
+
+						@supports ( grid-area: auto ) {
+							grid-template-columns: 1fr 1fr 1fr;
+						}
+
+						& .story {
+							flex-basis: 33.3%;
+						}
+					}
+				}
+
+				& .author-bio {
+
+					@supports ( grid-area: auto ) {
+						grid-template-columns: 15fr 85fr;
+					}
+
+					& .mugshot {
+						flex-basis: 15%;
+					}
+
+					& .author-info {
+						flex-basis: 85%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--large-up) {
+
+}

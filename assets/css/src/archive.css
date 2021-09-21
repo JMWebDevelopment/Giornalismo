@@ -1,0 +1,206 @@
+@import "_custom-properties.css";
+@import "_custom-mixins.css";
+
+.archive,
+.blog,
+.search {
+
+	& .site-main {
+
+		& .entry-header {
+			margin-top: 0;
+
+			& .author-bio {
+				display: flex;
+				flex-wrap: wrap;
+				background-color: var(--color-off-white);
+				padding: 10px;
+				margin-bottom: 2rem;
+
+				@supports ( grid-area: auto ) {
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+
+				& .mugshot {
+					flex-basis: 100%;
+					padding: 0 10px;
+
+					& img {
+						border-radius: 10px;
+					}
+				}
+
+				& .author-info {
+					flex-basis: 100%;
+					padding: 0 10px;
+
+					& .title {
+						@mixin oswald 20px, var(--color-black), 400, none;
+						margin: 0 0 0.5rem;
+					}
+
+					& .bio {
+						font-size: 16px;
+						margin: 0 0 1rem;
+					}
+
+					& .author-social-area {
+
+						& a {
+							display: inline-block;
+							margin-right: 15px;
+							color: var(--color-black);
+
+							&:hover,
+							&:focus {
+								color: var(--color-dark-grey);
+							}
+
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		& .archive-posts {
+
+			& .story-article {
+				margin-bottom: 1rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid var(--color-black);
+
+				&.has-post-thumbnail {
+					display: flex;
+					flex-wrap: wrap;
+
+					@supports ( grid-area: auto ) {
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-column-gap: 0;
+						grid-row-gap: 0;
+					}
+
+					& .featured-photo {
+						flex-basis: 100%;
+						padding: 0 10px;
+						margin-bottom: 1rem;
+
+						& .caption,
+						& .photo-credit {
+							font-size: 16px;
+							margin: 0 0 0.5em;
+						}
+					}
+
+					& .post-info {
+						flex-basis: 100%;
+						padding: 0 10px;
+					}
+				}
+
+				& .label-head {
+					margin: 0 0 10px;
+					background-color: var(--color-off-black);
+					@mixin roboto 16px, var(--color-white), 400, none;
+					padding: 5px;
+					display: inline-block;
+				}
+
+				& h2 {
+					margin: 0 0 1rem;
+				}
+
+				& .byline {
+					font-size: 16px;
+					margin: 0 0 0.5em;
+				}
+
+				& .button {
+					text-decoration: none;
+
+					&:visited {
+						color: var(--color-white);
+
+						&:hover,
+						&:focus {
+							color: var(--color-black);
+						}
+					}
+				}
+			}
+
+			& .navigation {
+				border-bottom: 0;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+@media (--medium-up) {
+
+	.archive,
+	.blog,
+	.search {
+
+		& .site-main {
+
+			& .entry-header {
+
+				& .author-bio {
+
+					@supports ( grid-area: auto ) {
+						grid-template-columns: 15fr 85fr;
+					}
+
+					& .mugshot {
+						flex-basis: 15%;
+					}
+
+					& .author-info {
+						flex-basis: 85%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (--large-up) {
+
+	.archive,
+	.blog,
+	.search {
+
+		& .site-main {
+
+			& .archive-posts {
+
+				& .story-article {
+
+					&.has-post-thumbnail {
+
+						@supports ( grid-area: auto ) {
+							grid-template-columns: 1fr 2fr;
+						}
+
+						& .featured-photo {
+							flex-basis: 33.3%;
+							padding: 0 10px;
+							margin-bottom: 0;
+						}
+
+						& .post-info {
+							flex-basis: 66.7%;
+							padding: 0 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
