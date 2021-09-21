@@ -146,6 +146,7 @@ if ( isProd ) {
 	paths.styles.editorDest = `${ prodAssetsDir }/css/editor/`;
 	paths.scripts.dest = `${ prodAssetsDir }/js/`;
 	paths.images.dest = `${ prodAssetsDir }/images/`;
+	paths.webfonts.dest = `${ prodAssetsDir }/webfonts/`;
 	paths.languages = {
 		src: `${ prodThemePath }/**/*.php`,
 		dest: `${ prodThemePath }/languages/${ config.theme.slug }.pot`,
