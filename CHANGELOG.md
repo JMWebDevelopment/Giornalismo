@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1
+- Fixed the same posts from showing in multiple columns.
+
 ## 2.0
 - Redeveloped the theme using WP Rig as a starter theme.
 - Tested with WordPress 5.8.1.
