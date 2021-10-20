@@ -9,6 +9,8 @@ namespace WP_Rig\WP_Rig;
 
 use WP_Query;
 
+global $duplicate_ids;
+
 if ( get_theme_mod( 'giornalismo-column-one-count' ) ) {
 	$count = esc_attr( get_theme_mod( 'giornalismo-column-one-count' ) );
 } else {
@@ -18,6 +20,7 @@ if ( get_theme_mod( 'giornalismo-column-one-count' ) ) {
 $posts_args   = array(
 	'posts_per_page' => $count,
 	'cat'            => esc_attr( get_theme_mod( 'giornalismo-column-one-category' ) ),
+	'post__not_in'   => $duplicate_ids,
 );
 $column_posts = new WP_Query( $posts_args );
 ?>
@@ -31,7 +34,8 @@ $column_posts = new WP_Query( $posts_args );
 	if ( $column_posts->have_posts() ) {
 		while ( $column_posts->have_posts() ) {
 			$column_posts->the_post();
-			$args = array(
+			$duplicate_ids[] = get_the_id();
+			$args            = array(
 				'category' => get_theme_mod( 'giornalismo-column-one-category' ),
 				'column'   => 'column-one',
 			);

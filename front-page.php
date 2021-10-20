@@ -15,6 +15,8 @@ wp_rig()->print_styles( 'wp-rig-front-page' );
 wp_rig()->print_styles( 'wp-rig-content' );
 wp_rig()->load_color_stylesheet();
 
+global $duplicate_ids;
+
 ?>
 	<div class="site-container">
 		<main id="primary" class="site-main">

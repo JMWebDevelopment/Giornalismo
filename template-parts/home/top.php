@@ -9,6 +9,8 @@ namespace WP_Rig\WP_Rig;
 
 use WP_Query;
 
+global $duplicate_ids;
+
 $top_story_args = array(
 	'posts_per_page'      => 1,
 	'cat'                 => esc_attr( get_theme_mod( 'giornalismo-top-story-category' ) ),
@@ -21,7 +23,8 @@ $top_story      = new WP_Query( $top_story_args );
 if ( $top_story->have_posts() ) {
 	while ( $top_story->have_posts() ) {
 		$top_story->the_post();
-		$args = array(
+		$duplicate_ids[] = get_the_ID();
+		$args            = array(
 			'category' => 'none',
 			'column'   => 'top',
 		);
