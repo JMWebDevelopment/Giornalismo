@@ -3,7 +3,7 @@ Contributers: Jacob Martella
 Tags: two-columns,three-columns,left-sidebar,right-sidebar,custom-header,custom-menu,editor-style,featured-images,theme-options
 Requires at least: 4.0
 Tested up to: 5.8.1
-Stable tag: 2.0
+Stable tag: 2.0.1
 
 == Description ==
 Give your site the look of a newspaper front page, but with a modern day look. With Giornalismo, your readers will know about everything going on with a top story section and up to three columns full of stories right up front. Once inside, it will be easy for readers to know the important details, with story highlights, and navigate within the site, with related stories and latest posts. Giornalismo is completely responsive, allowing readers to take your stories wherever they go.
@@ -158,6 +158,9 @@ add_action( 'wp_enqueue_scripts', 'giornalismo_child_theme_styles', 10 ); ?>'
 If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (http://jacobmartella.com/giornalismo-wordpress-theme).
 
 == Changelog ==
+= 2.0.1 =
+- Fixed the same posts from showing in multiple columns.
+
 = 2.0 =
 - Redeveloped the theme using WP Rig as a starter theme.
 - Tested with WordPress 5.8.1.

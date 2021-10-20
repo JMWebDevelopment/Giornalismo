@@ -59,7 +59,7 @@ msgstr ""
 msgid "Tags: "
 msgstr ""
 
-#: template-staff-page.php:3, inc/Breadcrumbs/Component.php:116
+#: template-staff-page.php:3, inc/Breadcrumbs/Component.php:123
 msgid "Staff"
 msgstr ""
 
@@ -116,31 +116,31 @@ msgstr ""
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/Archive/Component.php:86
+#: inc/Archive/Component.php:110
 msgid "Page "
 msgstr ""
 
-#: inc/Archive/Component.php:79
+#: inc/Archive/Component.php:103
 msgid "Search results for "
 msgstr ""
 
-#: inc/Archive/Component.php:75, inc/Archive/Component.php:73, inc/Archive/Component.php:71
+#: inc/Archive/Component.php:99, inc/Archive/Component.php:97, inc/Archive/Component.php:95
 msgid "Archives for "
 msgstr ""
 
-#: inc/Breadcrumbs/Component.php:63
+#: inc/Breadcrumbs/Component.php:70
 msgid "Home"
 msgstr ""
 
-#: inc/Breadcrumbs/Component.php:112
+#: inc/Breadcrumbs/Component.php:119
 msgid "Search Results: "
 msgstr ""
 
-#: inc/Breadcrumbs/Component.php:109
+#: inc/Breadcrumbs/Component.php:116
 msgid "Blog Archives"
 msgstr ""
 
-#: inc/Breadcrumbs/Component.php:105
+#: inc/Breadcrumbs/Component.php:112
 msgid "Author Archive: "
 msgstr ""
 
@@ -393,47 +393,47 @@ msgstr ""
 msgid "Use this area to display an ad in the header area."
 msgstr ""
 
-#: inc/Single_Post/Component.php:88, inc/Single_Post/Component.php:86
+#: inc/Single_Post/Component.php:95, inc/Single_Post/Component.php:93
 msgid "Written by "
 msgstr ""
 
-#: inc/Single_Post/Component.php:101
+#: inc/Single_Post/Component.php:115
 msgid "Story Highlights"
 msgstr ""
 
-#: inc/Single_Post/Component.php:151
+#: inc/Single_Post/Component.php:178
 msgid "Related Stories"
 msgstr ""
 
-#: inc/Single_Post/Component.php:178
+#: inc/Single_Post/Component.php:213
 msgid "More Stories From "
 msgstr ""
 
-#: inc/Single_Post/Component.php:220
+#: inc/Single_Post/Component.php:262
 msgid "About "
 msgstr ""
 
-#: inc/Single_Post/Component.php:233, inc/Social_Media/Component.php:62, inc/Social_Media/Component.php:74
+#: inc/Single_Post/Component.php:282, inc/Social_Media/Component.php:69, inc/Social_Media/Component.php:81
 msgid "Facebook Profile"
 msgstr ""
 
-#: inc/Single_Post/Component.php:236, inc/Social_Media/Component.php:65
+#: inc/Single_Post/Component.php:285, inc/Social_Media/Component.php:72
 msgid "Twitter Profile"
 msgstr ""
 
-#: inc/Single_Post/Component.php:239
+#: inc/Single_Post/Component.php:288
 msgid "Email the Author"
 msgstr ""
 
-#: inc/Social_Media/Component.php:68
+#: inc/Social_Media/Component.php:75
 msgid "YouTube Channel"
 msgstr ""
 
-#: inc/Social_Media/Component.php:71
+#: inc/Social_Media/Component.php:78
 msgid "Tumblr Blog"
 msgstr ""
 
-#: inc/Social_Media/Component.php:79, inc/Social_Media/Component.php:77
+#: inc/Social_Media/Component.php:86, inc/Social_Media/Component.php:84
 msgid "RSS Feed"
 msgstr ""
 
