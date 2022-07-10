@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "settings": {
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Oswald\", sans-serif",
+          "slug": "oswald",
+          "name": "Oswald",
+          "fontFace": [
+            {
+              "fontFamily": "Oswald",
+              "fontWeight": "400 700",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/webfonts/Oswald-VariableFont_wght.ttf" ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Quattrocento\", sans-serif",
+          "slug": "quattrocento",
+          "name": "Quattrocento",
+          "fontFace": [
+            {
+              "fontFamily": "Quattrocento",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/webfonts/Quattrocento-Regular.ttf" ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Roboto\", sans-serif",
+          "slug": "roboto",
+          "name": "Roboto",
+          "fontFace": [
+            {
+              "fontFamily": "Roboto",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/webfonts/Roboto-Regular.ttf" ]
+            },
+            {
+              "fontFamily": "Roboto",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/webfonts/Roboto-Bold.ttf" ]
+            },
+            {
+              "fontFamily": "Roboto",
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "src": [ "file:./assets/webfonts/Roboto-Italic.ttf" ]
+            },
+            {
+              "fontFamily": "Roboto",
+              "fontWeight": "700",
+              "fontStyle": "italc",
+              "src": [ "file:./assets/webfonts/Roboto-BoldItalic.ttf" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
